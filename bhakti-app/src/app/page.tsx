@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Search, Sparkles, Heart, Calendar } from "lucide-react";
 import { BannerAd } from "@/components/AdSense";
+import { getFeaturedFestivals } from "@/config/festivals";
 
 export default function Home() {
+  const featuredFestivals = getFeaturedFestivals();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
@@ -71,21 +73,16 @@ export default function Home() {
       {/* Featured Sections */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Popular Festivals */}
+          {/* Featured Festivals */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-orange-900 mb-8 text-center">Popular Festivals</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { name: "Diwali", title: "Festival of Lights", icon: "🪔" },
-                { name: "Holi", title: "Festival of Colors", icon: "🎨" },
-                { name: "Navratri", title: "Nine Nights", icon: "🌙" },
-                { name: "Ganesh Chaturthi", title: "Lord Ganesha", icon: "🐘" }
-              ].map((festival) => (
-                <Link key={festival.name} href={`/festivals/${festival.name.toLowerCase().replace(' ', '-')}`}>
-                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-orange-100">
+            <h3 className="text-3xl font-bold text-orange-900 mb-8 text-center">Featured Festivals</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              {featuredFestivals.map((festival) => (
+                <Link key={festival.id} href={`/festivals/${festival.id}`}>
+                  <div className={`bg-gradient-to-br ${festival.color} p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-white/20 text-white`}>
                     <div className="text-4xl mb-3 text-center">{festival.icon}</div>
-                    <h4 className="text-xl font-bold text-orange-900 mb-2 text-center">{festival.name}</h4>
-                    <p className="text-orange-700 text-center">{festival.title}</p>
+                    <h4 className="text-xl font-bold mb-2 text-center">{festival.name}</h4>
+                    <p className="text-center text-sm opacity-90">{festival.title}</p>
                   </div>
                 </Link>
               ))}

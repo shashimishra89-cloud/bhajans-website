@@ -52,11 +52,13 @@ export default function JivitputrikaVratPage() {
 
         {/* Main Festival Image */}
         <div className="text-center mb-12">
-          <img 
-            src="/jivitputrika-vrat-main-image.jpg" 
-            alt="A beautiful image of Jivitputrika Vrat festival celebrations" 
-            className="w-full max-w-4xl mx-auto h-96 object-cover rounded-2xl shadow-2xl border-4 border-orange-200"
-          />
+          <div className="w-full max-w-4xl mx-auto h-96 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl shadow-2xl border-4 border-orange-200 flex items-center justify-center">
+            <div className="text-center text-white">
+              <div className="text-8xl mb-4">🙏</div>
+              <h3 className="text-3xl font-bold mb-2">जीवित्पुत्रिका व्रत</h3>
+              <p className="text-xl opacity-90">Sacred Fast for Children's Wellbeing</p>
+            </div>
+          </div>
         </div>
 
         {/* Banner Ad */}
@@ -74,11 +76,12 @@ export default function JivitputrikaVratPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Story 1 */}
             <div className="bg-white rounded-2xl shadow-xl border border-orange-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <img 
-                src="/story1-image.jpg" 
-                alt="Image for the first story" 
-                className="w-full h-48 object-cover border-b-4 border-orange-200"
-              />
+              <div className="w-full h-48 bg-gradient-to-r from-orange-300 to-yellow-400 border-b-4 border-orange-200 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="text-6xl mb-2">👩‍👦</div>
+                  <p className="text-lg font-semibold">माता की महिमा</p>
+                </div>
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-orange-900 mb-4 border-b-2 border-orange-100 pb-2">
                   पहली कथा - माता की महिमा
@@ -111,11 +114,12 @@ export default function JivitputrikaVratPage() {
 
             {/* Story 2 */}
             <div className="bg-white rounded-2xl shadow-xl border border-orange-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <img 
-                src="/story2-image.jpg" 
-                alt="Image for the second story" 
-                className="w-full h-48 object-cover border-b-4 border-orange-200"
-              />
+              <div className="w-full h-48 bg-gradient-to-r from-purple-400 to-pink-500 border-b-4 border-orange-200 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="text-6xl mb-2">👭</div>
+                  <p className="text-lg font-semibold">सात बहनों की कथा</p>
+                </div>
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-orange-900 mb-4 border-b-2 border-orange-100 pb-2">
                   दूसरी कथा - सात माताओं की कहानी
