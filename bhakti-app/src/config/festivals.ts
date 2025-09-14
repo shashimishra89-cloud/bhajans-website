@@ -62,7 +62,7 @@ export const festivalsConfig: Festival[] = [
     duration: "1 day",
     icon: "🙏",
     color: "from-orange-400 to-red-500",
-    featured: false
+    featured: true
   }
 ];
 
