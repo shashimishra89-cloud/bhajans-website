@@ -1,0 +1,15 @@
+name = "bhakti"
+compatibility_date = "2024-08-30"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bhakti-db"
+database_id = "70fe25d7-c578-4499-b5f4-ce2c1587ecca"
+
+# Pages configuration
+pages_build_output_dir = "bhakti-app/out"
+
+# R2 bucket configuration
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "bhakti-images"

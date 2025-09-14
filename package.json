@@ -1,0 +1,13 @@
+{
+  "name": "bhakti",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd bhakti-app && npm run dev",
+    "build": "cd bhakti-app && npm run build",
+    "start": "cd bhakti-app && npm start"
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.12"
+  }
+}

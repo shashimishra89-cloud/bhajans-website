@@ -1,0 +1,17 @@
+# Cloudflare Pages Redirects Configuration
+
+# Redirect old URLs to new structure (if needed)
+/festival/* /festivals/:splat 301
+/god/* /gods/:splat 301
+
+# Handle trailing slashes
+/festivals /festivals/ 301
+/gods /gods/ 301
+/search /search/ 301
+/about /about/ 301
+/contact /contact/ 301
+/privacy /privacy/ 301
+/terms /terms/ 301
+
+# Fallback for SPA routing
+/* /index.html 200
