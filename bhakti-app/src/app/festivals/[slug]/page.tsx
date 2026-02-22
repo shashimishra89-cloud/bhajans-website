@@ -7,7 +7,7 @@ const festivalData: { [key: string]: any } = {
   diwali: {
     id: "diwali",
     name: "Diwali",
-    title: "Festival of Lights",
+    title: "Festival of Lights (Jai Shree Ram)",
     description: "Diwali, also known as Deepavali, is the most celebrated Hindu festival symbolizing the victory of light over darkness, good over evil, and knowledge over ignorance. The festival spans five days, with each day having its own significance and rituals.",
     duration: "5 days",
     icon: "🪔",
