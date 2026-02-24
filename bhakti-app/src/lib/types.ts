@@ -5,13 +5,44 @@ export interface BaseContent {
   name: string;
   title: string;
   description: string;
+  duration?: string;
   icon: string;
-  color: string;
+  color?: string;
   featured?: boolean;
+  significance?: string;
+  deity?: string;
+  purpose?: string;
+  language?: string;
+  theme?: string;
+  rituals?: string[];
   seo?: {
     keywords: string[];
     description: string;
   };
+  sections: ContentSection[];
+}
+
+export interface ContentSection {
+  type: 'hero' | 'historical_significance' | 'stories' | 'lyrics' | 'rituals' | 'significance' | 'benefits' | 'videos' | 'shloka' | 'story' | 'bhajan' | 'aarti' | 'mantra' | 'ritual';
+  title: string;
+  content: string;
+  subsections?: Subsection[];
+  videos?: VideoEmbed[];
+}
+
+export interface Subsection {
+  title: string;
+  content?: string;
+  hindi?: string;
+  english?: string;
+  meaning?: string;
+  sanskrit?: string;
+}
+
+export interface VideoEmbed {
+  title: string;
+  embedId: string;
+  description: string;
 }
 
 export interface Section {
@@ -36,26 +67,22 @@ export interface Festival extends BaseContent {
   duration: string;
   significance?: string;
   rituals?: string[];
-  sections: Section[];
+  sections: ContentSection[];
 }
 
 export interface Aarti extends BaseContent {
   deity: string;
-  language: string;
-  sections: Section[];
+  sections: ContentSection[];
 }
 
 export interface Bhajan extends BaseContent {
   deity: string;
-  language: string;
-  theme?: string;
-  sections: Section[];
+  sections: ContentSection[];
 }
 
 export interface Mantra extends BaseContent {
   deity: string;
-  purpose: string;
-  sections: Section[];
+  sections: ContentSection[];
 }
 
 export interface Category {

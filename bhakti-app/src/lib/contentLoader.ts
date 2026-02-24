@@ -1,20 +1,18 @@
 import { Festival, Aarti, Bhajan, Mantra, ContentType } from './types';
+import { readFileSync, readdirSync } from 'fs';
+import { join } from 'path';
 
 // Content loader utility functions
 export class ContentLoader {
-  private static basePath = '/content';
+  private static basePath = './content';
 
   // Festival content loading
   static async getAllFestivals(): Promise<Festival[]> {
     const festivals: Festival[] = [];
     
     try {
-      const festivalFiles = [
-        'diwali.json',
-        'holi.json', 
-        'navratri.json',
-        'ganesh-chaturthi.json'
-      ];
+      const festivalFiles = readdirSync(join(this.basePath, 'festivals'))
+        .filter(file => file.endsWith('.json'));
 
       for (const file of festivalFiles) {
         const festival = await this.loadFestival(file.replace('.json', ''));
@@ -29,9 +27,9 @@ export class ContentLoader {
 
   static async getFestival(slug: string): Promise<Festival | null> {
     try {
-      const response = await fetch(`${this.basePath}/festivals/${slug}.json`);
-      if (!response.ok) return null;
-      return await response.json();
+      const filePath = join(this.basePath, 'festivals', `${slug}.json`);
+      const fileContent = readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
     } catch (error) {
       console.error(`Error loading festival ${slug}:`, error);
       return null;
@@ -44,15 +42,28 @@ export class ContentLoader {
 
   // Aarti content loading
   static async getAllAartis(): Promise<Aarti[]> {
-    // Placeholder - will be populated when aarti content is added
-    return [];
+    const aartis: Aarti[] = [];
+    
+    try {
+      const aartiFiles = readdirSync(join(this.basePath, 'aartis'))
+        .filter(file => file.endsWith('.json'));
+
+      for (const file of aartiFiles) {
+        const aarti = await this.getAarti(file.replace('.json', ''));
+        if (aarti) aartis.push(aarti);
+      }
+    } catch (error) {
+      console.error('Error loading aartis:', error);
+    }
+
+    return aartis;
   }
 
   static async getAarti(slug: string): Promise<Aarti | null> {
     try {
-      const response = await fetch(`${this.basePath}/aartis/${slug}.json`);
-      if (!response.ok) return null;
-      return await response.json();
+      const filePath = join(this.basePath, 'aartis', `${slug}.json`);
+      const fileContent = readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
     } catch (error) {
       console.error(`Error loading aarti ${slug}:`, error);
       return null;
@@ -61,15 +72,28 @@ export class ContentLoader {
 
   // Bhajan content loading
   static async getAllBhajans(): Promise<Bhajan[]> {
-    // Placeholder - will be populated when bhajan content is added
-    return [];
+    const bhajans: Bhajan[] = [];
+    
+    try {
+      const bhajanFiles = readdirSync(join(this.basePath, 'bhajans'))
+        .filter(file => file.endsWith('.json'));
+
+      for (const file of bhajanFiles) {
+        const bhajan = await this.getBhajan(file.replace('.json', ''));
+        if (bhajan) bhajans.push(bhajan);
+      }
+    } catch (error) {
+      console.error('Error loading bhajans:', error);
+    }
+
+    return bhajans;
   }
 
   static async getBhajan(slug: string): Promise<Bhajan | null> {
     try {
-      const response = await fetch(`${this.basePath}/bhajans/${slug}.json`);
-      if (!response.ok) return null;
-      return await response.json();
+      const filePath = join(this.basePath, 'bhajans', `${slug}.json`);
+      const fileContent = readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
     } catch (error) {
       console.error(`Error loading bhajan ${slug}:`, error);
       return null;
@@ -78,15 +102,28 @@ export class ContentLoader {
 
   // Mantra content loading
   static async getAllMantras(): Promise<Mantra[]> {
-    // Placeholder - will be populated when mantra content is added
-    return [];
+    const mantras: Mantra[] = [];
+    
+    try {
+      const mantraFiles = readdirSync(join(this.basePath, 'mantras'))
+        .filter(file => file.endsWith('.json'));
+
+      for (const file of mantraFiles) {
+        const mantra = await this.getMantra(file.replace('.json', ''));
+        if (mantra) mantras.push(mantra);
+      }
+    } catch (error) {
+      console.error('Error loading mantras:', error);
+    }
+
+    return mantras;
   }
 
   static async getMantra(slug: string): Promise<Mantra | null> {
     try {
-      const response = await fetch(`${this.basePath}/mantras/${slug}.json`);
-      if (!response.ok) return null;
-      return await response.json();
+      const filePath = join(this.basePath, 'mantras', `${slug}.json`);
+      const fileContent = readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
     } catch (error) {
       console.error(`Error loading mantra ${slug}:`, error);
       return null;
