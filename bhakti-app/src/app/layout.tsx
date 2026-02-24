@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AdSenseScript } from "@/components/AdBlock";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Bhajans - Hindu Festivals, Gods & Sacred Songs",
-  description: "Discover the rich heritage of Hindu culture through festivals, deities, bhajans, and aartis. Complete repository of authentic devotional content.",
-  keywords: "Hindu festivals, bhajans, aartis, Diwali, Holi, Ganesha, Krishna, devotional songs",
-  authors: [{ name: "Bhajans" }],
+  title: "Bhakti - A Sacred Space for Devotion",
+  description: "All Bhakti Content. One Divine Place. Discover festivals, aartis, bhajans, mantras, and devotional stories in one sacred platform.",
+  keywords: ["bhakti", "hindu festivals", "aartis", "bhajans", "mantras", "devotional", "hinduism", "spiritual"],
+  authors: [{ name: "Bhakti" }],
   openGraph: {
-    title: "Bhajans - Hindu Festivals, Gods & Sacred Songs",
-    description: "Discover the rich heritage of Hindu culture through festivals, deities, bhajans, and aartis.",
+    title: "Bhakti - A Sacred Space for Devotion",
+    description: "All Bhakti Content. One Divine Place. Discover festivals, aartis, bhajans, mantras, and devotional stories.",
     type: "website",
   },
   other: {
@@ -25,7 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <AdSenseScript />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6946776427046584"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="antialiased font-sans">
         {children}

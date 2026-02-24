@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Sparkles, ArrowLeft, Music, Heart, Crown, Star, BookOpen, Flame } from "lucide-react";
-import { InContentAd } from "@/components/AdSense";
+import { InContentAd } from "@/components/AdBlock";
 
 // Mock data - in production this would come from Cloudflare D1
 const godData: { [key: string]: any } = {

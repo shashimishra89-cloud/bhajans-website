@@ -5,29 +5,13 @@ import React, { useEffect } from 'react';
 // AdSense configuration
 export const ADSENSE_CONFIG = {
   CLIENT_ID: "ca-pub-6946776427046584",
-  SCRIPT_SRC: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6946776427046584"
-};
-
-// AdSense Script component for head
-export const AdSenseScript = () => {
-  useEffect(() => {
-    // Load AdSense script
-    const script = document.createElement('script');
-    script.src = ADSENSE_CONFIG.SCRIPT_SRC;
-    script.async = true;
-    script.crossOrigin = 'anonymous';
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector(`script[src="${ADSENSE_CONFIG.SCRIPT_SRC}"]`);
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
-    };
-  }, []);
-
-  return null;
+  AD_SLOTS: {
+    HERO_BANNER: "1234567890",
+    CATEGORIES_INCONTENT: "1234567891", 
+    FEATURED_INCONTENT: "1234567892",
+    SIDEBAR_SQUARE: "1234567893",
+    CONTENT_BANNER: "1234567894"
+  }
 };
 
 // Main AdBlock component
@@ -39,14 +23,14 @@ interface AdBlockProps {
 }
 
 export const AdBlock: React.FC<AdBlockProps> = ({ 
-  adSlot = "1234567890", // Default ad slot
+  adSlot = ADSENSE_CONFIG.AD_SLOTS.HERO_BANNER,
   adFormat = "auto", 
   className = "adsbygoogle",
   style = { display: 'block' }
 }) => {
   useEffect(() => {
     try {
-      // Push ad to AdSense
+      // Push ad to AdSense when component mounts
       if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
         ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
       }
@@ -73,7 +57,17 @@ export const AdBlock: React.FC<AdBlockProps> = ({
 };
 
 // Responsive banner ad component
-export const BannerAd: React.FC<{ adSlot?: string }> = ({ adSlot = "1234567890" }) => {
+export const BannerAd: React.FC<{ adSlot?: string }> = ({ adSlot = ADSENSE_CONFIG.AD_SLOTS.HERO_BANNER }) => {
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+      }
+    } catch (error) {
+      console.error('AdSense error:', error);
+    }
+  }, []);
+
   return (
     <div className="w-full flex justify-center my-8">
       <div className="text-center">
@@ -97,7 +91,17 @@ export const BannerAd: React.FC<{ adSlot?: string }> = ({ adSlot = "1234567890" 
 };
 
 // Square ad component for sidebars
-export const SquareAd: React.FC<{ adSlot?: string }> = ({ adSlot = "1234567891" }) => {
+export const SquareAd: React.FC<{ adSlot?: string }> = ({ adSlot = ADSENSE_CONFIG.AD_SLOTS.SIDEBAR_SQUARE }) => {
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+      }
+    } catch (error) {
+      console.error('AdSense error:', error);
+    }
+  }, []);
+
   return (
     <div className="w-full flex justify-center my-6">
       <div className="text-center">
@@ -120,7 +124,7 @@ export const SquareAd: React.FC<{ adSlot?: string }> = ({ adSlot = "1234567891" 
 };
 
 // In-content ad component
-export const InContentAd: React.FC<{ adSlot?: string }> = ({ adSlot = "1234567892" }) => {
+export const InContentAd: React.FC<{ adSlot?: string }> = ({ adSlot = ADSENSE_CONFIG.AD_SLOTS.CATEGORIES_INCONTENT }) => {
   useEffect(() => {
     try {
       if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
