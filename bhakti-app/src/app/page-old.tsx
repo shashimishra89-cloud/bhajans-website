@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { Sparkles, Calendar, Music, BookOpen, Heart, ChevronRight } from "lucide-react";
 import { BannerAd, InContentAd } from "@/components/AdBlock";
+import { ContentLoader } from "@/lib/contentLoader";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import "@/styles/animations.css";
 
 // Category data
@@ -54,7 +57,35 @@ const categories = [
   }
 ];
 
+import { Festival, Aarti } from "@/lib/types";
+
 export default function Home() {
+  const [featuredContent, setFeaturedContent] = useState<(Festival | Aarti)[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadContent = async () => {
+      try {
+        const featuredFestivals = await ContentLoader.getAllFestivals();
+        const featuredAartis = await ContentLoader.getAllAartis();
+        
+        // Combine and limit to 5 featured items
+        const content = [
+          ...featuredFestivals.slice(0, 3),
+          ...featuredAartis.slice(0, 2)
+        ].slice(0, 5);
+        
+        setFeaturedContent(content);
+      } catch (error) {
+        console.error('Error loading featured content:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadContent();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
       {/* Hero Section */}
@@ -214,23 +245,45 @@ export default function Home() {
       </section>
 
       {/* Featured Content Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-orange-900 mb-4">
-              Featured Content
-            </h2>
-            <p className="text-xl text-orange-700 max-w-2xl mx-auto">
-              Discover the most beloved festivals and aartis from our collection
-            </p>
+      {featuredContent.length > 0 && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-orange-900 mb-4">
+                Featured Content
+              </h2>
+              <p className="text-xl text-orange-700 max-w-2xl mx-auto">
+                Discover the most beloved festivals and aartis from our collection
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+              {featuredContent.map((item) => (
+                <Link 
+                  key={item.id}
+                  href={`/${item.id.includes('-') ? 'festivals' : 'aartis'}/${item.id}`}
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105"
+                >
+                  <div className={`h-32 bg-gradient-to-br ${item.color || 'from-orange-400 to-red-500'} relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-4xl">{item.icon}</span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-1">
+                      {item.name}
+                    </h3>
+                    <p className="text-orange-700 text-sm line-clamp-2">
+                      {item.title}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-          
-          <div className="text-center text-orange-600">
-            <p className="text-lg">Coming Soon</p>
-            <p>This section will dynamically showcase popular festivals, aartis, bhajans, and mantras from our comprehensive collection.</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* AdSense After Featured Content */}
       <InContentAd adSlot="featured_incontent" />

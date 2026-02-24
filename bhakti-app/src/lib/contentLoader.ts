@@ -1,18 +1,20 @@
 import { Festival, Aarti, Bhajan, Mantra, ContentType } from './types';
-import { readFileSync, readdirSync } from 'fs';
-import { join } from 'path';
 
 // Content loader utility functions
 export class ContentLoader {
-  private static basePath = './content';
+  private static basePath = '/content';
 
   // Festival content loading
   static async getAllFestivals(): Promise<Festival[]> {
     const festivals: Festival[] = [];
     
     try {
-      const festivalFiles = readdirSync(join(this.basePath, 'festivals'))
-        .filter(file => file.endsWith('.json'));
+      const festivalFiles = [
+        'diwali.json',
+        'holi.json', 
+        'navratri.json',
+        'ganesh-chaturthi.json'
+      ];
 
       for (const file of festivalFiles) {
         const festival = await this.loadFestival(file.replace('.json', ''));
@@ -27,9 +29,9 @@ export class ContentLoader {
 
   static async getFestival(slug: string): Promise<Festival | null> {
     try {
-      const filePath = join(this.basePath, 'festivals', `${slug}.json`);
-      const fileContent = readFileSync(filePath, 'utf-8');
-      return JSON.parse(fileContent);
+      const response = await fetch(`${this.basePath}/festivals/${slug}.json`);
+      if (!response.ok) return null;
+      return await response.json();
     } catch (error) {
       console.error(`Error loading festival ${slug}:`, error);
       return null;
@@ -45,8 +47,13 @@ export class ContentLoader {
     const aartis: Aarti[] = [];
     
     try {
-      const aartiFiles = readdirSync(join(this.basePath, 'aartis'))
-        .filter(file => file.endsWith('.json'));
+      const aartiFiles = [
+        'lakshmi-aarti.json',
+        'ganesh-aarti.json',
+        'shiva-aarti.json',
+        'durga-aarti.json',
+        'krishna-aarti.json'
+      ];
 
       for (const file of aartiFiles) {
         const aarti = await this.getAarti(file.replace('.json', ''));
@@ -61,9 +68,9 @@ export class ContentLoader {
 
   static async getAarti(slug: string): Promise<Aarti | null> {
     try {
-      const filePath = join(this.basePath, 'aartis', `${slug}.json`);
-      const fileContent = readFileSync(filePath, 'utf-8');
-      return JSON.parse(fileContent);
+      const response = await fetch(`${this.basePath}/aartis/${slug}.json`);
+      if (!response.ok) return null;
+      return await response.json();
     } catch (error) {
       console.error(`Error loading aarti ${slug}:`, error);
       return null;
@@ -75,8 +82,11 @@ export class ContentLoader {
     const bhajans: Bhajan[] = [];
     
     try {
-      const bhajanFiles = readdirSync(join(this.basePath, 'bhajans'))
-        .filter(file => file.endsWith('.json'));
+      const bhajanFiles = [
+        'hanuman-chalisa.json',
+        'vishnu-sahasranam.json',
+        'shiv-tandav-stotram.json'
+      ];
 
       for (const file of bhajanFiles) {
         const bhajan = await this.getBhajan(file.replace('.json', ''));
@@ -91,9 +101,9 @@ export class ContentLoader {
 
   static async getBhajan(slug: string): Promise<Bhajan | null> {
     try {
-      const filePath = join(this.basePath, 'bhajans', `${slug}.json`);
-      const fileContent = readFileSync(filePath, 'utf-8');
-      return JSON.parse(fileContent);
+      const response = await fetch(`${this.basePath}/bhajans/${slug}.json`);
+      if (!response.ok) return null;
+      return await response.json();
     } catch (error) {
       console.error(`Error loading bhajan ${slug}:`, error);
       return null;
@@ -105,8 +115,11 @@ export class ContentLoader {
     const mantras: Mantra[] = [];
     
     try {
-      const mantraFiles = readdirSync(join(this.basePath, 'mantras'))
-        .filter(file => file.endsWith('.json'));
+      const mantraFiles = [
+        'om-namah-shivaya.json',
+        'om-mantra.json',
+        'gayatri-mantra.json'
+      ];
 
       for (const file of mantraFiles) {
         const mantra = await this.getMantra(file.replace('.json', ''));
@@ -121,9 +134,9 @@ export class ContentLoader {
 
   static async getMantra(slug: string): Promise<Mantra | null> {
     try {
-      const filePath = join(this.basePath, 'mantras', `${slug}.json`);
-      const fileContent = readFileSync(filePath, 'utf-8');
-      return JSON.parse(fileContent);
+      const response = await fetch(`${this.basePath}/mantras/${slug}.json`);
+      if (!response.ok) return null;
+      return await response.json();
     } catch (error) {
       console.error(`Error loading mantra ${slug}:`, error);
       return null;

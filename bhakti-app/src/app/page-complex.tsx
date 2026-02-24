@@ -226,7 +226,7 @@ export default function Home() {
           </div>
           
           <div className="text-center text-orange-600">
-            <p className="text-lg">Coming Soon</p>
+            <p className="text-lg">Loading featured content...</p>
             <p>This section will dynamically showcase popular festivals, aartis, bhajans, and mantras from our comprehensive collection.</p>
           </div>
         </div>
