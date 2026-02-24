@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Sparkles, Calendar, Music, BookOpen, Heart, ChevronRight } from "lucide-react";
-import { BannerAd, InContentAd } from "@/components/AdBlock";
+import { BannerAd, InContentAd, ADSENSE_CONFIG } from "@/components/AdBlock";
 import "@/styles/animations.css";
 
 // Category data
@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* AdSense After Hero */}
-      <BannerAd adSlot="hero_banner" />
+      <BannerAd adSlot={ADSENSE_CONFIG.AD_SLOTS.HERO_BANNER} />
 
       {/* Category Grid Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* AdSense After Categories */}
-      <InContentAd adSlot="categories_incontent" />
+      <InContentAd adSlot={ADSENSE_CONFIG.AD_SLOTS.CATEGORIES_INCONTENT} />
 
       {/* Vision Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-100 to-amber-100">
@@ -233,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* AdSense After Featured Content */}
-      <InContentAd adSlot="featured_incontent" />
+      <InContentAd adSlot={ADSENSE_CONFIG.AD_SLOTS.FEATURED_INCONTENT} />
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-orange-900 to-red-900 text-white py-16 px-4 sm:px-6 lg:px-8">

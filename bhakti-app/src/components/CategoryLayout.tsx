@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { BaseContent } from '@/lib/types';
 import { Breadcrumbs, generateBreadcrumbs } from './Breadcrumbs';
 import { BannerAd } from './AdBlock';
@@ -26,15 +27,15 @@ export const CategoryLayout: React.FC<CategoryLayoutProps> = ({
       <header className="bg-white/80 backdrop-blur-sm border-b border-orange-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <span className="text-2xl">🪔</span>
-              <h1 className="text-2xl font-bold text-orange-900">Bhajans</h1>
-            </div>
+              <h1 className="text-2xl font-bold text-orange-900">Bhakti</h1>
+            </Link>
             <nav className="hidden md:flex space-x-8">
-              <a href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</a>
-              <a href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</a>
-              <a href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</a>
-              <a href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</a>
+              <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
+              <Link href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</Link>
+              <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
+              <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
             </nav>
           </div>
         </div>
@@ -67,7 +68,7 @@ export const CategoryLayout: React.FC<CategoryLayoutProps> = ({
           {children || (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {items.map((item) => (
-                <a
+                <Link
                   key={item.id}
                   href={`/${contentType}/${item.id}`}
                   className={`group bg-gradient-to-br ${item.color} p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-white/20 text-white`}
@@ -75,7 +76,7 @@ export const CategoryLayout: React.FC<CategoryLayoutProps> = ({
                   <div className="text-4xl mb-3 text-center">{item.icon}</div>
                   <h3 className="text-xl font-bold mb-2 text-center">{item.name}</h3>
                   <p className="text-center text-sm opacity-90">{item.title}</p>
-                </a>
+                </Link>
               ))}
             </div>
           )}
@@ -91,9 +92,9 @@ export const CategoryLayout: React.FC<CategoryLayoutProps> = ({
           </div>
           <p className="text-orange-200 mb-6">Preserving and sharing the sacred traditions of Hindu culture</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-            <a href="/privacy" className="text-orange-200 hover:text-white">Privacy Policy</a>
-            <a href="/terms" className="text-orange-200 hover:text-white">Terms of Service</a>
-            <a href="/contact" className="text-orange-200 hover:text-white">Contact</a>
+            <Link href="/privacy" className="text-orange-200 hover:text-white">Privacy Policy</Link>
+            <Link href="/terms" className="text-orange-200 hover:text-white">Terms of Service</Link>
+            <Link href="/contact" className="text-orange-200 hover:text-white">Contact</Link>
           </div>
         </div>
       </footer>
