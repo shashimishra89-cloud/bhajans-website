@@ -2,23 +2,27 @@ import Link from "next/link";
 import { Calendar, Sparkles, ChevronRight } from "lucide-react";
 import { BannerAd } from "@/components/AdBlock";
 
-export const metadata = {
-  title: "Hindu Festivals - Bhakti",
-  description: "Explore the rich heritage of Hindu festivals with detailed information, rituals, and significance. Discover Diwali, Holi, Navratri, Ganesh Chaturthi and more.",
-  keywords: ["hindu festivals", "diwali", "holi", "navratri", "ganesh chaturthi", "hindu celebrations", "indian festivals"],
-};
-
 // Festival data
 const festivals = [
   {
     id: "diwali",
     name: "Diwali",
     title: "Festival of Lights",
-    description: "The Hindu festival of lights, symbolizing the victory of light over darkness, good over evil.",
+    description: "The Hindu festival of lights, symbolizing the victory of light over darkness, good over evil, and knowledge over ignorance.",
     icon: "🪔",
     color: "from-orange-400 to-yellow-500",
     date: "October/November",
     duration: "5 days"
+  },
+  {
+    id: "ganesh-chaturthi",
+    name: "Ganesh Chaturthi",
+    title: "Lord Ganesha's Birthday",
+    description: "Celebration of the birth of Lord Ganesha, the remover of obstacles and the god of wisdom.",
+    icon: "🐘",
+    color: "from-green-400 to-teal-500",
+    date: "August/September",
+    duration: "10 days"
   },
   {
     id: "holi",
@@ -37,20 +41,86 @@ const festivals = [
     description: "Nine nights dedicated to the nine forms of Goddess Durga, celebrated with dance and devotion.",
     icon: "💃",
     color: "from-red-400 to-orange-500",
-    date: "October/November",
+    date: "September/October",
     duration: "9 nights"
   },
   {
-    id: "ganesh-chaturthi",
-    name: "Ganesh Chaturthi",
-    title: "Lord Ganesha's Birthday",
-    description: "Celebration of the birth of Lord Ganesha, the remover of obstacles.",
-    icon: "🐘",
-    color: "from-green-400 to-teal-500",
+    id: "baisakhi",
+    name: "Baisakhi",
+    title: "Harvest Festival",
+    description: "Punjabi harvest festival marking the Sikh new year and celebrating the spring harvest.",
+    icon: "🌾",
+    color: "from-yellow-400 to-orange-500",
+    date: "April",
+    duration: "1 day"
+  },
+  {
+    id: "krishna-janmashtami",
+    name: "Krishna Janmashtami",
+    title: "Lord Krishna's Birth",
+    description: "Celebration of the birth of Lord Krishna, the eighth avatar of Lord Vishnu.",
+    icon: "🦚",
+    color: "from-blue-400 to-indigo-500",
+    date: "August/September",
+    duration: "1 day"
+  },
+  {
+    id: "maha-shivaratri",
+    name: "Maha Shivaratri",
+    title: "Great Night of Shiva",
+    description: "The most auspicious night dedicated to Lord Shiva, celebrated with fasting and vigil.",
+    icon: "🔱",
+    color: "from-purple-400 to-pink-500",
+    date: "February/March",
+    duration: "1 night"
+  },
+  {
+    id: "onam",
+    name: "Onam",
+    title: "Harvest Festival of Kerala",
+    description: "Traditional harvest festival of Kerala celebrating the return of King Mahabali.",
+    icon: "🛶️",
+    color: "from-amber-400 to-yellow-500",
     date: "August/September",
     duration: "10 days"
+  },
+  {
+    id: "pongal",
+    name: "Pongal",
+    title: "Tamil Harvest Festival",
+    description: "Four-day Tamil harvest festival thanking the Sun God for a bountiful harvest.",
+    icon: "🌾",
+    color: "from-orange-400 to-red-500",
+    date: "January",
+    duration: "4 days"
+  },
+  {
+    id: "raksha-bandhan",
+    name: "Raksha Bandhan",
+    title: "Bond of Protection",
+    description: "Festival celebrating the sacred bond between brothers and sisters.",
+    icon: "👫",
+    color: "from-green-400 to-teal-500",
+    date: "July/August",
+    duration: "1 day"
+  },
+  {
+    id: "ram-navami",
+    name: "Ram Navami",
+    title: "Lord Rama's Birth",
+    description: "Celebration of the birth of Lord Rama, the seventh avatar of Lord Vishnu.",
+    icon: "🏹",
+    color: "from-blue-400 to-indigo-500",
+    date: "April",
+    duration: "1 day"
   }
 ];
+
+export const metadata = {
+  title: "Hindu Festivals - Complete Guide | Bhakti",
+  description: "Explore rich heritage of Hindu festivals with detailed information, rituals, and significance. Discover Diwali, Holi, Navratri, Ganesh Chaturthi and more.",
+  keywords: ["hindu festivals", "diwali", "holi", "navratri", "ganesh chaturthi", "hindu celebrations", "indian festivals"],
+};
 
 export default function FestivalsPage() {
   return (
@@ -77,24 +147,35 @@ export default function FestivalsPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center items-center space-x-3 mb-8">
-            <Calendar className="w-12 h-12 text-orange-600" />
-            <h1 className="text-5xl font-bold text-orange-900">Hindu Festivals</h1>
+          <div className="flex justify-center items-center space-x-4 mb-8">
+            <span className="text-8xl">🎉</span>
+            <div className="text-left">
+              <h1 className="text-5xl font-bold text-orange-900 mb-2">Hindu Festivals</h1>
+              <p className="text-2xl text-orange-600 font-medium">Sacred Celebrations of Faith</p>
+            </div>
           </div>
-          <p className="text-xl text-orange-700 mb-8 max-w-2xl mx-auto">
-            Discover the vibrant tapestry of Hindu festivals, each celebrating divine stories, 
-            seasonal changes, and eternal values that have been cherished for millennia.
+          <p className="text-xl text-orange-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Explore the rich heritage of Hindu festivals with detailed information, rituals, and significance. Discover Diwali, Holi, Navratri, Ganesh Chaturthi and more.
           </p>
         </div>
       </section>
 
       {/* AdSense */}
-      <BannerAd adSlot="1234567895" />
+      <BannerAd adSlot="1234567894" />
 
       {/* Festivals Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-orange-900 mb-4">
+              Major Hindu Festivals
+            </h2>
+            <p className="text-xl text-orange-700 max-w-2xl mx-auto">
+              Explore the most celebrated festivals in Hinduism, each with unique traditions and spiritual significance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {festivals.map((festival) => (
               <Link 
                 key={festival.id}
@@ -108,31 +189,22 @@ export default function FestivalsPage() {
                   </div>
                 </div>
                 
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors">
-                        {festival.name}
-                      </h3>
-                      <p className="text-orange-600 font-medium">{festival.title}</p>
-                    </div>
-                    <ChevronRight className="w-5 h-5 text-orange-400 group-hover:text-orange-600 transition-colors" />
-                  </div>
-                  
-                  <p className="text-orange-700 mb-4 line-clamp-2">
-                    {festival.description}
+                <div className="text-center p-6">
+                  <h3 className="text-xl font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors">
+                    {festival.name}
+                  </h3>
+                  <p className="text-orange-600 text-sm group-hover:text-orange-500 transition-colors">
+                    {festival.title}
                   </p>
-                  
-                  <div className="flex items-center space-x-4 text-sm text-orange-600">
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{festival.date}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <span>⏱</span>
-                      <span>{festival.duration}</span>
-                    </div>
+                  <div className="mt-4 flex items-center justify-center space-x-2 text-orange-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-xs">Explore</span>
+                    <ChevronRight className="w-4 h-4" />
                   </div>
+                </div>
+                
+                <div className="flex items-center justify-center space-x-1 px-6 pb-4 text-orange-500">
+                  <span className="text-sm">⏱</span>
+                  <span className="text-sm">{festival.duration}</span>
                 </div>
               </Link>
             ))}
@@ -140,22 +212,28 @@ export default function FestivalsPage() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Featured Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold text-orange-900 mb-4">More Festivals Coming Soon</h2>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-orange-100 to-amber-100 rounded-2xl p-8 shadow-lg">
+            <h2 className="text-3xl font-bold text-orange-900 mb-6">Regional Celebrations</h2>
             <p className="text-lg text-orange-700 mb-6">
-              We're working on bringing you detailed information about many more Hindu festivals including 
-              Raksha Bandhan, Janmashtami, Durga Puja, and more.
+              Hindu festivals vary greatly across different regions of India, each with unique customs, traditions, and timing. From the grand celebrations of North India to the vibrant festivities of the South, every region has its own special way of honoring the divine.
             </p>
-            <Link 
-              href="/"
-              className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-medium transition-colors"
-            >
-              <span>Back to Home</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-orange-200">
+                <h3 className="text-xl font-bold text-orange-900 mb-3">North India</h3>
+                <p className="text-orange-700">
+                  Celebrates Diwali, Holi, and Navratri with grand community gatherings, traditional sweets, and elaborate rituals.
+                </p>
+              </div>
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-orange-200">
+                <h3 className="text-xl font-bold text-orange-900 mb-3">South India</h3>
+                <p className="text-orange-700">
+                  Known for Pongal, Onam, and Ayyappan festivals with unique cultural traditions and temple celebrations.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -170,7 +248,7 @@ export default function FestivalsPage() {
               </div>
               <h3 className="text-3xl font-bold">Bhakti</h3>
             </div>
-            <p className="text-xl text-orange-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-orange-300 text-sm mb-4">
               A Sacred Space for Devotion
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
@@ -181,10 +259,9 @@ export default function FestivalsPage() {
               <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">Stories</Link>
             </div>
           </div>
-          
           <div className="border-t border-orange-800 pt-8 text-center">
             <p className="text-orange-300 text-sm mb-4">
-              © 2024 Bhakti. Preserving and sharing sacred traditions of Hindu culture.
+              2024 Bhakti. Preserving and sharing sacred traditions of Hindu culture.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
               <Link href="/privacy" className="text-orange-300 hover:text-white transition-colors">Privacy Policy</Link>
