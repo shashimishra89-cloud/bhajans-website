@@ -1,4 +1,4 @@
-# Bhajans - Hindu Festivals & Sacred Songs
+# Bhakti - Hindu Festivals & Sacred Songs
 
 A modern, static website dedicated to Hindu festivals, deities, and devotional content. Built with Next.js and deployed on Cloudflare Pages.
 
