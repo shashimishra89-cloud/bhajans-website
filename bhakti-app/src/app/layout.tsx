@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AdSenseScript } from "@/components/AdSense";
+import { AdSenseScript } from "@/components/AdBlock";
 
 export const metadata: Metadata = {
   title: "Bhajans - Hindu Festivals, Gods & Sacred Songs",
@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: "Discover the rich heritage of Hindu culture through festivals, deities, bhajans, and aartis.",
     type: "website",
   },
+  other: {
+    "google-adsense-account": "ca-pub-6946776427046584"
+  }
 };
 
 export default function RootLayout({

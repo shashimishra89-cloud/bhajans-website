@@ -1,0 +1,62 @@
+{
+  "id": "holi",
+  "name": "Holi",
+  "title": "Festival of Colors",
+  "description": "Holi is a vibrant spring festival celebrating love, joy, and the triumph of good over evil. Known as the Festival of Colors, it marks the arrival of spring and the end of winter.",
+  "duration": "2 days",
+  "icon": "🎨",
+  "color": "from-pink-400 to-red-500",
+  "significance": "Celebrates the divine love of Radha and Krishna, and commemorates the victory of devotee Prahlad over the demoness Holika.",
+  "rituals": [
+    "Holika Dahan (bonfire ceremony)",
+    "Playing with colors (gulal)",
+    "Singing and dancing",
+    "Sharing festive foods",
+    "Visiting friends and family",
+    "Forgiveness and new beginnings"
+  ],
+  "sections": [
+    {
+      "type": "shloka",
+      "title": "Krishna Holi Shloka",
+      "content": {
+        "sanskrit": "रंगभूमि में राधे श्याम खेलें होली। गोपी गोपाल मिलकर मनावें होली॥",
+        "english": "In the colorful ground, Radha and Shyam play Holi. Gopis and Gopal together celebrate Holi.",
+        "meaning": "This shloka captures the divine play of Lord Krishna and Radha during Holi, symbolizing the eternal love and joy that transcends all boundaries."
+      }
+    },
+    {
+      "type": "story",
+      "title": "Prahlad and Holika",
+      "content": "The story of Holi begins with the demon king Hiranyakashipu, who wanted everyone to worship only him. However, his son Prahlad was a devoted follower of Lord Vishnu. Enraged, Hiranyakashipu asked his sister Holika, who had a boon to remain unburnt by fire, to sit in a pyre with Prahlad on her lap. However, because of Prahlad's devotion and Holika's evil intentions, she was burned while Prahlad remained safe. This victory of good over evil is celebrated as Holika Dahan."
+    },
+    {
+      "type": "story",
+      "title": "Krishna and the Colors",
+      "content": "Another beloved story is of young Krishna, who was self-conscious about his dark complexion compared to fair Radha. His mother Yashoda playfully suggested he could color Radha's face any color he wanted. Krishna took this advice and started the tradition of playing with colors during Holi. This playful act became a symbol of love transcending physical appearances and celebrating the divine connection between souls."
+    },
+    {
+      "type": "bhajan",
+      "title": "Holi Khele Raghuveera",
+      "content": {
+        "hindi": "होली खेले रघुवीरा अवध में\nहोली खेले रघुवीरा\nउड़त गुलाल लाल भयो अंबर\nखुशियों से भरा है यह समां\n\nब्रज में होली खेले कन्हैया\nराधे संग रंग में डूबे\nगोपियों के संग नाचे गाए\nप्रेम रस में सब को भिगोए\n\nहोली है भाई होली है\nरंगों का त्योहार होली है\nखुशियों का संचार होली है\nप्यार का उपहार होली है",
+        "english": "Raghuvira plays Holi in Ayodhya\nRaghuvira plays Holi\nFlying colors have made the sky red\nThis atmosphere is filled with joy\n\nKanhaiya plays Holi in Brij\nDrowned in colors with Radha\nDances and sings with the gopis\nDrenches everyone in love's essence\n\nIt's Holi brother, it's Holi\nHoli is the festival of colors\nHoli is the flow of happiness\nHoli is the gift of love",
+        "meaning": "This complete bhajan celebrates both Lord Rama and Krishna playing Holi, representing the joy, love, and divine play that characterizes this beautiful festival of colors."
+      }
+    },
+    {
+      "type": "aarti",
+      "title": "Holi Aarti",
+      "content": {
+        "hindi": "होली आई रे, होली आई\nरंग बरसे नीले गगन से\nधरती हर्षाई\n\nकृष्ण कन्हैया ब्रज में आए\nराधे संग रंग खेलाई\nगोपियों के मन को भाए\nहोली आई रे, होली आई\n\nगुलाल उड़ाए, पिचकारी चलाए\nसबको रंग में रंग जाए\nप्रेम की धारा बहाए\nहोली आई रे, होली आई",
+        "english": "Holi has come, Holi has come\nColors rain from the blue sky\nThe earth rejoices\n\nKrishna Kanhaiya came to Brij\nPlayed colors with Radha\nDelighted the hearts of gopis\nHoli has come, Holi has come\n\nThrows gulal, shoots water guns\nColors everyone in hues\nFlows the stream of love\nHoli has come, Holi has come",
+        "meaning": "This aarti celebrates the arrival of Holi with great joy, describing how Lord Krishna's divine play with colors brings happiness and love to all beings."
+      }
+    }
+  ],
+  "featured": true,
+  "seo": {
+    "keywords": ["holi", "festival of colors", "krishna radha", "praahlad holika", "hindu festival"],
+    "description": "Holi Festival of Colors - Complete guide with stories, bhajans, aartis, and rituals. Learn about Krishna's divine play and Prahlad's victory."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "ganesh-chaturthi",
+  "name": "Ganesh Chaturthi",
+  "title": "Festival of Lord Ganesha",
+  "description": "Ganesh Chaturthi is a vibrant Hindu festival celebrating the birth of Lord Ganesha, the elephant-headed deity known as the remover of obstacles and the patron of arts and sciences.",
+  "duration": "11 days",
+  "icon": "🐘",
+  "color": "from-green-400 to-teal-500",
+  "significance": "Celebrates the birth of Lord Ganesha and seeks his blessings for new beginnings, wisdom, and the removal of obstacles.",
+  "rituals": [
+    "Installing Ganesha idols",
+    "Daily prayers and offerings",
+    "Modak preparation and offering",
+    "Community celebrations",
+    "Cultural programs and processions",
+    "Visarjan (immersion ceremony)"
+  ],
+  "sections": [
+    {
+      "type": "shloka",
+      "title": "Vakratunda Mahakaya",
+      "content": {
+        "sanskrit": "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥",
+        "english": "O, Lord with a curved trunk and mighty body, whose splendor is equal to a million suns, please make all my endeavors free of obstacles, always.",
+        "meaning": "This powerful shloka is the most popular invocation to Lord Ganesha, recited before beginning any important work to seek his blessings for removing all obstacles and ensuring success."
+      }
+    },
+    {
+      "type": "story",
+      "title": "The Story of the Moon",
+      "content": "According to one legend, on the day of Ganesh Chaturthi, Lord Ganesha was returning home after a feast. As he was walking, he tripped and fell, causing his stomach to burst open and all the modaks to spill out. The moon, who was watching, laughed at him. Angered by the moon's arrogance, Ganesha cursed the moon, saying that anyone who saw the moon on this day would be subject to false accusations. The curse was later softened, stating that one could look at the moon a second time to negate the effects."
+    },
+    {
+      "type": "story",
+      "title": "The Birth of Ganesha",
+      "content": "Goddess Parvati created Ganesha from the turmeric paste she used for her bath and breathed life into him. She asked him to guard the entrance while she bathed. When Lord Shiva returned and was stopped by Ganesha, who didn't recognize him, Shiva in anger cut off the boy's head. Seeing Parvati's grief, Shiva promised to replace the head with that of the first living being he found, which was an elephant. Thus, Ganesha got his elephant head and was blessed to be worshipped first before any other deity."
+    },
+    {
+      "type": "bhajan",
+      "title": "Sukh Karta Dukh Harta Varta Vighnachi",
+      "content": {
+        "hindi": "सुख कर्ता दुःख हर्ता वार्ता विघ्नाची\nनुरवी पुरवी प्रेम कृपा जयाची\nसर्वांगी सुंदर उती शेंदुराची\nकंठी झळके माल मुक्ताफळांची\n\nजय देव जय देव जय मंगलमूर्ति\nदर्शनमात्रे मन कामना पुरती\n\nरत्नखचित फरा तुज गौरीकुमरा\nचंदनाची उटी कुंकुमकेशरा\nहिरे जडित मुकुट शोभतो बरा\nरुणझुणती नूपुरे चरणी घागरा\n\nजय देव जय देव जय मंगलमूर्ति\nदर्शनमात्रे मन कामना पुरती",
+        "english": "Giver of happiness, remover of sorrows, destroyer of obstacles\nFulfill our desires with your love and grace\nBeautiful in every way, with the glow of vermillion\nNecklace of pearls shining around your neck\n\nVictory to the Lord, victory to the auspicious form\nJust your sight fulfills all desires of the mind\n\nGem-studded crown adorns you, O son of Gauri\nSandal paste and saffron adorn your body\nDiamond-studded crown looks beautiful\nTinkling anklets on your feet make sweet sounds\n\nVictory to the Lord, victory to the auspicious form\nJust your sight fulfills all desires of the mind",
+        "meaning": "This is also the popular Marathi Ganesha Aarti, sung as a bhajan. It praises Lord Ganesha as the one who brings joy and happiness and is the remover of sorrow and obstacles. It is a beautiful invocation to seek his blessings."
+      }
+    },
+    {
+      "type": "aarti",
+      "title": "Jai Ganesh Jai Ganesh Deva",
+      "content": {
+        "hindi": "जय गणेश जय गणेश देवा\nमाता जाकी पार्वती पिता महादेवा\nएकदंत दयावंत चार भुजाधारी\nमस्तक सिंदूर सोहे मूसे की सवारी\n\nअंधे को आंख देत कोढ़ी को काया\nबांझ को पुत्र देत निर्धन को माया\nसूर श्याम शरण आए सफल कीजे सेवा\nमाता जाकी पार्वती पिता महादेवा\n\nदीनन की लाज राखो शंभु सुतकारी\nकामना करो पूरी आस तुम्हारी\nराम श्याम मेरे घट में बसो निरंतर\nमाता जाकी पार्वती पिता महादेवा\n\nजय गणेश जय गणेश जय गणेश देवा\nमाता जाकी पार्वती पिता महादेवा",
+        "english": "Victory to Ganesha, victory to Lord Ganesha\nWhose mother is Parvati and father is Mahadeva\nOne-tusked, compassionate, bearer of four arms\nVermillion adorns his forehead, riding on a mouse\n\nYou give eyes to the blind, body to the leper\nYou give children to the childless, wealth to the poor\nSur Shyam has come to your shelter, make his service successful\nWhose mother is Parvati and father is Mahadeva\n\nProtect the honor of the humble, O son of Shambhu\nFulfill desires, you are our hope\nRam Shyam, reside in my heart continuously\nWhose mother is Parvati and father is Mahadeva\n\nVictory to Ganesha, victory to Ganesha, victory to Lord Ganesha\nWhose mother is Parvati and father is Mahadeva",
+        "meaning": "This is a traditional Hindu aarti that praises Lord Ganesha and his divine parents, Lord Shiva and Goddess Parvati. It is a song of devotion and a plea for blessings, with lyrics that glorify his form and his role as the remover of all obstacles."
+      }
+    }
+  ],
+  "featured": true,
+  "seo": {
+    "keywords": ["ganesh chaturthi", "lord ganesha", "remover of obstacles", "elephant god", "hindu festival"],
+    "description": "Ganesh Chaturthi Festival of Lord Ganesha - Complete guide with stories, bhajans, aartis, and rituals. Learn about the birth of Ganesha and seek his blessings."
+  }
+}
