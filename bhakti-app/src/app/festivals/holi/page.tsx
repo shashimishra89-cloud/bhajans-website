@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Calendar, Sparkles, ChevronRight, Clock, MapPin, Heart, BookOpen } from "lucide-react";
+import { Calendar, Sparkles, ChevronRight, Clock, MapPin, Heart, BookOpen, ChevronDown } from "lucide-react";
 import { BannerAd, InContentAd } from "@/components/AdBlock";
 import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
+import { useState } from "react";
 
 // Static data - in production this would be loaded from JSON
 const festivalData = {
@@ -22,67 +25,166 @@ const festivalData = {
       content: "Holi, known as the festival of colors, is one of the most joyous and vibrant Hindu festivals. It marks the arrival of spring and celebrates the eternal love between Radha and Krishna."
     },
     {
-      type: "historical_significance",
-      title: "Historical Significance",
-      content: "Holi has ancient roots and is mentioned in Hindu scriptures like the Vedas and Puranas. The festival celebrates various divine events and has been celebrated for thousands of years across the Indian subcontinent."
+      type: "spiritual_significance",
+      title: "Spiritual Significance of Holi",
+      content: "Holi represents the triumph of good over evil, light over darkness, and the arrival of spring. The festival teaches us about forgiveness, new beginnings, and the power of divine love."
     },
     {
       type: "stories",
-      title: "Famous Stories",
-      content: "Holi is associated with several beautiful stories from Hindu mythology, each teaching important moral lessons.",
+      title: "Sacred Stories of Holi",
+      content: "Holi is associated with several beautiful stories from Hindu mythology, each teaching important moral lessons about devotion, love, and divine protection.",
       subsections: [
         {
-          title: "Radha and Krishna's Love",
-          content: "The most popular story of Holi celebrates the divine love between Radha and Krishna. Young Krishna, jealous of Radha's fair complexion, playfully colored her face with colors. Radha, in turn, colored Krishna's face, and this divine play became the tradition of applying colors during Holi."
+          title: "Prahlada and Holika",
+          content: "The most revered story of Holi originates from ancient Hindu scriptures, particularly the Bhagavata Purana. King Hiranyakashipu, through intense penance, received a boon from Lord Brahma that made him virtually invincible - he could not be killed by man or beast, day or night, inside or outside, with weapons or bare hands. Arrogant with power, he demanded that everyone in his kingdom worship him as the supreme deity. However, his own son Prahlada remained a staunch devotee of Lord Vishnu, refusing to worship his father. Enraged by his son's devotion, Hiranyakashipu subjected Prahlada to numerous cruel punishments, but the boy remained unharmed due to Vishnu's divine protection. Finally, Hiranyakashipu's sister Holika, who had a boon making her immune to fire, tricked Prahlada into sitting with her on a burning pyre. As the flames rose, Prahlada chanted Vishnu's name with unwavering faith. Miraculously, Holika's boon failed because she had used it for evil purposes, and she was consumed by the fire while Prahlada emerged unscathed, protected by divine intervention. This divine event symbolizes the eternal truth that devotion and righteousness always triumph over evil and arrogance. The Holika Dahan ceremony, where bonfires are lit the night before Holi, commemorates this victory of good over evil.",
+          hindi: "प्रहलाद और होलिका की कथा",
+          english: "The Victory of Devotion Over Evil"
         },
         {
-          title: "Prahlada and Holika",
-          content: "The festival also commemorates the story of Prahlada, a devout devotee of Lord Vishnu, and his evil aunt Holika. Holika had a boon that made her immune to fire, but when she tried to burn Prahlada, the boon failed and she was burned while Prahlada was saved by Vishnu's protection."
+          title: "Radha and Krishna's Divine Love",
+          content: "The most beloved aspect of Holi celebrates the divine love (Leela) between Lord Krishna and Radha in the sacred land of Vrindavan. According to folklore, young Krishna, with his dark complexion, was once playfully jealous of Radha's fair beauty. His mother Yashoda playfully suggested that he could color Radha's face with colors to make her complexion match his. Krishna, along with his friends (gopas), playfully applied colors to Radha and her friends (gopis), who in turn colored Krishna's face. This divine play became the foundation of Holi's color-throwing tradition. The story represents the spiritual truth that divine love transcends all physical appearances and social barriers. In Vrindavan and Mathura, this aspect of Holi is celebrated for weeks with great devotion. The famous 'Phoolon Ki Holi' (Flower Holi) at Banke Bihari Temple in Vrindavan, where flowers are thrown instead of colors, and the 'Lathmar Holi' in Barsana, where women playfully beat men with sticks, reenact Krishna's playful encounters with Radha and the gopis. This divine love story teaches us that true devotion and love are color-blind and celebrate the divine presence in every soul.",
+          hindi: "राधा-कृष्ण का दिव्य प्रेम",
+          english: "The Eternal Love of Radha and Krishna"
         },
         {
           title: "Kamadeva's Revival",
-          content: "In some traditions, Holi also celebrates the revival of Kamadeva, the god of love, who was burned to ashes by Lord Shiva's third eye but later revived on this day."
+          content: "An often-overlooked but significant story associated with Holi involves Kamadeva, the god of love and desire. According to Hindu mythology, when Goddess Sati immolated herself in her father Daksha's yajna, Lord Shiva was so overcome with grief that he renounced all worldly affairs and went into deep meditation in the Himalayas. This created imbalance in the universe as creation itself depended on Shiva's union with Shakti. The gods, concerned about cosmic order, sent Kamadeva to awaken Shiva from his meditation. Kamadeva shot his arrow of flowers at Shiva, which disturbed his meditation. Enraged, Shiva opened his third eye and burned Kamadeva to ashes with his fiery gaze. However, realizing Kamadeva's noble intentions, Shiva later granted him a boon that while his physical form was destroyed, he would continue to exist as an invisible force of love and desire. Holi is celebrated as the day when Kamadeva was revived, marking the return of love and passion to the world. This story symbolizes the victory of love over destruction and the importance of balancing spiritual discipline with worldly responsibilities. It reminds us that love and desire, when pure and devoted, are essential aspects of divine creation.",
+          hindi: "कामदेव का पुनर्जीवन",
+          english: "The Resurrection of the God of Love"
         }
       ]
     },
     {
-      type: "rituals",
-      title: "Rituals and Celebrations",
-      content: "Holi celebrations span two days with distinct rituals and traditions.",
+      type: "celebrations",
+      title: "How Holi is Celebrated",
+      content: "Holi celebrations span two days with distinct rituals and traditions across different regions of India.",
       subsections: [
         {
-          title: "Holika Dahan",
-          content: "The first night of Holi involves the Holika Dahan ceremony, where bonfires are lit to symbolize the burning of evil. People gather around the fire, perform rituals, and offer prayers for the destruction of their inner evils."
+          title: "Holika Dahan - Bonfire Ceremony",
+          content: "The first night of Holi involves the Holika Dahan ceremony, where bonfires are lit to symbolize the burning of evil. People gather around the fire, perform rituals, and offer prayers for the destruction of their inner evils.",
+          hindi: "होलिका दहन",
+          english: "The Burning of Evil"
         },
         {
-          title: "Rangwali Holi",
-          content: "The second day is the main celebration where people play with colors. Streets come alive with people throwing colored powder (gulal) and colored water, dancing to traditional songs, and sharing festive foods."
+          title: "Rangwali Holi - Playing with Colors",
+          content: "The second day is the main celebration where people play with colors. Streets come alive with people throwing colored powder (gulal) and colored water, dancing to traditional songs, and sharing festive foods.",
+          hindi: "रंगाली होली",
+          english: "The Festival of Colors"
         },
         {
-          title: "Traditional Foods",
-          content: "Special Holi delicacies include gujiya (sweet dumplings), mathri (savory snacks), thandai (cooling drink), and various sweets that are shared among family and friends."
+          title: "Traditional Holi Foods",
+          content: "Special Holi delicacies include gujiya (sweet dumplings), mathri (savory snacks), thandai (cooling drink), and various sweets that are shared among family and friends.",
+          hindi: "होली के व्यंजन",
+          english: "Traditional Holi Delicacies"
         },
         {
-          title: "Cultural Events",
-          content: "In regions like Mathura and Vrindavan, Holi celebrations last for over a week with special events like Lathmar Holi, where women playfully beat men with sticks, reenacting Krishna's playful encounters with the gopis."
+          title: "Regional Celebrations",
+          content: "In regions like Mathura and Vrindavan, Holi celebrations last for over a week with special events like Lathmar Holi, where women playfully beat men with sticks, reenacting Krishna's playful encounters with the gopis.",
+          hindi: "क्षेत्रीय उत्सव",
+          english: "Regional Holi Traditions"
+        }
+      ]
+    },
+    {
+      type: "foods",
+      title: "Traditional Holi Delicacies",
+      content: "Holi is celebrated with various traditional foods that hold cultural and religious significance.",
+      subsections: [
+        {
+          title: "Gujiya",
+          hindi: "गुझिया",
+          english: "Sweet Dumplings",
+          content: "Traditional crescent-shaped sweet dumplings that are quintessential to Holi celebrations. Made with refined flour (maida) or whole wheat flour, stuffed with sweet khoya (milk solids) mixed with dried fruits, nuts, and cardamom powder. The dough is kneaded with ghee and milk, then shaped into half-moons with the filling inside. Deep-fried to golden perfection in pure ghee until crispy on outside and soft inside. Often garnished with pistachios and almonds. These sweets represent the sweetness of relationships and the joy of sharing during festivals. Each region has its variation - some use semolina (sooji) instead of khoya, while others add coconut or mawa. The preparation is a family ritual where women gather days before Holi to make these delicacies together."
+        },
+        {
+          title: "Thandai",
+          hindi: "ठंडाई",
+          english: "Cooling Drink",
+          content: "A refreshing, cooling beverage essential for Holi celebrations, especially during the color play when people are outdoors in the sun. Made from full-fat milk, yogurt, and sugar, flavored with aromatic spices like cardamom, black pepper, and fennel seeds. The special ingredient is bhang (cannabis leaves) in some traditional preparations, though many families make it without. The drink is garnished with rose petals, saffron strands, and sometimes almond paste. Thandai helps balance the body's heat during spring season and provides energy during the energetic celebrations. The name literally means 'cooling' in Hindi, and it's believed to have medicinal properties that help prevent heat strokes during outdoor festivities."
+        },
+        {
+          title: "Malpua",
+          hindi: "मालपुआ",
+          english: "Sweet Fritters",
+          content: "Traditional Indian pancakes that are crispy on edges and soft in the center, beloved during Holi and other festivals. Made from a batter of flour, semolina, and mashed bananas or yogurt, sweetened with sugar or jaggery. Flavored with cardamom and sometimes saffron for aroma and color. The batter is poured as small rounds in hot ghee and fried until golden brown. Some variations include adding coconut or khoya to the batter for richness. Malpuas are often served with rabri (thickened sweet milk) or sugar syrup. In some regions, they're made with rice flour instead of wheat flour. These sweet fritters symbolize prosperity and are distributed as prasad (blessed food) in many communities during Holi."
+        },
+        {
+          title: "Dahi Vada",
+          hindi: "दही वड़ा",
+          english: "Savory Lentil Fritters",
+          content: "Popular savory snack that provides a perfect balance to the sweet dishes during Holi. Made from urad dal (black gram) or moong dal (green gram) that's soaked for several hours and then ground into a thick batter. The batter is seasoned with ginger, green chilies, cumin seeds, and salt, then whipped to incorporate air for lightness. Round-shaped dumplings are deep-fried until golden and crispy, then soaked in water to soften. Finally, they're served in thick, seasoned yogurt (dahi) garnished with tamarind chutney, mint-coriander chutney, roasted cumin powder, and chaat masala. Some variations include adding spinach or beetroot to the batter for color and nutrition. This cooling dish helps balance the heat from spicy foods and outdoor activities during Holi celebrations."
+        }
+      ]
+    },
+    {
+      type: "colors_meaning",
+      title: "The Spiritual Meaning of Holi Colors",
+      content: "Each color used during Holi has deep spiritual significance and represents different aspects of life and divinity.",
+      subsections: [
+        {
+          title: "Red",
+          hindi: "लाल",
+          english: "Red Color",
+          content: "Love & Energy - Represents the divine love of Radha and Krishna, symbolizing passion and energy."
+        },
+        {
+          title: "Yellow", 
+          hindi: "पीला",
+          english: "Yellow Color",
+          content: "Prosperity & Turmeric - Represents prosperity, happiness, and the sacred turmeric used in rituals."
+        },
+        {
+          title: "Green",
+          hindi: "हरा",
+          english: "Green Color", 
+          content: "Renewal - Represents spring, new beginnings, and the rejuvenation of nature."
+        },
+        {
+          title: "Blue",
+          hindi: "नीला",
+          english: "Blue Color",
+          content: "Krishna Consciousness - Represents Lord Krishna's divine consciousness and the infinite sky."
+        }
+      ]
+    },
+    {
+      type: "eco_friendly",
+      title: "Eco-Friendly Holi Celebration",
+      content: "Celebrating Holi responsibly while honoring its spiritual significance and protecting the environment.",
+      subsections: [
+        {
+          title: "Use Natural Colors",
+          content: "Opt for natural, organic colors made from flowers and herbs instead of chemical dyes that can harm skin and environment."
+        },
+        {
+          title: "Respect Consent",
+          content: "Always ask for permission before applying colors to others, especially children and elders who may not wish to participate."
+        },
+        {
+          title: "Protect Animals",
+          content: "Avoid using colors that may harm animals. Keep pets indoors during color play and clean up any spills properly."
+        },
+        {
+          title: "Stay Hydrated",
+          content: "Drink plenty of water and stay hydrated during outdoor celebrations, especially when playing in the sun."
         }
       ]
     }
   ]
 };
 
-export const metadata = {
-  title: "Holi Festival - Festival of Colors | Bhakti",
-  description: "Complete guide to Holi festival with colors, rituals, stories, and celebrations. Learn about the Festival of Colors and its significance.",
-  keywords: ["holi", "festival of colors", "radha krishna", "holi celebrations", "holi colors", "holi rituals", "hindu festival", "spring festival"],
-};
-
 export default function HoliPage() {
+  const [expandedStory, setExpandedStory] = useState<number | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [expandedFood, setExpandedFood] = useState<number | null>(null);
+
   const festival = festivalData;
   
   if (!festival) {
     notFound();
   }
+
+  const breadcrumbs = generateBreadcrumbs('festivals', festival.name);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
@@ -95,156 +197,371 @@ export default function HoliPage() {
               <h1 className="text-2xl font-bold text-orange-900">Bhakti</h1>
             </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/festivals" className="text-orange-600 font-semibold">Festivals</Link>
-              <Link href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</Link>
-              <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
-              <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
-              <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
+              <Link href="/festivals" className="text-orange-700 hover:text-orange-900 transition-colors">Festivals</Link>
+              <Link href="/aartis" className="text-orange-700 hover:text-orange-900 transition-colors">Aartis</Link>
+              <Link href="/mantras" className="text-orange-700 hover:text-orange-900 transition-colors">Mantras</Link>
+              <Link href="/stories" className="text-orange-700 hover:text-orange-900 transition-colors">Stories</Link>
             </nav>
           </div>
         </div>
       </header>
 
-      {/* Breadcrumbs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <Breadcrumbs items={generateBreadcrumbs("festivals", festival.name)} />
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center items-center space-x-4 mb-8">
-            <span className="text-8xl">{festival.icon}</span>
-            <div className="text-left">
-              <h1 className="text-5xl font-bold text-orange-900 mb-2">{festival.name}</h1>
-              <p className="text-2xl text-orange-600 font-medium">{festival.title}</p>
-            </div>
+      {/* Hero Section with Animated Background */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-pink-400 to-yellow-400 opacity-20">
+          <div className="absolute inset-0 animate-pulse">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-red-300 rounded-full opacity-30 animate-bounce"></div>
+            <div className="absolute top-20 right-20 w-24 h-24 bg-yellow-300 rounded-full opacity-30 animate-bounce delay-100"></div>
+            <div className="absolute bottom-10 left-1/3 w-28 h-28 bg-pink-300 rounded-full opacity-30 animate-bounce delay-200"></div>
+            <div className="absolute bottom-20 right-1/4 w-36 h-36 bg-green-300 rounded-full opacity-30 animate-bounce delay-300"></div>
           </div>
-          <p className="text-xl text-orange-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            {festival.description}
-          </p>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <div className="mb-8">
+            <Breadcrumbs items={breadcrumbs} />
+          </div>
           
-          <div className="flex flex-wrap justify-center gap-6 text-orange-600">
-            <div className="flex items-center space-x-2">
-              <Calendar className="w-5 h-5" />
-              <span className="font-medium">{festival.date}</span>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-12 border border-orange-200">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600 mb-6">
+              होली - Holi
+            </h1>
+            
+            <div className="space-y-4 text-lg">
+              <p className="text-2xl font-semibold text-orange-800">
+                वसन्तोत्सवोऽयं रंगोत्सवः प्रेमोत्सवश्च।
+              </p>
+              <p className="text-xl text-orange-700">
+                होली – रंगों का उत्सव, प्रेम और भक्ति का पर्व।
+              </p>
+              <p className="text-lg text-gray-700 font-medium">
+                Holi – The Festival of Colors, Divine Love, and Spiritual Renewal
+              </p>
             </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="w-5 h-5" />
-              <span className="font-medium">{festival.duration}</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-5 h-5" />
-              <span className="font-medium">{festival.regions.length}+ Regions</span>
+            
+            <div className="mt-8 flex justify-center">
+              <div className="animate-bounce">
+                <ChevronDown className="h-8 w-8 text-orange-500" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Banner Ad */}
-      <BannerAd adSlot="1234567102" />
-
-      {/* Main Content */}
-      <main className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {festival.sections.map((section, index) => (
-            <div key={index} className="mb-16">
-              <h2 className="text-3xl font-bold text-orange-900 mb-6">{section.title}</h2>
-              <div className="prose prose-orange max-w-none">
-                <p className="text-lg text-orange-700 leading-relaxed mb-6">{section.content}</p>
-                
-                {section.subsections && (
-                  <div className="space-y-8 mt-8">
-                    {section.subsections.map((subsection, subIndex) => (
-                      <div key={subIndex} className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-orange-200">
-                        <h3 className="text-xl font-bold text-orange-900 mb-3">{subsection.title}</h3>
-                        <p className="text-orange-700 leading-relaxed">{subsection.content}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
-              {index < festival.sections.length - 1 && <InContentAd adSlot={`123456710${index + 3}`} />}
-            </div>
-          ))}
-
-          {/* Significance Section */}
-          <div className="bg-gradient-to-r from-orange-100 to-amber-100 rounded-2xl p-8 shadow-lg mb-16">
-            <h2 className="text-3xl font-bold text-orange-900 mb-6">Spiritual Significance</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-4">
-                <Heart className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold text-orange-900 mb-2">Divine Love</h3>
-                  <p className="text-orange-700">Holi celebrates the eternal love between Radha and Krishna, representing the union of the individual soul with the divine.</p>
+      {/* Significance Section - 3 Columns */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
+            Significance of Holi
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Spiritual Significance */}
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-orange-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Heart className="h-8 w-8 text-white" />
                 </div>
+                <h3 className="text-xl font-bold text-orange-800 mb-2">
+                  Spiritual Significance
+                </h3>
+                <p className="text-orange-600 font-medium">
+                  आध्यात्मिक महत्व
+                </p>
               </div>
-              <div className="flex items-start space-x-4">
-                <BookOpen className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold text-orange-900 mb-2">Equality and Joy</h3>
-                  <p className="text-orange-700">During Holi, all social barriers dissolve as everyone comes together to celebrate with colors, symbolizing equality and universal brotherhood.</p>
-                </div>
-              </div>
+              <p className="text-gray-700 leading-relaxed">
+                The victory of Prahlada's devotion over Holika's evil, symbolizing triumph of good over evil and power of unwavering faith in the divine.
+              </p>
             </div>
-          </div>
 
-          {/* Related Festivals */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-orange-900 mb-8">Related Festivals</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Link href="/festivals/diwali" className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-orange-200">
-                <div className="text-4xl mb-4 text-center">🪔</div>
-                <h3 className="text-lg font-bold text-orange-900 text-center group-hover:text-orange-600">Diwali</h3>
-                <p className="text-orange-600 text-center text-sm mt-2">Festival of Lights</p>
-              </Link>
-              <Link href="/festivals/ganesh-chaturthi" className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-orange-200">
-                <div className="text-4xl mb-4 text-center">🐘</div>
-                <h3 className="text-lg font-bold text-orange-900 text-center group-hover:text-orange-600">Ganesh Chaturthi</h3>
-                <p className="text-orange-600 text-center text-sm mt-2">Lord Ganesha's Birthday</p>
-              </Link>
-              <Link href="/festivals/navratri" className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-orange-200">
-                <div className="text-4xl mb-4 text-center">💃</div>
-                <h3 className="text-lg font-bold text-orange-900 text-center group-hover:text-orange-600">Navratri</h3>
-                <p className="text-orange-600 text-center text-sm mt-2">Nine Nights of Goddess</p>
-              </Link>
+            {/* Seasonal Significance */}
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-orange-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Calendar className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-orange-800 mb-2">
+                  Seasonal Significance
+                </h3>
+                <p className="text-orange-600 font-medium">
+                  ऋतु महत्व
+                </p>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Marks the arrival of spring, celebrating agricultural renewal, new harvests, and rejuvenation of nature after winter's dormancy.
+              </p>
+            </div>
+
+            {/* Social Significance */}
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-orange-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Sparkles className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-orange-800 mb-2">
+                  Social Significance
+                </h3>
+                <p className="text-orange-600 font-medium">
+                  सामाजिक महत्व
+                </p>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Brings communities together, breaks down social barriers, and promotes forgiveness, unity, and celebration of human relationships.
+              </p>
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
-      {/* Footer */}
-      <footer className="bg-gradient-to-r from-orange-900 to-red-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+      <BannerAd />
+
+      {/* Mythological Stories - Accordion */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-orange-50/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
+          <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
+            Sacred Stories of Holi
+          </h2>
+          
+          <div className="space-y-6">
+            {festival.sections.find(s => s.type === 'stories')?.subsections?.map((story, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-orange-100">
+                <button
+                  onClick={() => setExpandedStory(expandedStory === index ? null : index)}
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-orange-50 transition-colors"
+                >
+                  <div>
+                    <h3 className="text-xl font-bold text-orange-800 mb-1">
+                      {story.title}
+                    </h3>
+                    <p className="text-orange-600 font-medium">
+                      {story.hindi}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {story.english}
+                    </p>
+                  </div>
+                  <ChevronDown 
+                    className={`h-6 w-6 text-orange-500 transition-transform ${
+                      expandedStory === index ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                
+                {expandedStory === index && (
+                  <div className="px-8 pb-6 border-t border-orange-100">
+                    <div className="pt-4">
+                      <div className="w-full h-1 bg-gradient-to-r from-orange-200 via-pink-200 to-yellow-200 rounded-full mb-4"></div>
+                      <p className="text-gray-700 leading-relaxed">
+                        {story.content}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
-              <h3 className="text-3xl font-bold">Bhakti</h3>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <InContentAd />
+
+      {/* Regional Celebrations */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
+            How Holi is Celebrated
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-orange-100 to-pink-100 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-orange-900 mb-4">
+                Mathura & Vrindavan
+              </h3>
+              <p className="text-orange-700 mb-4 font-medium">
+                मथुरा और वृन्दावन
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                The heartland of Holi celebrations, where festivities last for weeks. The famous Lathmar Holi of Barsana and the grand celebrations at Banke Bihari Temple attract devotees from worldwide.
+              </p>
             </div>
-            <p className="text-xl text-orange-200 mb-8 max-w-2xl mx-auto">
-              A Sacred Space for Devotion
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <Link href="/festivals" className="text-orange-200 hover:text-white transition-colors">Festivals</Link>
-              <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">Aartis</Link>
-              <Link href="/bhajans" className="text-orange-200 hover:text-white transition-colors">Bhajans</Link>
-              <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">Mantras</Link>
-              <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">Stories</Link>
+            
+            <div className="bg-gradient-to-br from-yellow-100 to-green-100 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-orange-900 mb-4">
+                Modern Celebrations
+              </h3>
+              <p className="text-orange-700 mb-4 font-medium">
+                आधुनिक उत्सव
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Community gatherings, color parties in parks and societies, and cultural programs that bring people together across all ages and backgrounds to celebrate the joy of Holi.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Traditional Foods - 4 Card Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-yellow-50/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
+            Traditional Holi Delicacies
+          </h2>
           
-          <div className="border-t border-orange-800 pt-8 text-center">
-            <p className="text-orange-300 text-sm mb-4">
-              © 2024 Bhakti. Preserving and sharing sacred traditions of Hindu culture.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-              <Link href="/privacy" className="text-orange-300 hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-orange-300 hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/contact" className="text-orange-300 hover:text-white transition-colors">Contact</Link>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {festival.sections.find(s => s.type === 'foods')?.subsections?.map((food, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-orange-100">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-orange-800 mb-2">
+                    {food.title}
+                  </h3>
+                  <p className="text-orange-600 font-medium mb-2">
+                    {food.hindi}
+                  </p>
+                  <p className="text-gray-600 text-sm mb-3">
+                    {food.english}
+                  </p>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {food.content}
+                  </p>
+                  
+                  <button
+                    onClick={() => setExpandedFood(expandedFood === index ? null : index)}
+                    className="mt-4 w-full text-orange-600 hover:text-orange-800 font-medium text-sm flex items-center justify-center"
+                  >
+                    {expandedFood === index ? 'Hide Details' : 'How it\'s prepared'}
+                    <ChevronDown 
+                      className={`ml-2 h-4 w-4 transition-transform ${
+                        expandedFood === index ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  
+                  {expandedFood === index && (
+                    <div className="mt-4 pt-4 border-t border-orange-100">
+                      <p className="text-gray-600 text-sm mb-3">
+                        {food.title === 'Gujiya' && "The preparation begins 2-3 days before Holi. Khoya is prepared by reducing milk to solids, then mixed with finely chopped nuts, cardamom powder, and sugar. The dough is made with flour, ghee, and milk, rested for 30 minutes, then rolled thin. Filling is placed, edges sealed with water, and deep-fried in medium-hot ghee until golden. The key is maintaining the right oil temperature - too hot burns the outside, too cool makes them oily."}
+                        {food.title === 'Thandai' && "Prepared by soaking almonds, poppy seeds, melon seeds, and fennel seeds overnight, then grinding into fine paste. Milk is boiled with this paste, sugar, and cardamom. Served chilled with garnish of rose petals and saffron. Some families add a pinch of black pepper for warmth. The drink should be prepared fresh and consumed within 24 hours for best taste and medicinal properties."}
+                        {food.title === 'Malpua' && "Batter is prepared by mixing flour with semolina, mashed bananas, and yogurt. Sugar and cardamom are added for sweetness and aroma. The batter rests for 1-2 hours to ferment slightly. Small ladles of batter are poured into hot ghee, spreading naturally into round shapes. Fried until golden brown on both sides, then drained on paper towels. For extra richness, some add khoya or coconut to the batter."}
+                        {food.title === 'Dahi Vada' && "Dal is soaked for 4-6 hours, then ground with ginger, green chilies, and salt to a thick batter. The batter is whipped vigorously for 5-10 minutes to incorporate air. Small vadas are fried in hot oil until golden. Immediately soaked in warm water for 15-20 minutes to soften, then gently squeezed and placed in seasoned yogurt. Garnished with spices and chutneys just before serving."}
+                      </p>
+                      <div className="text-xs text-gray-500 mt-2">
+                        <strong>Key Ingredients:</strong> {
+                          food.title === 'Gujiya' ? "Flour, khoya, nuts, cardamom, ghee, sugar" :
+                          food.title === 'Thandai' ? "Milk, yogurt, almonds, fennel, cardamom, rose petals" :
+                          food.title === 'Malpua' ? "Flour, semolina, banana, sugar, ghee, cardamom" :
+                          "Urad dal, yogurt, ginger, chilies, cumin, spices"
+                        }
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <BannerAd />
+
+      {/* Interactive Colors Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
+            The Spiritual Meaning of Colors
+          </h2>
+          
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
+            {festival.sections.find(s => s.type === 'colors_meaning')?.subsections?.map((color, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedColor(selectedColor === color.title ? null : color.title)}
+                className={`p-6 rounded-xl border-2 transition-all ${
+                  selectedColor === color.title 
+                    ? 'border-orange-500 bg-orange-50 scale-105' 
+                    : 'border-orange-200 bg-white hover:border-orange-300'
+                }`}
+              >
+                <div 
+                  className={`w-16 h-16 rounded-full mx-auto mb-4 ${
+                    color.title === 'Red' ? 'bg-red-400' :
+                    color.title === 'Yellow' ? 'bg-yellow-400' :
+                    color.title === 'Green' ? 'bg-green-400' :
+                    'bg-blue-400'
+                  }`}
+                ></div>
+                <h3 className="text-lg font-bold text-orange-800 mb-1">
+                  {color.title}
+                </h3>
+                <p className="text-orange-600 text-sm">
+                  {color.hindi}
+                </p>
+              </button>
+            ))}
+          </div>
+          
+          {selectedColor && (
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-orange-200">
+              <h3 className="text-2xl font-bold text-orange-900 mb-4">
+                {selectedColor}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                {festival.sections.find(s => s.type === 'colors_meaning')?.subsections?.find(c => c.title === selectedColor)?.content}
+              </p>
             </div>
+          )}
+        </div>
+      </section>
+
+      <InContentAd />
+
+      {/* Eco-Friendly Holi */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-green-50/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
+            Eco-Friendly Holi Celebration
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {festival.sections.find(s => s.type === 'eco_friendly')?.subsections?.map((tip, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-green-100">
+                <div className="w-12 h-12 bg-green-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Heart className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-orange-800 mb-3">
+                  {tip.title}
+                </h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {tip.content}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-orange-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Sparkles className="h-6 w-6" />
+            <span className="text-lg font-semibold">Bhakti</span>
+          </div>
+          <p className="text-orange-200">
+            Celebrating the divine festivals of Sanatana Dharma with devotion and love
+          </p>
+          <div className="mt-6 space-x-6 flex justify-center">
+            <Link href="/festivals" className="text-orange-200 hover:text-white transition-colors">
+              Festivals
+            </Link>
+            <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">
+              Aartis
+            </Link>
+            <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">
+              Mantras
+            </Link>
+            <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">
+              Stories
+            </Link>
           </div>
         </div>
       </footer>
