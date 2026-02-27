@@ -13,41 +13,70 @@ const aartiData = {
   description: "A powerful aarti dedicated to Lord Shiva, the supreme deity of destruction and transformation.",
   deity: "Lord Shiva",
   lyrics: {
-    hindi: [
-      "ॐ जय शिव ओंकारा, प्रभु शिव ओंकारा",
-      "ब्रम्हा विष्णु सदाशिव, जानत अकलंका",
-      "जय शिव ओंकारा...",
-      "एक निरंजन, दुइ निरंजन, तीन निरंजन चार",
-      "पांच निरंजन, सात निरंजन, अठ निरंजन नव",
-      "दश निरंजन, एक दश निरंजन, बारह निरंजन",
-      "तेरह निरंजन, चौदह निरंजन, पंद्रह निरंजन",
-      "सोळास निरंजन, सत्रा निरंजन, अठारह निरंजन",
-      "एकोणीस निरंजन, वीस निरंजन, एक वीस निरंजन",
-      "बाईस निरंजन, तेईस निरंजन, चोवीस निरंजन",
-      "पच्चीस निरंजन, सवा पच्चीस निरंजन, सत्तावीस निरंजन",
-      "अठ्ठाईस निरंजन, एकोणीस निरंजन, तीस निरंजन",
-      "एकतीस निरंजन, बत्तीस निरंजन, तेहतीस निरंजन",
-      "चोतीस निरंजन, पेचतीस निरंजन, छत्तीस निरंजन",
-      "सदा शिव राजा, सदा शिव राजा, सदा शिव राजा",
-      "जय शिव ओंकारा..."
+    sanskrit: [
+      "ॐ जय शिवोंकारः, प्रभुः शिवोंकारः",
+      "ब्रह्मा विष्णुः सदाशिवः, ज्ञातः अकलन्कः",
+      "जय शिवोंकारः...",
+      "एकः निरञ्जनः, द्वौ निरञ्जनौ, त्रयः निरञ्जनाः, चत्वारः निरञ्जनाः",
+      "पञ्च निरञ्जनाः, सप्त निरञ्जनाः, अष्ट निरञ्जनाः, नव निरञ्जनाः",
+      "दश निरञ्जनाः, एकादश निरञ्जनाः, द्वादश निरञ्जनाः",
+      "त्रयोदश निरञ्जनाः, चतुर्दश निरञ्जनाः, पञ्चदश निरञ्जनाः",
+      "षोडश निरञ्जनाः, सप्तदश निरञ्जनाः, अष्टादश निरञ्जनाः, एकोनविंशतिः निरञ्जनाः",
+      "एकोनविंशतिः निरञ्जनाः, विंशतिः निरञ्जनाः, एकविंशतिः निरञ्जनाः",
+      "द्वाविंशतिः निरञ्जनाः, त्रयोविंशतिः निरञ्जनाः, चतुर्विंशतिः निरञ्जनाः",
+      "पञ्चविंशतिः निरञ्जनाः, सप्तविंशतिः निरञ्जनाः, अष्टाविंशतिः निरञ्जनाः, एकोनत्रिंशत् निरञ्जनाः",
+      "अष्टाविंशतिः निरञ्जनाः, एकोनत्रिंशत् निरञ्जनाः, विंशतिः निरञ्जनाः, एकविंशतिः निरञ्जनाः",
+      "जय शिवोंकारः..."
     ],
-    english: [
-      "Om Jai Shiv Omkara, Prabhu Shiv Omkara",
-      "Brahma Vishnu Sadashiv, Janat Akalanka",
-      "Jai Shiv Omkara...",
-      "Eka Niranjan, Dui Niranjan, Teen Niranjan Char",
-      "Paanch Niranjan, Saat Niranjan, Aath Niranjan Nav",
-      "Dash Niranjan, Ek Dash Niranjan, Barah Niranjan",
-      "Terah Niranjan, Chaudah Niranjan, Pandrah Niranjan",
-      "Shodash Niranjan, Satrah Niranjan, Atharah Niranjan",
-      "Ek Nis Niranjan, Vees Niranjan, Ek Vees Niranjan",
-      "Bais Niranjan, Tis Niranjan, Chovis Niranjan",
-      "Pachis Niranjan, Sava Pachis Niranjan, Sattavis Niranjan",
-      "Athais Niranjan, Ek Nis Niranjan, Tees Niranjan",
-      "Ekatis Niranjan, Batis Niranjan, Tethis Niranjan",
-      "Chotis Niranjan, Pechis Niranjan, Chhattis Niranjan",
-      "Sada Shiv Raja, Sada Shiv Raja, Sada Shiv Raja",
-      "Jai Shiv Omkara..."
+    translations: [
+      {
+        hindi: "ॐ हे सभी शिव को, जो तीनों का स्वामी है, मैं उनकी पूजा करता हूँ।",
+        english: "Om, to the three-eyed Lord Shiva, who is the essence of all knowledge, I offer my prayers."
+      },
+      {
+        hindi: "ब्रम्हा, विष्णु, महेश, जानत अकलंका, सगर और चंद्र हैं।",
+        english: "Brahma, Vishnu, and Mahesh, the creator, sustainer, and destroyer, I meditate upon."
+      },
+      {
+        hindi: "जय शिव ओंकारा, जिनकी महिमा से सब संसारणों का नाश करते हैं।",
+        english: "Jai Shiv Omkara, whose glory fills the entire universe."
+      },
+      {
+        hindi: "एक निरंजन, दुइ निरंजन, तीन निरंजन, चार निरंजन, पंद्रह निरंजन।",
+        english: "One without beginning, middle, or end, who pervades all existence."
+      },
+      {
+        hindi: "पांच निरंजन, सात निरंजन, अठ निरंजन, नव निरंजन।",
+        english: "Who wears the moon as his crown and the serpent as his necklace."
+      },
+      {
+        hindi: "दश निरंजन, एक दश निरंजन, बारह निरंजन।",
+        english: "One with three eyes in whom the three worlds reside."
+      },
+      {
+        hindi: "तेरह निरंजन, चौदह निरंजन, पंद्रह निरंजन।",
+        english: "Who removes all obstacles and grants all desires."
+      },
+      {
+        hindi: "सोळास निरंजन, सत्रा निरंजन, अठ निरंजन, नव निरंजन।",
+        english: "Whose form is frightening and who is compassionate."
+      },
+      {
+        hindi: "एकोणीस निरंजन, वीस निरंजन, एक वीस निरंजन।",
+        english: "One who gives both prosperity and liberation."
+      },
+      {
+        hindi: "बाईस निरंजन, तेईस निरंजन, चोवीस निरंजन।",
+        english: "Who is eternal and the witness to all."
+      },
+      {
+        hindi: "अठ्ठाईस निरंजन, एकोणीस निरंजन, वीस निरंजन, एक वीस निरंजन।",
+        english: "One who knows all and is beyond all gunas."
+      },
+      {
+        hindi: "जय शिव ओंकारा...",
+        english: "Jai Shiv Omkara..."
+      }
     ]
   },
   meaning: "This aarti glorifies Lord Shiva as the supreme being who is beyond all attributes (Niranjan). It describes his various forms and manifestations, emphasizing his eternal nature and his role as the ultimate reality.",
@@ -161,13 +190,13 @@ export default function ShivAartiPage() {
 
         <InContentAd />
 
-        {/* Hindi Lyrics */}
+        {/* Sanskrit Shlokas */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Hindi Lyrics</h2>
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">Sanskrit Shlokas</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
             <div className="space-y-3">
-              {aarti.lyrics.hindi.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed">
+              {aarti.lyrics.sanskrit.map((line, index) => (
+                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed text-center">
                   {line}
                 </p>
               ))}
@@ -175,17 +204,30 @@ export default function ShivAartiPage() {
           </div>
         </section>
 
-        {/* English Translation */}
+        <InContentAd />
+
+        {/* Translations */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">English Translation</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-            <div className="space-y-3">
-              {aarti.lyrics.english.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                  {line}
-                </p>
-              ))}
-            </div>
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">Shloka Translations</h2>
+          <div className="space-y-6">
+            {aarti.lyrics.translations.map((translation, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
+                    <h4 className="text-lg font-bold text-blue-900 mb-3">हिन्दी</h4>
+                    <p className="text-gray-700 leading-relaxed" dir="rtl">
+                      {translation.hindi}
+                    </p>
+                  </div>
+                  <div className="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <h4 className="text-lg font-bold text-purple-900 mb-3">English</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      {translation.english}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
