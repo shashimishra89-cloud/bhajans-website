@@ -8,24 +8,33 @@ import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
 
 const aartiData = {
   id: "ganesh-aarti",
-  name: "Ganesh Aarti",
+  name: "श्री गणेश जी की आरती | Ganesh Ji Ki Aarti Lyrics in Hindi",
   title: "Jai Ganesh Jai Ganesh Deva",
   description: "The most beloved aarti dedicated to Lord Ganesha, the remover of obstacles and the god of wisdom.",
   deity: "Lord Ganesha",
   lyrics: {
     sanskrit: [
-      "ॐ जय गणेश जय गणेश देवा",
-      "माता यस्य पार्वती पिता महेश्वरः",
-      "एकदन्तः दयावान् चतुर्भुजधारी",
-      "मस्तके सिन्दूरं मूषकवाहनः",
-      "अन्धेभ्यः दृष्टिं ददाति कुष्ठिनो देहं",
-      "वन्ध्येभ्यः पुत्रं ददाति दरिद्रेभ्यः धनम्",
-      "सूर्यश्यामौ शरणं यातौ सफलं कुरु",
-      "कामनाः पूर्यन्तां दुःखिनो दूरीयन्ताम्",
-      "दीनानां लज्जां रक्षति दुःखितानां दुःखानि",
-      "निवारयति दुःखितानां दुःखानि",
-      "जय गणेश जय गणेश देवा",
-      "माता यस्य पार्वती पिता महेश्वरः"
+      "जय गणेश जय गणेश देवा, जय गणेश देवा।",
+      "माता जाकी पार्वती, पिता महादेवा।",
+      "एक दंत दयावंत, चार भुजा धारी।",
+      "मस्तक सिंदूर सोहे, मूसे की सवारी।",
+      "जय गणेश जय गणेश देवा, जय गणेश देवा।",
+      "माता जाकी पार्वती, पिता महादेवा।",
+      "पान चढ़े फल चढ़े, और चढ़े मेवा।",
+      "लड्डुअन का भोग लगे, संत करें सेवा।",
+      "जय गणेश जय गणेश देवा, जय गणेश देवा।",
+      "माता जाकी पार्वती, पिता महादेवा।",
+      "अंधन को आंख देत, कोढ़िन को काया।",
+      "बांझन को पुत्र देत, निर्धन को माया।",
+      "जय गणेश जय गणेश देवा, जय गणेश देवा।",
+      "माता जाकी पार्वती, पिता महादेवा।",
+      "सूर श्याम शरण आए, सफल कीजे सेवा।",
+      "माता जाकी पार्वती, पिता महादेवा।",
+      "दीनन की लाज रखो, शंभु सुतकारी।",
+      "कामना को पूरण करो, जाऊं बलिहारी।",
+      "जय गणेश जय गणेश देवा, जय गणेश देवा।",
+      "माता जाकी पार्वती, पिता महादेवा।",
+      "भगवान गणेश की जय, पार्वती के लल्ला की जय, ओम गं गणपतये नमः"
     ],
     translations: [
       {
@@ -34,7 +43,7 @@ const aartiData = {
       },
       {
         hindi: "माता पार्वती और पिता महादेव शिव हैं।",
-        english: "Your mother is Parvati and your father is the great deity Shiva."
+        english: "Your mother is Parvati and your father is great deity Shiva."
       },
       {
         hindi: "एक दांत वाले, दयावान और चार भुजाओं वाले।",
@@ -71,10 +80,10 @@ const aartiData = {
     ]
   },
   meaning: "This aarti glorifies Lord Ganesha as the remover of obstacles and bestower of wisdom.",
-  significance: "Ganesh Aarti is performed to seek blessings of Lord Ganesha for removing obstacles, granting wisdom.",
+  significance: "Ganesh Aarti is performed to seek the blessings of Lord Ganesha for removing obstacles, granting wisdom, and achieving success in all endeavors.",
   benefits: [
     "Removal of obstacles and challenges",
-    "Wisdom and intellectual clarity",
+    "Wisdom and intellectual clarity", 
     "Success in new ventures and projects",
     "Protection from negative energies"
   ]
@@ -116,8 +125,13 @@ export default function GaneshAartiPage() {
           
           <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl shadow-xl p-8 md:p-12 border border-orange-200">
             <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Music className="h-12 w-12 text-white" />
+              <div className="w-32 h-32 mx-auto mb-8 flex flex-col items-center justify-center">
+                <img 
+                  src="/images/ganesh.jpg" 
+                  alt="Lord Ganesha" 
+                  className="w-24 h-24 rounded-full mb-4 object-cover border-4 border-orange-300 shadow-lg"
+                />
+                <Music className="h-8 w-8 text-orange-600" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-orange-900 mb-6">
                 {aarti.name}

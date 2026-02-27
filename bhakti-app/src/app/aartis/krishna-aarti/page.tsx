@@ -9,119 +9,90 @@ import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
 const aartiData = {
   id: "krishna-aarti",
   name: "Krishna Aarti",
-  title: "Om Jai Shri Krishna",
-  description: "A devotional prayer to Lord Krishna, the divine cowherd and embodiment of love and wisdom.",
+  title: "Aarti Kunj Bihari Ki",
+  description: "A melodious aarti dedicated to Lord Krishna, the divine cowherd and embodiment of love.",
   deity: "Lord Krishna",
   lyrics: {
     sanskrit: [
-      "ॐ जय श्रीकृष्णः, जय श्रीकृष्णः",
-      "गोपालः कृष्णः, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः...",
-      "वृन्दावनस्य राजा, जय श्रीकृष्णः",
-      "गोपीनां प्रियः, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः...",
-      "माखनचोरः राजा, जय श्रीकृष्णः",
-      "राधिकायाः प्रियः, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः...",
-      "वंशीवादकः राजा, जय श्रीकृष्णः",
-      "यशोदायाः लालः, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः...",
-      "गीतायाः दाता, जय श्रीकृष्णः",
-      "धर्मस्य रक्षिता, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः...",
-      "भक्तानां सहचारी, जय श्रीकृष्णः",
-      "दुःखिनां दाता, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः...",
-      "ॐ जय श्रीकृष्णः, जय श्रीकृष्णः",
-      "गोपालः कृष्णः, जय श्रीकृष्णः",
-      "जय श्रीकृष्णः..."
+      "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।",
+      "गले में बैजंती माला, बजावै मुरली मधुर बाला।",
+      "श्रवण में कुण्डल झलकाला, नंद के आनंद नंदलाला।",
+      "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।",
+      "गन सम अंग कांति काली, राधिका चमक रही आली।",
+      "लतन में ठाढ़े बनमाली, भ्रमर सी अलक, कस्तूरी तिलक।",
+      "चरन छवि श्यामा प्यारी, गोपी जात प्यारी।",
+      "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।",
+      "कनकमय मोर मुकुट बिलसै, देवता दरसन को तरसैं।",
+      "गगन सों सुमन रासि बरसै, ग्वालिन दारसन को तरसैं।",
+      "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।",
+      "जहां ते प्रकट भई गंगा, कलुष कलि राधारी।",
+      "चमकती उज्ज्वल तट रेनू, बज राधिका चमक।",
+      "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।",
+      "चरन छवि श्यामा प्यारी, गोपी जात प्यारी।",
+      "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।"
     ],
     translations: [
       {
-        hindi: "ॐ हे श्री कृष्ण, जय हो आपकी।",
-        english: "Om, victory to Lord Krishna, victory to Lord Krishna."
+        hindi: "ॐ कुंज बिहारी की आरती है।",
+        english: "Om, this is the aarti of Kunj Bihari."
       },
       {
-        hindi: "गोपाल कृष्ण, जय हो आपकी।",
-        english: "Gopal Krishna, victory to you."
+        hindi: "श्री गिरिधर कृष्ण मुरारी की आरती है।",
+        english: "This is the aarti of Shri Giridhar Krishna Murari."
       },
       {
-        hindi: "जय श्री कृष्ण...",
-        english: "Victory to Lord Krishna..."
+        hindi: "गले में वैजंती माला और मुरली बजा रहे हैं।",
+        english: "You have Vaijayanti mala around your neck and play the flute."
       },
       {
-        hindi: "वृंदावन के राजा, जय हो।",
-        english: "King of Vrindavan, victory to you."
+        hindi: "श्रवण में कुण्डल और नंद के आनंद हैं।",
+        english: "You have peacock feather in your crown and lotus in your ears."
       },
       {
-        hindi: "गोपियों का प्रिय, जय हो।",
-        english: "Beloved of the Gopis, victory to you."
+        hindi: "गन सम अंग कांति काली और राधिका चमक रही हैं।",
+        english: "Your body is blue like the sky and you wear yellow clothes."
       },
       {
-        hindi: "जय श्री कृष्ण...",
-        english: "Victory to Lord Krishna..."
+        hindi: "लतन में ठाढ़े बनमाली और भ्रमर सी अलक हैं।",
+        english: "You wear Banamali in your ears and have a lightning mark."
       },
       {
-        hindi: "माखन चोर राजा, जय हो।",
-        english: "Butter thief king, victory to you."
+        hindi: "चरन छवि श्यामा प्यारी और गोपी जात हैं।",
+        english: "You are served by Shyama and Gopi girls."
       },
       {
-        hindi: "राधिका का प्रिय, जय हो।",
-        english: "Beloved of Radhika, victory to you."
+        hindi: "कनकमय मोर मुकुट बिलसै और देवता दरसन को तरसैं।",
+        english: "Kanhaiya Mukut is your throne and Devaki looks after you."
       },
       {
-        hindi: "जय श्री कृष्ण...",
-        english: "Victory to Lord Krishna..."
+        hindi: "गगन सों और सुमन रासि बरसै रहते हैं।",
+        english: "Gagan and Sumran are always praising you."
       },
       {
-        hindi: "बांसुरी वादक राजा, जय हो।",
-        english: "Flute-playing king, victory to you."
+        hindi: "जहां ते प्रकट भई गंगा और कलुष कलि राधारी हैं।",
+        english: "You are the protector of the world and destroyer of Kaliya."
       },
       {
-        hindi: "यशोदा का लाल, जय हो।",
-        english: "Son of Yashoda, victory to you."
+        hindi: "चमकती उज्ज्वल तट रेनू और बज राधिका चमक।",
+        english: "Chamkari Ujjwal Tej Renoo and Vijay Rajdhani."
       },
       {
-        hindi: "जय श्री कृष्ण...",
-        english: "Victory to Lord Krishna..."
+        hindi: "चरन छवि श्यामा प्यारी और गोपी जात हैं।",
+        english: "You are served by Shyama and Gopi girls."
       },
       {
-        hindi: "गीता का दाता, जय हो।",
-        english: "Giver of the Gita, victory to you."
-      },
-      {
-        hindi: "धर्म का रक्षक, जय हो।",
-        english: "Protector of dharma, victory to you."
-      },
-      {
-        hindi: "जय श्री कृष्ण...",
-        english: "Victory to Lord Krishna..."
-      },
-      {
-        hindi: "भक्तों का साथी, जय हो।",
-        english: "Companion of devotees, victory to you."
-      },
-      {
-        hindi: "दुखियों का दाता, जय हो।",
-        english: "Giver to the sorrowful, victory to you."
-      },
-      {
-        hindi: "जय श्री कृष्ण...",
-        english: "Victory to Lord Krishna..."
-      },
-      {
-        hindi: "ॐ हे श्री कृष्ण, जय हो आपकी।",
-        english: "Om, victory to Lord Krishna, victory to you."
+        hindi: "आरती कुंजबिहारी की, श्री गिरिधर कृष्ण मुरारी की।",
+        english: "Aarti of Kunj Bihari, Shri Giridhar Krishna Murari."
       }
     ]
   },
-  meaning: "This aarti glorifies Lord Krishna in his various divine aspects - as the king of Vrindavan, the beloved of the gopis, the butter thief, the flute player, the giver of the Bhagavad Gita, and the protector of dharma. It celebrates his divine play (lila) and his role as the supreme source of love and wisdom.",
-  significance: "Krishna Aarti is performed to seek the blessings of Lord Krishna for love, wisdom, and spiritual guidance. It helps devotees connect with his divine energy and experience the bliss of devotion.",
+  meaning: "This aarti glorifies Lord Krishna as the divine cowherd who resides in Kunj (Vrindavan). It describes his enchanting form, his divine attributes, and his role as the protector and beloved of all beings.",
+  significance: "Krishna Aarti is performed to seek the blessings of Lord Krishna for love, devotion, protection, and spiritual upliftment. It helps devotees connect with the divine love and compassion of Krishna.",
   benefits: [
     "Divine love and compassion",
-    "Spiritual wisdom and guidance",
-      "Inner peace and happiness",
-      "Blessings for family harmony"
+    "Protection from evil forces",
+    "Spiritual growth and devotion",
+    "Peace and harmony in life"
   ]
 };
 
@@ -136,7 +107,6 @@ export default function KrishnaAartiPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm border-b border-blue-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -147,8 +117,10 @@ export default function KrishnaAartiPage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-blue-700 hover:text-blue-900 transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-blue-700 hover:text-blue-900 transition-colors">Aartis</Link>
+              <Link href="/bhajans" className="text-blue-700 hover:text-blue-900 transition-colors">Bhajans</Link>
               <Link href="/mantras" className="text-blue-700 hover:text-blue-900 transition-colors">Mantras</Link>
               <Link href="/stories" className="text-blue-700 hover:text-blue-900 transition-colors">Stories</Link>
+              <Link href="/gods" className="text-blue-700 hover:text-blue-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>
@@ -161,10 +133,15 @@ export default function KrishnaAartiPage() {
             <Breadcrumbs items={breadcrumbs} />
           </div>
           
-          <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl shadow-xl p-8 md:p-12 border border-blue-200">
+          <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl shadow-xl p-8 md:p-12 border border-blue-200">
             <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Music className="h-12 w-12 text-white" />
+              <div className="w-32 h-32 mx-auto mb-8 flex flex-col items-center justify-center">
+                <img 
+                  src="/images/krishna.jpg" 
+                  alt="Lord Krishna" 
+                  className="w-24 h-24 rounded-full mb-4 object-cover border-4 border-blue-300 shadow-lg"
+                />
+                <Music className="h-8 w-8 text-blue-600" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
                 {aarti.name}
@@ -180,166 +157,101 @@ export default function KrishnaAartiPage() {
         </div>
       </section>
 
-      <BannerAd />
+      {/* Aarti Lyrics Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-blue-200">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
+              {aarti.title}
+            </h2>
+            
+            <div className="space-y-6 mb-12">
+              {aarti.lyrics.sanskrit.map((shloka, index) => (
+                <div key={index} className="text-center">
+                  <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed mb-2">
+                    {shloka}
+                  </p>
+                  {aarti.lyrics.translations[index] && (
+                    <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                      <div className="grid md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <p className="font-semibold text-blue-700 mb-1">Hindi:</p>
+                          <p className="text-gray-700">{aarti.lyrics.translations[index].hindi}</p>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-blue-700 mb-1">English:</p>
+                          <p className="text-gray-700">{aarti.lyrics.translations[index].english}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Aarti Information */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white rounded-lg shadow-md p-6 border border-blue-100">
-            <div className="flex items-center space-x-3 mb-2">
-              <Heart className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">{aarti.deity}</span>
+            <InContentAd />
+            
+            {/* Meaning and Significance */}
+            <div className="mt-12 space-y-8">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Meaning</h3>
+                <p className="text-gray-700 leading-relaxed">{aarti.meaning}</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-200">
+                <h3 className="text-xl font-bold text-indigo-900 mb-4">Significance</h3>
+                <p className="text-gray-700 leading-relaxed">{aarti.significance}</p>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm">Deity</p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-6 border border-blue-100">
-            <div className="flex items-center space-x-3 mb-2">
-              <Clock className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">5-10 min</span>
+
+            {/* Benefits */}
+            <div className="mt-8">
+              <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">Benefits</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {aarti.benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start space-x-3 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <Heart className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">{benefit}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="text-gray-600 text-sm">Duration</p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-6 border border-blue-100">
-            <div className="flex items-center space-x-3 mb-2">
-              <BookOpen className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">Traditional</span>
-            </div>
-            <p className="text-gray-600 text-sm">Type</p>
           </div>
         </div>
+      </section>
 
-        {/* Significance Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Significance</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-            <p className="text-gray-700 leading-relaxed text-lg mb-6">
-              {aarti.significance}
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              {aarti.meaning}
-            </p>
-          </div>
-        </section>
-
-        <InContentAd />
-
-        {/* Sanskrit Shlokas */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Sanskrit Shlokas</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-            <div className="space-y-3">
-              {aarti.lyrics.sanskrit.map((line: string, index: number) => (
-                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed text-center">
-                  {line}
-                </p>
+      {/* Related Aartis */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-200">
+            <h2 className="text-2xl font-bold text-blue-900 mb-6">Related Aartis</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { id: "ganesh-aarti", name: "Ganesh Aarti", color: "orange" },
+                { id: "durga-aarti", name: "Durga Aarti", color: "pink" },
+                { id: "shiv-aarti", name: "Shiv Aarti", color: "blue" },
+                { id: "lakshmi-aarti", name: "Lakshmi Aarti", color: "yellow" }
+              ].map((related) => (
+                <Link
+                  key={related.id}
+                  href={`/aartis/${related.id}`}
+                  className={`p-4 rounded-lg border-2 border-${related.color}-200 bg-${related.color}-50 hover:bg-${related.color}-100 transition-all duration-300 group`}
+                >
+                  <div className="flex items-center space-x-2">
+                    <Music className={`h-5 w-5 text-${related.color}-600`} />
+                    <span className={`font-medium text-${related.color}-900 group-hover:text-${related.color}-700`}>
+                      {related.name}
+                    </span>
+                    <ChevronRight className={`h-4 w-4 text-${related.color}-600 group-hover:text-${related.color}-700`} />
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
-        </section>
-
-        <InContentAd />
-
-        {/* Translations */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Shloka Translations</h2>
-          <div className="space-y-6">
-            {aarti.lyrics.translations.map((translation, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                    <h4 className="text-lg font-bold text-blue-900 mb-3">हिन्दी</h4>
-                    <p className="text-gray-700 leading-relaxed" dir="rtl">
-                      {translation.hindi}
-                    </p>
-                  </div>
-                  <div className="bg-purple-50 rounded-lg p-6 border border-purple-100">
-                    <h4 className="text-lg font-bold text-purple-900 mb-3">English</h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      {translation.english}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <BannerAd />
-
-        {/* Benefits */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Benefits</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {aarti.benefits.map((benefit, index) => (
-              <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
-                <h3 className="text-lg font-bold text-blue-800 mb-3">
-                  {benefit}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Related Aartis */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Related Aartis</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/aartis/ganesh-aarti" className="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">🐘</span>
-                <h3 className="text-lg font-bold text-blue-800">Ganesh Aarti</h3>
-              </div>
-              <p className="text-gray-600 text-sm">Lord Ganesha</p>
-            </Link>
-            
-            <Link href="/aartis/lakshmi-aarti" className="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">💰</span>
-                <h3 className="text-lg font-bold text-blue-800">Lakshmi Aarti</h3>
-              </div>
-              <p className="text-gray-600 text-sm">Goddess Lakshmi</p>
-            </Link>
-            
-            <Link href="/aartis/shiv-aarti" className="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">🔱</span>
-                <h3 className="text-lg font-bold text-blue-800">Shiv Aarti</h3>
-              </div>
-              <p className="text-gray-600 text-sm">Lord Shiva</p>
-            </Link>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Sparkles className="h-6 w-6" />
-            <span className="text-lg font-semibold">Bhakti</span>
-          </div>
-          <p className="text-blue-200">
-            Celebrating the divine festivals of Sanatana Dharma with devotion and love
-          </p>
-          <div className="mt-6 space-x-6 flex justify-center">
-            <Link href="/festivals" className="text-blue-200 hover:text-white transition-colors">
-              Festivals
-            </Link>
-            <Link href="/aartis" className="text-blue-200 hover:text-white transition-colors">
-              Aartis
-            </Link>
-            <Link href="/mantras" className="text-blue-200 hover:text-white transition-colors">
-              Mantras
-            </Link>
-            <Link href="/stories" className="text-blue-200 hover:text-white transition-colors">
-              Stories
-            </Link>
-          </div>
         </div>
-      </footer>
+      </section>
+
+      <BannerAd />
     </div>
   );
 }
