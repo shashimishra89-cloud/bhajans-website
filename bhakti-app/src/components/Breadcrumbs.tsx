@@ -40,7 +40,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' 
 
 // Helper function to generate breadcrumbs for different content types
 export const generateBreadcrumbs = (
-  contentType: 'festivals' | 'aartis' | 'bhajans' | 'mantras',
+  contentType: 'festivals' | 'aartis' | 'bhajans' | 'mantras' | 'stories',
   itemName?: string
 ): BreadcrumbItem[] => {
   const baseItems = [

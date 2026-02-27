@@ -13,51 +13,106 @@ const aartiData = {
   description: "A devotional prayer to Lord Krishna, the divine cowherd and embodiment of love and wisdom.",
   deity: "Lord Krishna",
   lyrics: {
-    hindi: [
-      "ॐ जय श्री कृष्ण, जय श्री कृष्ण",
-      "गोपाल कृष्ण, जय श्री कृष्ण",
-      "जय श्री कृष्ण...",
-      "वृंदावन के राजा, जय श्री कृष्ण",
-      "गोपियों का प्रिया, जय श्री कृष्ण",
-      "जय श्री कृष्ण...",
-      "मखन चोर राजा, जय श्री कृष्ण",
-      "राधिका का प्रिया, जय श्री कृष्ण",
-      "जय श्री कृष्ण...",
-      "बंसी वादक राजा, जय श्री कृष्ण",
-      "यशोदा का लाला, जय श्री कृष्ण",
-      "जय श्री कृष्ण...",
-      "गीता का दाता, जय श्री कृष्ण",
-      "धर्म का रक्षक, जय श्री कृष्ण",
-      "जय श्री कृष्ण...",
-      "भक्तों का साथी, जय श्री कृष्ण",
-      "दुखियों का दाता, जय श्री कृष्ण",
-      "जय श्री कृष्ण...",
-      "ॐ जय श्री कृष्ण, जय श्री कृष्ण",
-      "गोपाल कृष्ण, जय श्री कृष्ण",
-      "जय श्री कृष्ण..."
+    sanskrit: [
+      "ॐ जय श्रीकृष्णः, जय श्रीकृष्णः",
+      "गोपालः कृष्णः, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः...",
+      "वृन्दावनस्य राजा, जय श्रीकृष्णः",
+      "गोपीनां प्रियः, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः...",
+      "माखनचोरः राजा, जय श्रीकृष्णः",
+      "राधिकायाः प्रियः, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः...",
+      "वंशीवादकः राजा, जय श्रीकृष्णः",
+      "यशोदायाः लालः, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः...",
+      "गीतायाः दाता, जय श्रीकृष्णः",
+      "धर्मस्य रक्षिता, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः...",
+      "भक्तानां सहचारी, जय श्रीकृष्णः",
+      "दुःखिनां दाता, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः...",
+      "ॐ जय श्रीकृष्णः, जय श्रीकृष्णः",
+      "गोपालः कृष्णः, जय श्रीकृष्णः",
+      "जय श्रीकृष्णः..."
     ],
-    english: [
-      "Om Jai Shri Krishna, Jai Shri Krishna",
-      "Gopal Krishna, Jai Shri Krishna",
-      "Jai Shri Krishna...",
-      "Vrindavan Ka Raja, Jai Shri Krishna",
-      "Gopiyo Ka Priya, Jai Shri Krishna",
-      "Jai Shri Krishna...",
-      "Makhan Chor Raja, Jai Shri Krishna",
-      "Radhika Ka Priya, Jai Shri Krishna",
-      "Jai Shri Krishna...",
-      "Bansi Vadak Raja, Jai Shri Krishna",
-      "Yashoda Ka Lala, Jai Shri Krishna",
-      "Jai Shri Krishna...",
-      "Geeta Ka Data, Jai Shri Krishna",
-      "Dharma Ka Rakshak, Jai Shri Krishna",
-      "Jai Shri Krishna...",
-      "Bhakton Ka Saathi, Jai Shri Krishna",
-      "Dukhiyon Ka Data, Jai Shri Krishna",
-      "Jai Shri Krishna...",
-      "Om Jai Shri Krishna, Jai Shri Krishna",
-      "Gopal Krishna, Jai Shri Krishna",
-      "Jai Shri Krishna..."
+    translations: [
+      {
+        hindi: "ॐ हे श्री कृष्ण, जय हो आपकी।",
+        english: "Om, victory to Lord Krishna, victory to Lord Krishna."
+      },
+      {
+        hindi: "गोपाल कृष्ण, जय हो आपकी।",
+        english: "Gopal Krishna, victory to you."
+      },
+      {
+        hindi: "जय श्री कृष्ण...",
+        english: "Victory to Lord Krishna..."
+      },
+      {
+        hindi: "वृंदावन के राजा, जय हो।",
+        english: "King of Vrindavan, victory to you."
+      },
+      {
+        hindi: "गोपियों का प्रिय, जय हो।",
+        english: "Beloved of the Gopis, victory to you."
+      },
+      {
+        hindi: "जय श्री कृष्ण...",
+        english: "Victory to Lord Krishna..."
+      },
+      {
+        hindi: "माखन चोर राजा, जय हो।",
+        english: "Butter thief king, victory to you."
+      },
+      {
+        hindi: "राधिका का प्रिय, जय हो।",
+        english: "Beloved of Radhika, victory to you."
+      },
+      {
+        hindi: "जय श्री कृष्ण...",
+        english: "Victory to Lord Krishna..."
+      },
+      {
+        hindi: "बांसुरी वादक राजा, जय हो।",
+        english: "Flute-playing king, victory to you."
+      },
+      {
+        hindi: "यशोदा का लाल, जय हो।",
+        english: "Son of Yashoda, victory to you."
+      },
+      {
+        hindi: "जय श्री कृष्ण...",
+        english: "Victory to Lord Krishna..."
+      },
+      {
+        hindi: "गीता का दाता, जय हो।",
+        english: "Giver of the Gita, victory to you."
+      },
+      {
+        hindi: "धर्म का रक्षक, जय हो।",
+        english: "Protector of dharma, victory to you."
+      },
+      {
+        hindi: "जय श्री कृष्ण...",
+        english: "Victory to Lord Krishna..."
+      },
+      {
+        hindi: "भक्तों का साथी, जय हो।",
+        english: "Companion of devotees, victory to you."
+      },
+      {
+        hindi: "दुखियों का दाता, जय हो।",
+        english: "Giver to the sorrowful, victory to you."
+      },
+      {
+        hindi: "जय श्री कृष्ण...",
+        english: "Victory to Lord Krishna..."
+      },
+      {
+        hindi: "ॐ हे श्री कृष्ण, जय हो आपकी।",
+        english: "Om, victory to Lord Krishna, victory to you."
+      }
     ]
   },
   meaning: "This aarti glorifies Lord Krishna in his various divine aspects - as the king of Vrindavan, the beloved of the gopis, the butter thief, the flute player, the giver of the Bhagavad Gita, and the protector of dharma. It celebrates his divine play (lila) and his role as the supreme source of love and wisdom.",
@@ -171,13 +226,13 @@ export default function KrishnaAartiPage() {
 
         <InContentAd />
 
-        {/* Hindi Lyrics */}
+        {/* Sanskrit Shlokas */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">Hindi Lyrics</h2>
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">Sanskrit Shlokas</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
             <div className="space-y-3">
-              {aarti.lyrics.hindi.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed">
+              {aarti.lyrics.sanskrit.map((line: string, index: number) => (
+                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed text-center">
                   {line}
                 </p>
               ))}
@@ -185,17 +240,30 @@ export default function KrishnaAartiPage() {
           </div>
         </section>
 
-        {/* English Translation */}
+        <InContentAd />
+
+        {/* Translations */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">English Translation</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-            <div className="space-y-3">
-              {aarti.lyrics.english.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                  {line}
-                </p>
-              ))}
-            </div>
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">Shloka Translations</h2>
+          <div className="space-y-6">
+            {aarti.lyrics.translations.map((translation, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
+                    <h4 className="text-lg font-bold text-blue-900 mb-3">हिन्दी</h4>
+                    <p className="text-gray-700 leading-relaxed" dir="rtl">
+                      {translation.hindi}
+                    </p>
+                  </div>
+                  <div className="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <h4 className="text-lg font-bold text-purple-900 mb-3">English</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      {translation.english}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

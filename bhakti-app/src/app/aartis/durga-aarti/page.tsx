@@ -13,7 +13,7 @@ const aartiData = {
   description: "A prayer to Goddess Durga, the divine mother who protects and destroys evil.",
   deity: "Goddess Durga",
   lyrics: {
-    hindi: [
+    sanskrit: [
       "ॐ जय दुर्गा माता, जय जय दुर्गा माता",
       "सुख संपत्ति दाता, जय जय दुर्गा माता",
       "जय दुर्गा माता...",
@@ -36,28 +36,83 @@ const aartiData = {
       "सुख संपत्ति दाता, जय जय दुर्गा माता",
       "जय दुर्गा माता..."
     ],
-    english: [
-      "Om Jai Durga Mata, Jai Jai Durga Mata",
-      "Sukh Sampatti Data, Jai Jai Durga Mata",
-      "Jai Durga Mata...",
-      "Jai Ambe Jagadamba, Jai Jagadamba",
-      "Bhavani Bhuvaneshwari, Jai Jagadamba",
-      "Jai Ambe Jagadamba...",
-      "Shumbh Nishumbh Vidari, Jai Jagadamba",
-      "Mahishasur Mardini, Jai Jagadamba",
-      "Jai Ambe Jagadamba...",
-      "Chand Mund Vinashini, Jai Jagadamba",
-      "Raktbeej Prashini, Jai Jagadamba",
-      "Jai Ambe Jagadamba...",
-      "Daksha Praja Hantini, Jai Jagadamba",
-      "Chandika Chamunda, Jai Jagadamba",
-      "Jai Ambe Jagadamba...",
-      "Kalika Bhadrakali, Jai Jagadamba",
-      "Shiva Shantikarini, Jai Jagadamba",
-      "Jai Ambe Jagadamba...",
-      "Jai Durga Mata, Jai Jai Durga Mata",
-      "Sukh Sampatti Data, Jai Jai Durga Mata",
-      "Jai Durga Mata..."
+    translations: [
+      {
+        hindi: "ॐ हे दुर्गा माता, जय हो आपकी।",
+        english: "Om, victory to Mother Durga, victory to Mother Durga."
+      },
+      {
+        hindi: "सुख और संपत्ति देने वाली, जय हो आपकी।",
+        english: "Giver of happiness and wealth, victory to you."
+      },
+      {
+        hindi: "जय दुर्गा माता...",
+        english: "Victory to Mother Durga..."
+      },
+      {
+        hindi: "जय अंबे जगदम्बे, संसार की माँ।",
+        english: "Victory to Mother Ambika, mother of the universe."
+      },
+      {
+        hindi: "भवानी और भुवनेश्वरी, जय हो।",
+        english: "Bhavani and Bhuvaneshwari, victory to you."
+      },
+      {
+        hindi: "जय अंबे जगदम्बे...",
+        english: "Victory to Mother Ambika..."
+      },
+      {
+        hindi: "शुंभ और निशुंभ का विनाश करने वाली।",
+        english: "Destroyer of Shumbh and Nishumbh demons."
+      },
+      {
+        hindi: "महिषासुर को मारने वाली।",
+        english: "Slayer of the buffalo demon Mahishasur."
+      },
+      {
+        hindi: "जय अंबे जगदम्बे...",
+        english: "Victory to Mother Ambika..."
+      },
+      {
+        hindi: "चंड और मुंड का विनाश करने वाली।",
+        english: "Destroyer of Chand and Mund demons."
+      },
+      {
+        hindi: "रक्तबीज का वध करने वाली।",
+        english: "Slayer of the demon Raktabeej."
+      },
+      {
+        hindi: "जय अंबे जगदम्बे...",
+        english: "Victory to Mother Ambika..."
+      },
+      {
+        hindi: "दक्ष की प्रजा का वध करने वाली।",
+        english: "Destroyer of Daksha's progeny."
+      },
+      {
+        hindi: "चामुंडा देवी, जय हो।",
+        english: "Chandika and Chamunda, victory to you."
+      },
+      {
+        hindi: "जय अंबे जगदम्बे...",
+        english: "Victory to Mother Ambika..."
+      },
+      {
+        hindi: "कालिका और भद्रकाली, जय हो।",
+        english: "Kalika and Bhadrakali, victory to you."
+      },
+      {
+        hindi: "शांति देने वाली, जय हो।",
+        english: "Giver of peace, victory to you."
+      },
+      {
+        hindi: "जय अंबे जगदम्बे...",
+        english: "Victory to Mother Ambika..."
+      },
+      {
+        hindi: "जय दुर्गा माता, जय हो आपकी।",
+        english: "Victory to Mother Durga, victory to you."
+      }
     ]
   },
   meaning: "This aarti glorifies Goddess Durga as the supreme mother who protects her devotees and destroys evil forces. It describes her various forms and victories over demons like Shumbh, Nishumbh, and Mahishasur, emphasizing her role as the protector of the universe.",
@@ -171,13 +226,13 @@ export default function DurgaAartiPage() {
 
         <InContentAd />
 
-        {/* Hindi Lyrics */}
+        {/* Sanskrit Shlokas */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-pink-900 mb-6">Hindi Lyrics</h2>
+          <h2 className="text-3xl font-bold text-pink-900 mb-6">Sanskrit Shlokas</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-pink-100">
             <div className="space-y-3">
-              {aarti.lyrics.hindi.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed">
+              {aarti.lyrics.sanskrit.map((line: string, index: number) => (
+                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed text-center">
                   {line}
                 </p>
               ))}
@@ -185,17 +240,30 @@ export default function DurgaAartiPage() {
           </div>
         </section>
 
-        {/* English Translation */}
+        <InContentAd />
+
+        {/* Translations */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-pink-900 mb-6">English Translation</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-pink-100">
-            <div className="space-y-3">
-              {aarti.lyrics.english.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                  {line}
-                </p>
-              ))}
-            </div>
+          <h2 className="text-3xl font-bold text-pink-900 mb-6">Shloka Translations</h2>
+          <div className="space-y-6">
+            {aarti.lyrics.translations.map((translation, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 border border-pink-100">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-pink-50 rounded-lg p-6 border border-pink-100">
+                    <h4 className="text-lg font-bold text-pink-900 mb-3">हिन्दी</h4>
+                    <p className="text-gray-700 leading-relaxed" dir="rtl">
+                      {translation.hindi}
+                    </p>
+                  </div>
+                  <div className="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <h4 className="text-lg font-bold text-purple-900 mb-3">English</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      {translation.english}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
