@@ -14,7 +14,7 @@ const bhajanData = {
   deity: "Lord Krishna",
   verses: "8",
   lyrics: {
-    hindi: [
+    sanskrit: [
       "अधरं मधुरं वदनं मधुरं नयनं मधुरं हसितं मधुरम्।",
       "हृदयं मधुरं हरणं मधुरं गमनं मधुरं मधुरं मधुरम्॥",
       "वचनं मधुरं चरितं मधुरं वेषणं मधुरं वलितं मधुरम्।",
@@ -151,7 +151,7 @@ export default function MadhurashtakamPage() {
           <h2 className="text-3xl font-bold text-pink-900 mb-6">Sanskrit Verses</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-pink-100">
             <div className="space-y-3">
-              {bhajan.lyrics.hindi.map((line, index) => (
+              {bhajan.lyrics.sanskrit.map((line, index) => (
                 <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed">
                   {line}
                 </p>

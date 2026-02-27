@@ -21,12 +21,6 @@ const mantraData = {
       "भर्गो देवस्य धीमहि",
       "धियो यो नः प्रचोदयात्"
     ],
-    hindi: [
-      "ॐ भूर्भुवः स्वः",
-      "तत्सवितुर्वरेण्यं",
-      "भर्गो देवस्य धीमहि",
-      "धियो यो नः प्रचोदयात्"
-    ],
     english: [
       "Om Bhuur Bhuvah Svah",
       "Tat Savitur Varennyam",
@@ -154,20 +148,6 @@ export default function GayatriMantraPage() {
             <div className="space-y-3">
               {mantra.lyrics.sanskrit.map((line, index) => (
                 <p key={index} className="text-2xl text-yellow-800 font-bold text-center leading-relaxed">
-                  {line}
-                </p>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Hindi Transliteration */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-yellow-900 mb-6">Hindi Transliteration</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-yellow-100">
-            <div className="space-y-3">
-              {mantra.lyrics.hindi.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 font-medium text-center leading-relaxed">
                   {line}
                 </p>
               ))}
