@@ -19,10 +19,6 @@ const mantraData = {
       "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्",
       "उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात्"
     ],
-    hindi: [
-      "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्",
-      "उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात्"
-    ],
     english: [
       "Om Tryambakam Yajamahe Sugandhim Pushtivardhanam",
       "Urvarukamiva Bandhanan Mrityormukshiya Maamritat"
@@ -148,20 +144,6 @@ export default function MahamrityunjayaMantraPage() {
             <div className="space-y-3">
               {mantra.lyrics.sanskrit.map((line, index) => (
                 <p key={index} className="text-2xl text-green-800 font-bold text-center leading-relaxed">
-                  {line}
-                </p>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Hindi Transliteration */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-green-900 mb-6">Hindi Transliteration</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-green-100">
-            <div className="space-y-3">
-              {mantra.lyrics.hindi.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 font-medium text-center leading-relaxed">
                   {line}
                 </p>
               ))}

@@ -14,7 +14,7 @@ const bhajanData = {
   deity: "Lord Shiva",
   verses: "15",
   lyrics: {
-    hindi: [
+    sanskrit: [
       "जटा टवी गलज्जल प्रवाह पवितस्थले",
       "गलेऽवलम्बितं लम्बितां भुजंगतुंग मालिकम्।",
       "डमड्डमड्डमड्डमन्निनाद वड्डमेगधूषणं",
@@ -159,7 +159,7 @@ export default function ShivTandavStotramPage() {
           <h2 className="text-3xl font-bold text-purple-900 mb-6">Sanskrit Verses</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-purple-100">
             <div className="space-y-3">
-              {bhajan.lyrics.hindi.map((line, index) => (
+              {bhajan.lyrics.sanskrit.map((line, index) => (
                 <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed">
                   {line}
                 </p>
