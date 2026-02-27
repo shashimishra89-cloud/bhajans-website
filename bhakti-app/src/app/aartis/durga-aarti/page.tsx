@@ -8,33 +8,40 @@ import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
 
 const aartiData = {
   id: "durga-aarti",
-  name: "Durga Aarti",
+  name: "Durga Mata Ki Aarti | मां दुर्गा की आरती, जय अंबे गौरी जय श्यामा गौरी....",
   title: "Om Jai Durga Mata",
   description: "A prayer to Goddess Durga, the divine mother who protects and destroys evil.",
   deity: "Goddess Durga",
   lyrics: {
     sanskrit: [
-      "ॐ जय दुर्गा माता, जय जय दुर्गा माता",
-      "सुख संपत्ति दाता, जय जय दुर्गा माता",
-      "जय दुर्गा माता...",
-      "जय अंबे जगदम्बे, जय जगदम्बे",
-      "भवानी भुवनेश्वरी, जय जगदम्बे",
-      "जय अंबे जगदम्बे...",
-      "शुंभ निशुंभ विदारी, जय जगदम्बे",
-      "महिषासुर मर्दिनी, जय जगदम्बे",
-      "जय अंबे जगदम्बे...",
-      "चंड मुंड विनाशिनी, जय जगदम्बे",
-      "रक्तबीज प्रहाशिनी, जय जगदम्बे",
-      "जय अंबे जगदम्बे...",
-      "दक्ष प्रजा हंतिनी, जय जगदम्बे",
-      "चंडिका चामुंडा, जय जगदम्बे",
-      "जय अंबे जगदम्बे...",
-      "कालिका भद्रकाली, जय जगदम्बे",
-      "शिवा शांतिकारिणी, जय जगदम्बे",
-      "जय अंबे जगदम्बे...",
-      "जय दुर्गा माता, जय जय दुर्गा माता",
-      "सुख संपत्ति दाता, जय जय दुर्गा माता",
-      "जय दुर्गा माता..."
+      "जय अंबे गौरी, मैया जय श्यामा गौरी।",
+      "तुमको निशिदिन ध्यावत, हरि ब्रह्मा शिवरी॥ ओम जय अंबे गौरी",
+      "मांग सिन्दूर विराजत, टीको मृगमद कोत।",
+      "उज्जवल से दोउ नैना, चन्द्रवदन नीको॥ ओम जय अंबे गौरी",
+      "केहरि वाहन राजत, रक्ताम्बर राज।",
+      "रक्तपुष्प गल माला, कण्ठन पर साजै॥ ओम जय अंबे गौरी",
+      "केहरि वाहन राजत, खड्ग खप्परधारी।",
+      "सुर नर मुनि-जन सेवत, तिनके दुखहारी॥ ओम जय अंबे गौरी",
+      "कानन कुण्डल शोभित, नासाग्रे मोती।",
+      "कोटिक चन्द्र दिवाकर, सम राजत ज्योति॥ ओम जय अंबे गौरी",
+      "शुम्भ-निशुम्भ बिदारे, महिषासुर घाती।",
+      "धूम्र विलोचन नैना, निशिदिन माताती॥ ओम जय अंबे गौरी",
+      "चण्ड-मुण्ड संहारे, शोणित बीज हरे।",
+      "ब्रह्मा रुद्राणी तुम कमला रानी।",
+      "आगम-निगम-बखानी, तुम शिव पटरानी॥ ओम जय अंबे गौरी",
+      "चौंसठ योगिनी मंगल गावत, नृत्य करत भैरूं।",
+      "बाजत ताल मृदंगा, अरु बाजत डमरु॥ ओम जय अंबे गौरी",
+      "तुम ही जग की माता, तुम ही हो भरता।",
+      "भक्तन की दुख हरता, सुख सम्पत्ति करता॥ ओम जय अंबे गौरी",
+      "भुजा चार अति शोभित, वर-मुद्रा धारी।",
+      "मनवान्छित फल पावत, सेवत नर-नारी॥ ओम जय अंबे गौरी",
+      "कंचन थाल विराजत, अगर कपूर बाती।",
+      "श्रीमालकेतु में राजत, कोटि रतन ज्योति॥ ओम जय अंबे गौरी",
+      "श्री अम्बेजी की आरती, जो कोई नर गावै।",
+      "कहत शिवानन्द स्वामी, सुख सम्पत्ति पावै॥ ओम जय अंबे गौरी, ओम जय अंबे गौरी",
+      "जोर से बोलो जय माता दी, सारे बोले जय माता दी।",
+      "बोल सांचे दरबार की जय",
+      "जयकारा शेरावाली का बोल सांचे दरबार की जय"
     ],
     translations: [
       {
@@ -67,7 +74,7 @@ const aartiData = {
       },
       {
         hindi: "महिषासुर को मारने वाली।",
-        english: "Slayer of the buffalo demon Mahishasur."
+        english: "Slayer of buffalo demon Mahishasur."
       },
       {
         hindi: "जय अंबे जगदम्बे...",
@@ -79,7 +86,7 @@ const aartiData = {
       },
       {
         hindi: "रक्तबीज का वध करने वाली।",
-        english: "Slayer of the demon Raktabeej."
+        english: "Slayer of demon Raktabeej."
       },
       {
         hindi: "जय अंबे जगदम्बे...",
@@ -163,8 +170,13 @@ export default function DurgaAartiPage() {
           
           <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl shadow-xl p-8 md:p-12 border border-pink-200">
             <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Music className="h-12 w-12 text-white" />
+              <div className="w-32 h-32 mx-auto mb-8 flex flex-col items-center justify-center">
+                <img 
+                  src="/images/durga.jpg" 
+                  alt="Goddess Durga" 
+                  className="w-24 h-24 rounded-full mb-4 object-cover border-4 border-pink-300 shadow-lg"
+                />
+                <Music className="h-8 w-8 text-pink-600" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-pink-900 mb-6">
                 {aarti.name}
