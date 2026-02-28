@@ -171,12 +171,10 @@ export default function DurgaAartiPage() {
           <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl shadow-xl p-8 md:p-12 border border-pink-200">
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-8 flex flex-col items-center justify-center">
-                <img 
-                  src="/images/durga.jpg" 
-                  alt="Goddess Durga" 
-                  className="w-24 h-24 rounded-full mb-4 object-cover border-4 border-pink-300 shadow-lg"
-                />
-                <Music className="h-8 w-8 text-pink-600" />
+                <div className="w-24 h-24 rounded-full mb-4 bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center border-4 border-red-300 shadow-lg">
+                  <span className="text-white text-3xl font-bold">द</span>
+                </div>
+                <Music className="h-8 w-8 text-red-600" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-pink-900 mb-6">
                 {aarti.name}
@@ -257,23 +255,26 @@ export default function DurgaAartiPage() {
         {/* Translations */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-pink-900 mb-6">Shloka Translations</h2>
-          <div className="space-y-6">
-            {aarti.lyrics.translations.map((translation, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 border border-pink-100">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-pink-50 rounded-lg p-6 border border-pink-100">
-                    <h4 className="text-lg font-bold text-pink-900 mb-3">हिन्दी</h4>
-                    <p className="text-gray-700 leading-relaxed" dir="rtl">
-                      {translation.hindi}
-                    </p>
+          <div className="space-y-8 mb-12">
+            {aarti.lyrics.sanskrit.map((shloka, index) => (
+              <div key={index} className="text-center space-y-4">
+                <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
+                  {shloka}
+                </p>
+                {aarti.lyrics.translations[index] && (
+                  <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="font-semibold text-red-700 mb-2">Hindi:</p>
+                        <p className="text-gray-700 leading-relaxed">{aarti.lyrics.translations[index].hindi}</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-red-700 mb-2">English:</p>
+                        <p className="text-gray-700 leading-relaxed">{aarti.lyrics.translations[index].english}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="bg-purple-50 rounded-lg p-6 border border-purple-100">
-                    <h4 className="text-lg font-bold text-purple-900 mb-3">English</h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      {translation.english}
-                    </p>
-                  </div>
-                </div>
+                )}
               </div>
             ))}
           </div>

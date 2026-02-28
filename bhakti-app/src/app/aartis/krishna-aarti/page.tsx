@@ -136,11 +136,9 @@ export default function KrishnaAartiPage() {
           <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl shadow-xl p-8 md:p-12 border border-blue-200">
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-8 flex flex-col items-center justify-center">
-                <img 
-                  src="/images/krishna.jpg" 
-                  alt="Lord Krishna" 
-                  className="w-24 h-24 rounded-full mb-4 object-cover border-4 border-blue-300 shadow-lg"
-                />
+                <div className="w-24 h-24 rounded-full mb-4 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center border-4 border-blue-300 shadow-lg">
+                  <span className="text-white text-3xl font-bold">क</span>
+                </div>
                 <Music className="h-8 w-8 text-blue-600" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
@@ -165,22 +163,22 @@ export default function KrishnaAartiPage() {
               {aarti.title}
             </h2>
             
-            <div className="space-y-6 mb-12">
+            <div className="space-y-8 mb-12">
               {aarti.lyrics.sanskrit.map((shloka, index) => (
-                <div key={index} className="text-center">
-                  <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed mb-2">
+                <div key={index} className="text-center space-y-4">
+                  <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
                     {shloka}
                   </p>
                   {aarti.lyrics.translations[index] && (
-                    <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
                       <div className="grid md:grid-cols-2 gap-4 text-sm">
                         <div>
-                          <p className="font-semibold text-blue-700 mb-1">Hindi:</p>
-                          <p className="text-gray-700">{aarti.lyrics.translations[index].hindi}</p>
+                          <p className="font-semibold text-blue-700 mb-2">Hindi:</p>
+                          <p className="text-gray-700 leading-relaxed">{aarti.lyrics.translations[index].hindi}</p>
                         </div>
                         <div>
-                          <p className="font-semibold text-blue-700 mb-1">English:</p>
-                          <p className="text-gray-700">{aarti.lyrics.translations[index].english}</p>
+                          <p className="font-semibold text-blue-700 mb-2">English:</p>
+                          <p className="text-gray-700 leading-relaxed">{aarti.lyrics.translations[index].english}</p>
                         </div>
                       </div>
                     </div>

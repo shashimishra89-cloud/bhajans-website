@@ -1,1 +1,110 @@
-{"id": "hanuman-chalisa", "name": "Hanuman Chalisa", "title": "Shri Hanuman Chalisa", "description": "The most powerful and popular devotional hymn dedicated to Lord Hanuman, composed by Goswami Tulsidas. The Hanuman Chalisa consists of 40 verses (chaupais) that praise Lord Hanuman's strength, devotion, and divine powers.", "duration": "10 minutes", "icon": "💪", "deity": "Lord Hanuman", "significance": "Removes obstacles, provides strength, courage, and protection from evil forces. Reciting it brings peace and prosperity.", "seo": {"description": "Complete Hanuman Chalisa with lyrics in Hindi and English, meaning, and benefits. Learn the proper way to recite Hanuman Chalisa.", "keywords": ["hanuman chalisa", "lord hanuman", "tulsidas", "hanuman bhajan", "strength devotion", "obstacle remover", "bajrang bali"]}, "sections": [{"type": "hero", "title": "Shri Hanuman Chalisa", "content": "The Hanuman Chalisa is a powerful devotional hymn of 40 verses praising Lord Hanuman, the mighty devotee of Lord Rama who embodies strength, devotion, and selfless service."}, {"type": "historical_significance", "title": "Historical Significance", "content": "The Hanuman Chalisa was composed by Goswami Tulsidas in the 16th century. It has been recited for centuries by millions of devotees seeking Hanuman's blessings and protection."}, {"type": "lyrics", "title": "Complete Chalisa Lyrics", "content": "The complete 40 verses of Hanuman Chalisa with Doha and Chopai.", "subsections": [{"title": "Doha", "hindi": "श्रीगुरु चरन सरोज रज, निज मनु मुकुर सुधारि।\nबरनउ रघुबर बिमल जसु, जो दायक फल चारि॥\n\nबुद्धिहीन तनु जानिके, सुमिरौं पवनकुमार।\nबल बुद्धि विद्या देहु मोहि, हरहु कलेस बिकार॥", "english": "Having polished the mirror of my heart with the dust of my guru's lotus feet,\nI sing the pure fame of the best of the Raghu dynasty, which bestows the four fruits of life.\n\nKnowing my body to be devoid of intelligence,\nI remember Hanuman, the son of the Wind God.\nGrant me strength, intelligence, and knowledge,\nAnd remove all my afflictions and sins.", "meaning": "The opening verses invoke the guru's blessings and dedicate the Chalisa to Lord Hanuman, seeking his divine gifts."}, {"title": "Chaupai 1-10", "hindi": "जय हनुमान ज्ञान गुन सागर।\nजय कपीस तिहुँ लोक उजागर॥\n\nरामदूत अतुलित बल धामा।\nअंजनि-पुत्र पवनसुत नामा॥\n\nमहाबीर बिक्रम बजरंगी।\nकुमति निवार सुमित के संगी॥\n\nकंचन बरन बिराज सुबेसा।\nकानन कुण्डल निसिखेस बेसा॥\n\nकाज किन्हु बिसेस बिगर नाहीं।\nप्रभु तुम्हरे सर्व गुन गाहीं॥\n\nबसिय रामपत सहस दल जानी।\nजाय पवनसुत जानी महाभारी॥\n\nजाब लो सुबिद लखन सोइरा।\nबिरज महादेव के तोरी॥\n\nअब बिदि जानकी गोसाईं।\nलाह संजीवन लखन लाल सोइ॥\n\nसब करि सोच न धरियो पासा।\nलाह उर लाख जलाय बासा॥", "english": "Victory to Hanuman, ocean of wisdom and virtue.\nVictory to the monkey chief, illuminator of the three worlds.\n\nMessenger of Rama, abode of incomparable strength.\nSon of Anjana, named Son of the Wind.\n\nGreat hero of mighty valor, body like thunderbolt.\nDestroyer of evil thoughts, companion of the good.\n\nGolden complexioned, wearing beautiful clothes.\nWith ears like earrings and curly hair.\n\nYou hold the Mace and the Flag in your hands.\nAnd a sacred thread of Munja grass adorns your shoulder.\n\nYou are the embodiment of Lord Shiva and son of Kesari.\nYou are honored by the whole world as the son of Pavan.\n\nYou are extremely wise, virtuous and clever.\nYou are always eager to do the work of Lord Rama.\n\nYou delight in listening to the glories of Lord Rama.\nRam, Lakshman and Sita reside in your heart.\n\nYou assumed a tiny form to appear before Sita.\nYou burned the entire Lanka with your fiery tail.\n\nYou brought the Sanjivini herb and revived Lakshman.\nRama embraced you with great joy.", "meaning": "These verses describe Hanuman's divine qualities, his relationship with Lord Rama, and his heroic deeds."}]}, {"type": "benefits", "title": "Benefits of Reciting Hanuman Chalisa", "content": "The spiritual and practical benefits of regular recitation.", "subsections": [{"title": "Spiritual Benefits", "content": "Removes negative energies, provides spiritual protection, enhances devotion, and brings peace of mind."}, {"title": "Material Benefits", "content": "Removes obstacles, brings success in endeavors, provides courage and strength, and protects from dangers."}]}, {"type": "rituals", "title": "How to Recite", "content": "Proper method and guidelines for reciting Hanuman Chalisa.", "subsections": [{"title": "Best Time", "content": "Early morning after bath, or evening after sunset. Tuesday and Saturday are especially auspicious."}, {"title": "Procedure", "content": "Sit facing north or east, light a diya, offer flowers and prasad, then recite with devotion and concentration."}]}, {"type": "videos", "title": "Hanuman Chalisa Videos", "content": "Watch these videos to learn the proper way to recite Hanuman Chalisa:", "videos": [{"title": "Complete Hanuman Chalisa with Pronunciation", "embedId": "hanuman_chalisa_complete", "description": "Full Chalisa with correct pronunciation and meaning"}, {"title": "Hanuman Chalisa with Meaning", "embedId": "hanuman_chalisa_meaning", "description": "Detailed explanation of each verse's meaning"}]}]}
+{
+  "id": "hanuman-chalisa",
+  "name": "Hanuman Chalisa",
+  "title": "Shri Hanuman Chalisa",
+  "description": "The most powerful and popular devotional hymn dedicated to Lord Hanuman, composed by Goswami Tulsidas. The Hanuman Chalisa consists of 40 verses (chaupais) that praise Lord Hanuman's strength, devotion, and divine powers.",
+  "duration": "10 minutes",
+  "icon": "💪",
+  "deity": "Lord Hanuman",
+  "significance": "Removes obstacles, provides strength, courage, and protection from evil forces. Reciting it brings peace and prosperity.",
+  "seo": {
+    "description": "Complete Hanuman Chalisa with lyrics in Hindi and English, meaning, and benefits. Learn the proper way to recite Hanuman Chalisa.",
+    "keywords": ["hanuman chalisa", "lord hanuman", "tulsidas", "hanuman bhajan", "strength devotion", "obstacle remover", "bajrang bali"]
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Shri Hanuman Chalisa",
+      "content": "The Hanuman Chalisa is a powerful devotional hymn of 40 verses praising Lord Hanuman, the mighty devotee of Lord Rama who embodies strength, devotion, and selfless service."
+    },
+    {
+      "type": "historical_significance",
+      "title": "Historical Significance",
+      "content": "The Hanuman Chalisa was composed by Goswami Tulsidas in the 16th century. It has been recited for centuries by millions of devotees seeking Hanuman's blessings and protection."
+    },
+    {
+      "type": "lyrics",
+      "title": "Complete Chalisa Lyrics",
+      "content": "The complete 40 verses of Hanuman Chalisa with Doha and Chopai.",
+      "subsections": [
+        {
+          "title": "Doha",
+          "hindi": "श्रीगुरु चरन सरोज रज, निज मनु मुकुर सुधारि।\nबरनउ रघुबर बिमल जसु, जो दायक फल चारि॥\n\nबुद्धिहीन तनु जानिके, सुमिरौं पवनकुमार।\nबल बुद्धि विद्या देहु मोहि, हरहु कलेस बिकार॥",
+          "english": "Having polished the mirror of my heart with the dust of my guru's lotus feet,\nI sing the pure fame of the best of the Raghu dynasty, which bestows the four fruits of life.\n\nKnowing my body to be devoid of intelligence,\nI remember Hanuman, the son of the Wind God.\nGrant me strength, intelligence, and knowledge,\nAnd remove all my afflictions and sins.",
+          "meaning": "The opening verses invoke the guru's blessings and dedicate the Chalisa to Lord Hanuman, seeking his divine gifts."
+        },
+        {
+          "title": "Chaupai 1-10",
+          "hindi": "जय हनुमान ज्ञान गुन सागर।\nजय कपीस तिहुँ लोक उजागर॥\n\nरामदूत अतुलित बल धामा।\nअंजनि-पुत्र पवनसुत नामा॥\n\nमहाबीर बिक्रम बजरंगी।\nकुमति निवार सुमित के संगी॥\n\nकंचन बरन बिराज सुबेसा।\nकानन कुण्डल निसिखेस बेसा॥\n\nकाज किन्हु बिसेस बिगर नाहीं।\nप्रभु तुम्हरे सर्व गुन गाहीं॥\n\nबसिय रामपत सहस दल जानी।\nजाय पवनसुत जानी महाभारी॥\n\nजाब लो सुबिद लखन सोइरा।\nबिरज महादेव के तोरी॥\n\nअब बिदि जानकी गोसाईं।\nलाह संजीवन लखन लाल सोइ॥",
+          "english": "Victory to Hanuman, ocean of wisdom and virtue.\nVictory to the monkey chief, illuminator of the three worlds.\n\nMessenger of Rama, abode of incomparable strength.\nSon of Anjana, named Son of the Wind.\n\nGreat hero of mighty valor, body like thunderbolt.\nDestroyer of evil thoughts, companion of the good.\n\nGolden complexioned, wearing beautiful clothes.\nWith ears like earrings and curly hair.\n\nYou hold Mace and Flag in your hands.\nAnd a sacred thread of Munja grass adorns your shoulder.\n\nYou are the embodiment of Lord Shiva and son of Kesari.\nYou are honored by the whole world as the son of Pavan.\n\nYou are extremely wise, virtuous and clever.\nYou are always eager to do the work of Lord Rama.\n\nYou delight in listening to the glories of Lord Rama.\nRam, Lakshman and Sita reside in your heart.\n\nYou assumed a tiny form to appear before Sita.\nYou burned the entire Lanka with your fiery tail.\n\nYou brought the Sanjivini herb and revived Lakshman.\nRama embraced you with great joy.",
+          "meaning": "These verses describe Hanuman's divine qualities, his relationship with Lord Rama, and his heroic deeds."
+        },
+        {
+          "title": "Chaupai 11-20",
+          "hindi": "सब करि सोच न धरियो पासा।\nलाह उर लाख जलाय बासा॥\n\nजटा में गंग बहत है, गल मुण्डन माला।\nशेष नाग लिपटावत, ओढ़त मृगछाला॥\n\nओम जय हनुमान ओंकारा।\nगगन सम अंग कांति काली।\nराधिका चमक रही आली।\nलतन में ठाढ़े बनमाली॥\n\nजहां ते प्रकट भई गंगा, कलुष कलि हारिणि श्रीगंगा।\nस्मरन ते होत मोह भंगा, बसी सिव सीस जटा के बीच।\nहरै अघ कीच, चरन छवि श्रीबनवारी की॥\n\nचमकती उज्ज्वल तट रेनू, बज रही वृंदावन बेनू।\nचहुं दिसि गोपि ग्वाल धेनू, हंसत मृदु मंद, चांदनी चंद।\nकटत भव फंद, टेर सुन दीन भिखारी की॥",
+          "english": "Having thought of all this, you did not delay at all.\nYou immediately flew and reached Lanka.\n\nThe Ganga flows in your matted hair, and a garland of Mundmala adorns your neck.\nShesh Nag is wrapped around, and you wear the Makarachhala.\n\nOm, victory to Hanuman, Omkara.\nYour body is as bright as the mountain of gold.\nRadhika is shining brightly.\nYou stand as Banamali in the creepers.\n\nWhere the Ganga manifested, the destroyer of the impurities of Kali, Shri Ganga.\nBy remembering her, the attachment of worldly love is broken.\nShe resides in the matted hair of Shiva, between the two jatas.\nShe destroys the heap of sins, the beloved of Shri Banwari.\n\nThe shining bright bank of the sandal mountain is fragrant.\nThe flute of Vrindavan is playing, the cowherds and Gwalas are smiling.\nLaughing softly, the moon Chandni is shining,\nHearing the cries of the poor, the compassionate one.",
+          "meaning": "These verses describe Hanuman's divine appearance, his connection with Mother Ganga, and his compassionate nature."
+        },
+        {
+          "title": "Chaupai 21-30",
+          "hindi": "दोहा\n\nसुन सब जग जुग फल पावै, बसह बद बिदा हनुमान।\nबाल समय बल रूप तुम्हारो, बिगत बिगत बिश्व न पावै।\n\nतुम उपकार सुग्रिव, तुम्हारे सदा गुन गावै।\nअस करहु कर जो कोइ, तुम फल दसि पावै॥\n\nतुम अशरथ विद्या, तुम अशरथ धर्म।\nतुम जग के स्वामी, तुम सब ठो महान।\n\nतुम जनकी सेवक, तुम रघुनाथ के दास।\nरघुपति अवधूत, सब सुख लहे बसावै।\n\nसाकल लोक और सुर, तुम रे गुन गावै।\nजो कोइ भजत तुम्हारो, कहत शिवानन्द स्वामी॥\n\nसनकादिक ब्रह्मादिक, सुरशर शेष नाग।\nकुबेर पति विष्णु, रघुपति भ्रमादेव।\nविभीषण अनंत, रुद्र अनंत, हनुमान अनंत।\n\nजो सत्रु त्राता हनुमान, सोइ बिजय बहुत।\nजो सत्रु त्राता हनुमान, सोइ बिजय बहुत॥",
+          "english": "Doha\n\nHearing everyone's praise, the servant Hanuman becomes pleased.\nYour youthful form is the embodiment of all powers, the supreme being pervades all.\n\nYou are the supporter of the weak, your virtues are praised by all.\nWhatever work one does, you grant the fruits.\n\nYou are the supreme knowledge, you are the supreme dharma.\nYou are the lord of the world, you are the greatest of all.\n\nYou are the servant of the people, you are the servant of the Lord of the Raghus.\nLord Rama is pleased, and makes everyone live happily.\n\nThe world and the heavens sing your praises.\nWhoever worships you, says Shivanand Swami.\n\nSankadi, Brahmadi, Shesh Nag, Sarasur Shesh.\nKuberpati Vishnu, Raghupati Brahmdev.\nVibhishan Anant, Rudra Anant, Hanuman Anant.\n\nWhoever destroys the enemy Hanuman, says Vibhishan with great joy.\nWhoever destroys the enemy Hanuman, says Vibhishan with great joy.",
+          "meaning": "These verses describe Hanuman's supreme status, his role as servant of Lord Rama, and his power to destroy enemies."
+        },
+        {
+          "title": "Chaupai 31-40",
+          "hindi": "सादर सुवन अमर सागर, बहुत बहुत रूप तुम्हारो।\nअसत सिद्धि सागर समुद्र, रहे भगवन के अधिपति।\n\nतुम रघुपति भक्त हनुमान, सुमिरौं भव प्रिय भवान।\nसकल कलि बिकार टेरो, तुम मम अधिपति॥\n\nविषय त्रिगुण रूप लिनो, कमल नयन रूप धिनो।\nदशरथ दसरथ रूप निरखार, बिगत बिगत बिश्व निरखार।\n\nकोसल करे बद्र रूप, तुम रघुनाथ के बल।\nबजरंगी बिल देखन लागे, सब भूत दर भागे।\n\nसोइ परसादि ग्रह तुम्हारो, पवनपुत्र सुत तुम्हारो।\nजय जय जय हनुमान, गोसाईं तुलसीदास॥\n\nदोहा\n\nपवनतनाय त्रिभुवन महिमा, गुन अति अतुलित।\nतुम सम अधिपति कर सकै, कोइ नहिं दुख लागै।\n\nअंत यम त्राता तुम्हारो, हनुमान अतुलित।\nदुर्ग भवान त्राता तुम्हारो, सकल सुख हरि लागै॥\n\nराम द्वारे तुम्हारो, तुम सदा अवतार।\nसकल कलि बिकार के नाथ, राम सहायत विश्व नाथ॥\n\nतुम भरोसे ही राम के, पावन सुत हो जावै।\nराम काज दीन तुम्हारो, तुम चरनों को पावै॥",
+          "english": "The ocean of wisdom, your form is very, very wonderful.\nAssuming the form of the ocean, you remain the abode of the gods.\n\nYou are the devotee Hanuman of Lord Rama, beloved of all.\nYou are my master, the destroyer of all obstacles.\n\nSeeing the form of the three worlds, assuming the form of Kamal Nayan.\nSeeing the form of Dasharath, seeing the form of the supreme being.\n\nAssuming the form of a bear, the strength of Lord Raghunath.\nBajrang Bali went to see, all ghosts ran away.\n\nGranting desired fruits to you, the son of Pavan.\nVictory, victory to Hanuman, says Tulsidas.\n\nDoha\n\nThe glory of the three worlds, the qualities are incomparable.\nYou can grant all boons, no one suffers.\n\nYou are the destroyer of the enemy, Hanuman is manifested.\nThe destroyer of the suffering of the poor, Hanuman is manifested.\n\nYou are the beloved of Lord Ram, you are his beloved.\nLord of all obstacles, Shri Ram.\n\nYou alone go to Ram, becoming the son of Pavan.\nRam gives you the kingdom, you give it to the poor.",
+          "meaning": "These final verses describe Hanuman's supreme powers, his ability to grant boons, and his eternal devotion to Lord Rama."
+        }
+      ]
+    },
+    {
+      "type": "benefits",
+      "title": "Benefits of Reciting Hanuman Chalisa",
+      "content": "The spiritual and practical benefits of regular recitation.",
+      "subsections": [
+        {
+          "title": "Spiritual Benefits",
+          "content": "Removes negative energies, provides spiritual protection, enhances devotion, and brings peace of mind."
+        },
+        {
+          "title": "Material Benefits",
+          "content": "Removes obstacles, brings success in endeavors, provides courage and strength, and protects from dangers."
+        }
+      ]
+    },
+    {
+      "type": "rituals",
+      "title": "How to Recite",
+      "content": "Proper method and guidelines for reciting Hanuman Chalisa.",
+      "subsections": [
+        {
+          "title": "Best Time",
+          "content": "Early morning after bath, or evening after sunset. Tuesday and Saturday are especially auspicious."
+        },
+        {
+          "title": "Procedure",
+          "content": "Sit facing north or east, light a diya, offer flowers and prasad, then recite with devotion and concentration."
+        }
+      ]
+    },
+    {
+      "type": "videos",
+      "title": "Hanuman Chalisa Videos",
+      "content": "Watch these videos to learn the proper way to recite Hanuman Chalisa:",
+      "videos": [
+        {
+          "title": "Complete Hanuman Chalisa with Pronunciation",
+          "embedId": "hanuman_chalisa_complete",
+          "description": "Full Chalisa with correct pronunciation and meaning"
+        },
+        {
+          "title": "Hanuman Chalisa with Meaning",
+          "embedId": "hanuman_chalisa_meaning",
+          "description": "Detailed explanation of each verse's meaning"
+        }
+      ]
+    }
+  ]
+}
