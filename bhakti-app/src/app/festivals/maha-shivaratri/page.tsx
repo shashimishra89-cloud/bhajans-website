@@ -163,8 +163,11 @@ export default function MahaShivaratriPage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-purple-700 hover:text-purple-900 transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-purple-700 hover:text-purple-900 transition-colors">Aartis</Link>
+              <Link href="/bhajans" className="text-purple-700 hover:text-purple-900 transition-colors">Bhajans</Link>
+              <Link href="/chalisas" className="text-purple-700 hover:text-purple-900 transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-purple-700 hover:text-purple-900 transition-colors">Mantras</Link>
               <Link href="/stories" className="text-purple-700 hover:text-purple-900 transition-colors">Stories</Link>
+              <Link href="/gods" className="text-purple-700 hover:text-purple-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>

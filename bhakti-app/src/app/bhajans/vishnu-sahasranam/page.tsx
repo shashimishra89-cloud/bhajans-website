@@ -75,8 +75,11 @@ export default function VishnuSahasranamPage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-blue-700 hover:text-blue-900 transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-blue-700 hover:text-blue-900 transition-colors">Aartis</Link>
+              <Link href="/bhajans" className="text-blue-700 hover:text-blue-900 transition-colors">Bhajans</Link>
+              <Link href="/chalisas" className="text-blue-700 hover:text-blue-900 transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-blue-700 hover:text-blue-900 transition-colors">Mantras</Link>
               <Link href="/stories" className="text-blue-700 hover:text-blue-900 transition-colors">Stories</Link>
+              <Link href="/gods" className="text-blue-700 hover:text-blue-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>
