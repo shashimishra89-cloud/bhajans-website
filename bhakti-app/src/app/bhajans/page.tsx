@@ -84,11 +84,12 @@ export default function BhajansPage() {
               <h1 className="text-2xl font-bold text-orange-900">Bhakti</h1>
             </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
-              <Link href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</Link>
+              <Link href="/festivals" className="text-orange-800 hover:text-orange-900 transition-colors">Festivals</Link>
+              <Link href="/aartis" className="text-orange-800 hover:text-orange-900 transition-colors">Aartis</Link>
               <Link href="/bhajans" className="text-orange-600 font-semibold">Bhajans</Link>
-              <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
-              <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
+              <Link href="/chalisas" className="text-orange-800 hover:text-orange-900 transition-colors">Chalisas</Link>
+              <Link href="/mantras" className="text-orange-800 hover:text-orange-900 transition-colors">Mantras</Link>
+              <Link href="/gods" className="text-orange-800 hover:text-orange-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>

@@ -169,7 +169,38 @@ export default function HanumanChalisaPage() {
             </div>
           </div>
         </section>
-
+{/* Chalisa Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-orange-900 mb-6">Hanuman Chalisa</h2>
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-orange-100">
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold text-orange-900 mb-4">Complete 40 Verses</h3>
+            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+              The Hanuman Chalisa consists of 40 verses (chaupais) praising Lord Hanuman's glory, strength, and devotion. Each verse carries profound spiritual meaning and power.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
+                <h4 className="text-lg font-bold text-orange-800 mb-3">📖 Complete Text</h4>
+                <p className="text-gray-700 mb-4">Read the complete Hanuman Chalisa with all 40 verses, proper Hindi pronunciation, and English translations.</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-500 rounded-xl p-6 border border-blue-200">
+                <h4 className="text-lg font-bold text-blue-800 mb-3">🎵 Audio Version</h4>
+                <p className="text-gray-700 mb-4">Listen to the complete Hanuman Chalisa with proper pronunciation and rhythm.</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-teal-500 rounded-xl p-6 border border-green-200">
+                <h4 className="text-lg font-bold text-green-800 mb-3">📚 Download PDF</h4>
+                <p className="text-gray-700 mb-4">Download the complete Hanuman Chalisa in PDF format for offline reading and sharing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+        <BannerAd />
+        
         {/* English Translation */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-orange-900 mb-6">English Translation</h2>
@@ -255,6 +286,17 @@ export default function HanumanChalisaPage() {
               Stories
             </Link>
           </div>
+        </div>
+        
+        <div className="border-t border-orange-800 pt-8 text-center">
+            <p className="text-orange-300 text-sm mb-4">
+              © 2024 Bhakti. Preserving and sharing sacred traditions of Hindu culture.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+              <Link href="/privacy" className="text-orange-300 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-orange-300 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/contact" className="text-orange-300 hover:text-white transition-colors">Contact</Link>
+            </div>
         </div>
       </footer>
     </div>
