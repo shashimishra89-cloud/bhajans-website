@@ -1,65 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { Music, Sparkles, ChevronRight, Clock, Heart, BookOpen } from "lucide-react";
+import { Music, Sparkles, ChevronRight, BookOpen, Heart, Clock } from "lucide-react";
 import { BannerAd, InContentAd } from "@/components/AdBlock";
 import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
-
-const bhajanData = {
-  id: "hanuman-chalisa",
-  name: "Hanuman Chalisa",
-  title: "40 Verses of Hanuman",
-  description: "The most powerful prayer to Lord Hanuman, consisting of 40 verses (chaupais) praising his glory and seeking his blessings.",
-  deity: "Lord Hanuman",
-  verses: "40",
-  lyrics: {
-    hindi: [
-      "श्रीगुरु चरन सरोज रज, निज मनु मुकुर सुधारि।",
-      "बरनऊँ रघुबर बिमल जसु, जो दायक फल चारि॥",
-      "बुद्धिहीन तनु जानिके, सुमिरौं पवनकुमार।",
-      "बल बुद्धि बिद्या देहु मोहिं, हरहु कलेस बिकार॥",
-      "जय हनुमान ज्ञान गुन सागर।",
-      "जय कपीस तिहुँ लोक उजागर॥",
-      "राम दूत अतुलित बल धामा।",
-      "अंजनि पुत्र पवनसुत नामा॥",
-      "महाबीर बिक्रम बजरंगी।",
-      "कुमति निवाज सुमिरौं पवनकुमार॥",
-      "बल बुद्धि बिद्या देहु मोहिं, हरहु कलेस बिकार॥",
-      "जय हनुमान ज्ञान गुन सागर।",
-      "जय कपीस तिहुँ लोक उजागर॥"
-    ],
-    english: [
-      "Shri Guru Charan Saroja Raj, Nij Man Mukar Sudhari।",
-      "Barnau Raghubar Bimal Jasu, Jo Dayak Phal Chari॥",
-      "Buddhiheen Tanu Janike, Sumirau Pavan Kumar।",
-      "Bal Buddhi Vidya Dehu Mohin, Harahu Kalesh Vikar॥",
-      "Jai Hanuman Jnan Guna Sagar।",
-      "Jai Kapisa Tihun Lok Ujagar॥",
-      "Ram Doot Atulit Bal Dhama।",
-      "Anjani Putra Pavan Sut Nama॥",
-      "Mahabir Bikram Bajarangi।",
-      "Kumati Nivar Sumirau Pavan Kumar॥",
-      "Bal Buddhi Vidya Dehu Mohin, Harahu Kalesh Vikar॥",
-      "Jai Hanuman Jnan Guna Sagar।",
-      "Jai Kapisa Tihun Lok Ujagar॥"
-    ]
-  },
-  meaning: "Hanuman Chalisa is a devotional hymn dedicated to Lord Hanuman, composed by Tulsidas. It describes Hanuman's devotion to Lord Rama, his strength, wisdom, and his role as the destroyer of evil. The Chalisa consists of 40 verses (chaupais) that praise Hanuman's divine qualities and seek his blessings.",
-  significance: "Hanuman Chalisa is recited to seek strength, courage, wisdom, and protection from Lord Hanuman. It is believed to remove obstacles, ward off evil influences, and bring peace and prosperity to the devotee's life.",
-  benefits: [
-    "Strength and courage to face challenges",
-    "Wisdom and clarity of mind",
-    "Protection from negative energies",
-    "Success in endeavors and obstacles removed"
-  ]
-};
+import bhajanData from "../../../../content/bhajans/hanuman-chalisa.json";
 
 export default function HanumanChalisaPage() {
   const bhajan = bhajanData;
   
   if (!bhajan) {
-    notFound();
+    return <div>Loading...</div>;
   }
 
   const breadcrumbs = generateBreadcrumbs('bhajans', bhajan.name);
@@ -77,8 +28,11 @@ export default function HanumanChalisaPage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-orange-700 hover:text-orange-900 transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-orange-700 hover:text-orange-900 transition-colors">Aartis</Link>
+              <Link href="/bhajans" className="text-orange-600 font-semibold">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-700 hover:text-orange-900 transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-orange-700 hover:text-orange-900 transition-colors">Mantras</Link>
               <Link href="/stories" className="text-orange-700 hover:text-orange-900 transition-colors">Stories</Link>
+              <Link href="/gods" className="text-orange-700 hover:text-orange-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>
@@ -117,17 +71,21 @@ export default function HanumanChalisaPage() {
         {/* Bhajan Information */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="bg-white rounded-lg shadow-md p-6 border border-orange-100">
-            <div className="flex items-center space-x-3 mb-2">
-              <Heart className="w-5 h-5 text-orange-600" />
-              <span className="font-medium">{bhajan.deity}</span>
+            <div className="flex items-center space-x-4 text-sm text-orange-600">
+              <div className="flex items-center space-x-1">
+                <span>🙏</span>
+                <span>{bhajan.deity}</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span>📝</span>
+                <span>{bhajan.duration}</span>
+              </div>
             </div>
-            <p className="text-gray-600 text-sm">Deity</p>
           </div>
-          
           <div className="bg-white rounded-lg shadow-md p-6 border border-orange-100">
             <div className="flex items-center space-x-3 mb-2">
               <Clock className="w-5 h-5 text-orange-600" />
-              <span className="font-medium">{bhajan.verses} verses</span>
+              <span className="font-medium">{bhajan.duration}</span>
             </div>
             <p className="text-gray-600 text-sm">Length</p>
           </div>
@@ -149,7 +107,7 @@ export default function HanumanChalisaPage() {
               {bhajan.significance}
             </p>
             <p className="text-gray-600 leading-relaxed">
-              {bhajan.meaning}
+              {bhajan.significance}
             </p>
           </div>
         </section>
@@ -158,58 +116,37 @@ export default function HanumanChalisaPage() {
 
         {/* Hindi Lyrics */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-orange-900 mb-6">Hindi Lyrics</h2>
+          <h2 className="text-3xl font-bold text-orange-900 mb-6">Complete Hanuman Chalisa (हिंदी)</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-orange-100">
-            <div className="space-y-3">
-              {bhajan.lyrics.hindi.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed">
-                  {line}
-                </p>
+            <div className="space-y-6">
+              {bhajan.sections.find(section => section.type === 'lyrics')?.subsections?.map((subsection: any, index: any) => (
+                <div key={index} className="space-y-3">
+                  <h3 className="text-xl font-bold text-orange-800 mb-3">{subsection.title}</h3>
+                  <p className="text-lg text-gray-700 font-medium leading-relaxed whitespace-pre-line">
+                    {subsection.hindi}
+                  </p>
+                  <p className="text-sm text-gray-600 italic">{subsection.meaning}</p>
+                </div>
               ))}
             </div>
           </div>
         </section>
-{/* Chalisa Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-orange-900 mb-6">Hanuman Chalisa</h2>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-orange-100">
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-orange-900 mb-4">Complete 40 Verses</h3>
-            <p className="text-gray-700 leading-relaxed text-lg mb-6">
-              The Hanuman Chalisa consists of 40 verses (chaupais) praising Lord Hanuman's glory, strength, and devotion. Each verse carries profound spiritual meaning and power.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
-                <h4 className="text-lg font-bold text-orange-800 mb-3">📖 Complete Text</h4>
-                <p className="text-gray-700 mb-4">Read the complete Hanuman Chalisa with all 40 verses, proper Hindi pronunciation, and English translations.</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-500 rounded-xl p-6 border border-blue-200">
-                <h4 className="text-lg font-bold text-blue-800 mb-3">🎵 Audio Version</h4>
-                <p className="text-gray-700 mb-4">Listen to the complete Hanuman Chalisa with proper pronunciation and rhythm.</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-50 to-teal-500 rounded-xl p-6 border border-green-200">
-                <h4 className="text-lg font-bold text-green-800 mb-3">📚 Download PDF</h4>
-                <p className="text-gray-700 mb-4">Download the complete Hanuman Chalisa in PDF format for offline reading and sharing.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        
+
         <BannerAd />
         
         {/* English Translation */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-orange-900 mb-6">English Translation</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-orange-100">
-            <div className="space-y-3">
-              {bhajan.lyrics.english.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                  {line}
-                </p>
+            <div className="space-y-6">
+              {bhajan.sections.find(section => section.type === 'lyrics')?.subsections?.map((subsection: any, index: any) => (
+                <div key={index} className="space-y-3">
+                  <h3 className="text-xl font-bold text-orange-800 mb-3">{subsection.title}</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                    {subsection.english}
+                  </p>
+                  <p className="text-sm text-gray-600 italic">{subsection.meaning}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -221,11 +158,12 @@ export default function HanumanChalisaPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-orange-900 mb-6">Benefits</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {bhajan.benefits.map((benefit, index) => (
+            {bhajan.sections.find(section => section.type === 'benefits')?.subsections?.map((benefit: any, index: any) => (
               <div key={index} className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
                 <h3 className="text-lg font-bold text-orange-800 mb-3">
-                  {benefit}
+                  {benefit.title}
                 </h3>
+                <p className="text-gray-700">{benefit.content}</p>
               </div>
             ))}
           </div>
@@ -279,11 +217,20 @@ export default function HanumanChalisaPage() {
             <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">
               Aartis
             </Link>
+            <Link href="/bhajans" className="text-orange-200 hover:text-white transition-colors">
+              Bhajans
+            </Link>
+            <Link href="/chalisas" className="text-orange-200 hover:text-white transition-colors">
+              Chalisas
+            </Link>
             <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">
               Mantras
             </Link>
             <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">
               Stories
+            </Link>
+            <Link href="/gods" className="text-orange-200 hover:text-white transition-colors">
+              Gods
             </Link>
           </div>
         </div>

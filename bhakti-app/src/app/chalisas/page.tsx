@@ -39,6 +39,7 @@ export default function ChalisasPage() {
               <Link href="/bhajans" className="text-red-800 hover:text-red-900 transition-colors">Bhajans</Link>
               <Link href="/chalisas" className="text-red-600 font-semibold">Chalisas</Link>
               <Link href="/mantras" className="text-red-800 hover:text-red-900 transition-colors">Mantras</Link>
+              <Link href="/stories" className="text-red-800 hover:text-red-900 transition-colors">Stories</Link>
               <Link href="/gods" className="text-red-800 hover:text-red-900 transition-colors">Gods</Link>
             </nav>
           </div>
