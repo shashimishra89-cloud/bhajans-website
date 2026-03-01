@@ -151,10 +151,13 @@ export default function GodsPage() {
             <h3 className="text-xl font-bold">Bhajans</h3>
           </div>
           <p className="text-orange-200 mb-6">Preserving and sharing the sacred traditions of Hindu culture</p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-            <Link href="/privacy" className="text-orange-200 hover:text-white">Privacy Policy</Link>
-            <Link href="/terms" className="text-orange-200 hover:text-white">Terms of Service</Link>
-            <Link href="/contact" className="text-orange-200 hover:text-white">Contact</Link>
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+            <Link href="/festivals" className="text-orange-200 hover:text-white">Festivals</Link>
+            <Link href="/aartis" className="text-orange-200 hover:text-white">Aartis</Link>
+            <Link href="/bhajans" className="text-orange-200 hover:text-white">Bhajans</Link>
+            <Link href="/chalisas" className="text-orange-200 hover:text-white">Chalisas</Link>
+            <Link href="/mantras" className="text-orange-200 hover:text-white">Mantras</Link>
+            <Link href="/stories" className="text-orange-200 hover:text-white">Stories</Link>
           </div>
         </div>
       </footer>
