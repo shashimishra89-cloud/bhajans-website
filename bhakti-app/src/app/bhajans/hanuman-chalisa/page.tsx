@@ -169,94 +169,32 @@ export default function HanumanChalisaPage() {
             </div>
           </div>
         </section>
-
-        {/* English Translation */}
+{/* Chalisa Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-orange-900 mb-6">English Translation</h2>
+          <h2 className="text-3xl font-bold text-orange-900 mb-6">Hanuman Chalisa</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-orange-100">
             <div className="space-y-3">
-              {bhajan.lyrics.english.map((line, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                  {line}
-                </p>
-              ))}
+              <h3 className="text-xl font-bold text-orange-900 mb-4">Complete 40 Verses</h3>
+            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+              The Hanuman Chalisa consists of 40 verses (chaupais) praising Lord Hanuman's glory, strength, and devotion. Each verse carries profound spiritual meaning and power.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
+                <h4 className="text-lg font-bold text-orange-800 mb-3">📖 Complete Text</h4>
+                <p className="text-gray-700 mb-4">Read the complete Hanuman Chalisa with all 40 verses, proper Hindi pronunciation, and English translations.</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-500 rounded-xl p-6 border border-blue-200">
+                <h4 className="text-lg font-bold text-blue-800 mb-3">🎵 Audio Version</h4>
+                <p className="text-gray-700 mb-4">Listen to the complete Hanuman Chalisa with proper pronunciation and rhythm.</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-teal-500 rounded-xl p-6 border border-green-200">
+                <h4 className="text-lg font-bold text-green-800 mb-3">📚 Download PDF</h4>
+                <p className="text-gray-700 mb-4">Download the complete Hanuman Chalisa in PDF format for offline reading and sharing.</p>
+              </div>
             </div>
           </div>
-        </section>
-
-        <BannerAd />
-
-        {/* Benefits */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-orange-900 mb-6">Benefits</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {bhajan.benefits.map((benefit, index) => (
-              <div key={index} className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
-                <h3 className="text-lg font-bold text-orange-800 mb-3">
-                  {benefit}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Related Bhajans */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-orange-900 mb-6">Related Bhajans</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/bhajans/vishnu-sahasranam" className="bg-white rounded-xl shadow-lg p-6 border border-orange-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">🔱</span>
-                <h3 className="text-lg font-bold text-orange-800">Vishnu Sahasranam</h3>
-              </div>
-              <p className="text-gray-600 text-sm">Lord Vishnu</p>
-            </Link>
-            
-            <Link href="/bhajans/shiv-tandav-stotram" className="bg-white rounded-xl shadow-lg p-6 border border-orange-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">🔥</span>
-                <h3 className="text-lg font-bold text-orange-800">Shiv Tandav Stotram</h3>
-              </div>
-              <p className="text-gray-600 text-sm">Lord Shiva</p>
-            </Link>
-            
-            <Link href="/bhajans/madhurashtakam" className="bg-white rounded-xl shadow-lg p-6 border border-orange-100 hover:shadow-xl transition-shadow">
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">🎵</span>
-                <h3 className="text-lg font-bold text-orange-800">Madhurashtakam</h3>
-              </div>
-              <p className="text-gray-600 text-sm">Lord Krishna</p>
-            </Link>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-orange-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Sparkles className="h-6 w-6" />
-            <span className="text-lg font-semibold">Bhakti</span>
-          </div>
-          <p className="text-orange-200">
-            Celebrating the divine festivals of Sanatana Dharma with devotion and love
-          </p>
-          <div className="mt-6 space-x-6 flex justify-center">
-            <Link href="/festivals" className="text-orange-200 hover:text-white transition-colors">
-              Festivals
-            </Link>
-            <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">
-              Aartis
-            </Link>
-            <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">
-              Mantras
-            </Link>
-            <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">
-              Stories
-            </Link>
-          </div>
         </div>
-      </footer>
-    </div>
-  );
-}
+      </section>
