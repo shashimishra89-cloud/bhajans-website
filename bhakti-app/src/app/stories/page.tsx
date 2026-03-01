@@ -87,7 +87,9 @@ export default function StoriesPage() {
               <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
               <Link href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</Link>
               <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-800 hover:text-orange-600 font-medium">Chalisas</Link>
               <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
+              <Link href="/stories" className="text-orange-600 font-semibold">Stories</Link>
               <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
             </nav>
           </div>

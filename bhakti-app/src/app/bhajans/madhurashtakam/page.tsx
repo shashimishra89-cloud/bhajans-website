@@ -67,8 +67,11 @@ export default function MadhurashtakamPage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-pink-700 hover:text-pink-900 transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-pink-700 hover:text-pink-900 transition-colors">Aartis</Link>
+              <Link href="/bhajans" className="text-pink-700 hover:text-pink-900 transition-colors">Bhajans</Link>
+              <Link href="/chalisas" className="text-pink-700 hover:text-pink-900 transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-pink-700 hover:text-pink-900 transition-colors">Mantras</Link>
               <Link href="/stories" className="text-pink-700 hover:text-pink-900 transition-colors">Stories</Link>
+              <Link href="/gods" className="text-pink-700 hover:text-pink-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>

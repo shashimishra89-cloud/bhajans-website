@@ -83,6 +83,7 @@ export default function AartisPage() {
               <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
               <Link href="/chalisas" className="text-orange-800 hover:text-orange-600 font-medium">Chalisas</Link>
               <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
+              <Link href="/stories" className="text-orange-800 hover:text-orange-600 font-medium">Stories</Link>
               <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
             </nav>
           </div>
