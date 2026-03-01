@@ -90,6 +90,7 @@ export default function BhajansPage() {
               <Link href="/chalisas" className="text-orange-800 hover:text-orange-900 transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-orange-800 hover:text-orange-900 transition-colors">Mantras</Link>
               <Link href="/gods" className="text-orange-800 hover:text-orange-900 transition-colors">Gods</Link>
+              <Link href="/gods" className="text-orange-800 hover:text-orange-900 transition-colors">Gods</Link>
             </nav>
           </div>
         </div>
@@ -198,6 +199,7 @@ export default function BhajansPage() {
               <Link href="/festivals" className="text-orange-200 hover:text-white transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">Aartis</Link>
               <Link href="/bhajans" className="text-orange-200 hover:text-white transition-colors">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-200 hover:text-white transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">Mantras</Link>
               <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">Stories</Link>
             </div>

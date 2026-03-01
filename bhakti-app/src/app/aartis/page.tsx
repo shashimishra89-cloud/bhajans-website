@@ -81,6 +81,7 @@ export default function AartisPage() {
               <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
               <Link href="/aartis" className="text-orange-600 font-semibold">Aartis</Link>
               <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-800 hover:text-orange-600 font-medium">Chalisas</Link>
               <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
               <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
             </nav>
@@ -185,6 +186,7 @@ export default function AartisPage() {
               <Link href="/festivals" className="text-orange-200 hover:text-white transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">Aartis</Link>
               <Link href="/bhajans" className="text-orange-200 hover:text-white transition-colors">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-200 hover:text-white transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">Mantras</Link>
               <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">Stories</Link>
             </div>

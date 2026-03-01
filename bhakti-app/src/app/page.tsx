@@ -35,6 +35,15 @@ const categories = [
     color: "from-pink-400 to-purple-500"
   },
   {
+    id: "chalisas",
+    title: "Chalisas",
+    description: "Sacred 40-verse devotional hymns dedicated to various deities",
+    icon: "🪔",
+    image: "/images/categories/chalisas.jpg",
+    href: "/chalisas",
+    color: "from-red-400 to-orange-500"
+  },
+  {
     id: "mantras",
     title: "Mantras",
     description: "Powerful chants and spiritual vibrations",

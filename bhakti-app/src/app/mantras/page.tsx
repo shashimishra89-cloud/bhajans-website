@@ -227,6 +227,7 @@ export default function MantrasPage() {
               <Link href="/festivals" className="text-orange-200 hover:text-white transition-colors">Festivals</Link>
               <Link href="/aartis" className="text-orange-200 hover:text-white transition-colors">Aartis</Link>
               <Link href="/bhajans" className="text-orange-200 hover:text-white transition-colors">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-200 hover:text-white transition-colors">Chalisas</Link>
               <Link href="/mantras" className="text-orange-200 hover:text-white transition-colors">Mantras</Link>
               <Link href="/stories" className="text-orange-200 hover:text-white transition-colors">Stories</Link>
             </div>
