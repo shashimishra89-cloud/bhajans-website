@@ -359,7 +359,27 @@ const DurgaChalisaPage = () => {
         {/* In-Content Ad */}
         <InContentAd />
 
-        {/* Lyrics Section */}
+        {/* Complete Hindi Chalisa Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            पूर्ण दुर्गा चालीसा (Complete Durga Chalisa in Hindi)
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+              <div className="space-y-3 text-right">
+                {chalisaData.lyrics.hindi.map((verse, index) => (
+                  <div key={index} className="text-lg text-gray-800 leading-relaxed">
+                    {verse}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <InContentAd />
+
+        {/* Verse-by-Verse Translation Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             दुर्गा चालीसा - Durga Chalisa Lyrics

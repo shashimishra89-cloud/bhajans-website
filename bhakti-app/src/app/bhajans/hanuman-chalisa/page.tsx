@@ -143,7 +143,7 @@ export default function HanumanChalisaPage() {
                 <div key={index} className="space-y-3">
                   <h3 className="text-xl font-bold text-orange-800 mb-3">{subsection.title}</h3>
                   <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                    {subsection.english}
+                    {subsection.english || subsection.hindi}
                   </p>
                   <p className="text-sm text-gray-600 italic">{subsection.meaning}</p>
                 </div>
