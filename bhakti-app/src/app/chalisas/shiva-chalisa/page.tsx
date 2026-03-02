@@ -366,7 +366,7 @@ const ShivaChalisaPage = () => {
           </h2>
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
-              <div className="space-y-3 text-right">
+              <div className="space-y-3 text-left">
                 {chalisaData.lyrics.hindi.map((verse, index) => (
                   <div key={index} className="text-lg text-gray-800 leading-relaxed">
                     {verse}

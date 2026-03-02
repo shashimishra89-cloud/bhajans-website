@@ -173,7 +173,7 @@ export default function HanumanChalisaPage() {
           </h2>
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="bg-orange-50 rounded-lg p-6 border border-orange-200">
-              <div className="space-y-3 text-right">
+              <div className="space-y-3 text-left">
                 {chalisaData.lyrics.hindi.map((verse, index) => (
                   <div key={index} className="text-lg text-gray-800 leading-relaxed">
                     {verse}
