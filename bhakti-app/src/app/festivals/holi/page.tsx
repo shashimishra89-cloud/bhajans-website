@@ -261,7 +261,7 @@ export default function HoliPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <img 
-                    src="/holi-celebration.jpg" 
+                    src="/holi-celebration.svg" 
                     alt="Holi celebration with colors and people throwing colored powder"
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />
@@ -276,7 +276,7 @@ export default function HoliPage() {
                 </div>
                 <div className="space-y-4">
                   <img 
-                    src="/holi-sweets.jpg" 
+                    src="/holi-sweets.svg" 
                     alt="Traditional Holi sweets and gujiya"
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />
