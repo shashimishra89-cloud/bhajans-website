@@ -258,7 +258,7 @@ export default function HoliPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                 Holi Celebrations
               </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-3xl mx-auto">
               <div className="space-y-4">
                 <img 
                     src="/holi-celebration.jpg" 
@@ -273,22 +273,6 @@ export default function HoliPage() {
                       People gather in streets and open spaces to celebrate Holi by throwing colored powder (gulal) and water colors at each other, dancing to traditional drums, and sharing festive foods.
                     </p>
                   </div>
-                </div>
-                <div className="space-y-4">
-                  <img 
-                    src="/holi-sweets.jpg" 
-                    alt="Traditional Holi sweets and gujiya"
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                  />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                      Traditional Sweets & Delicacies
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Special Holi sweets like gujiya, mathri, and malpua are prepared and shared among families and neighbors, symbolizing sweet moments of the festival.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
