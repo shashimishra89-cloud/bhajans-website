@@ -251,7 +251,53 @@ export default function HoliPage() {
         </div>
       </section>
 
-      {/* Significance Section - 3 Columns */}
+      {/* Image Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+                Holi Celebrations
+              </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <img 
+                    src="/holi-celebration.jpg" 
+                    alt="Holi celebration with colors and people throwing colored powder"
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Vibrant Color Celebrations
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      People gather in streets and open spaces to celebrate Holi by throwing colored powder (gulal) and water colors at each other, dancing to traditional drums, and sharing festive foods.
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <img 
+                    src="/holi-sweets.jpg" 
+                    alt="Traditional Holi sweets and gujiya"
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Traditional Sweets & Delicacies
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Special Holi sweets like gujiya, mathri, and malpua are prepared and shared among families and neighbors, symbolizing sweet moments of the festival.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Banner Ad */}
+        <BannerAd />
+
+        {/* Significance Section - 3 Columns */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-orange-900 mb-12">
