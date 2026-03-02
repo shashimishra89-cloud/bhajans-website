@@ -19,6 +19,46 @@ const chalisas = [
     color: "from-orange-400 to-red-500",
     deity: "Lord Hanuman",
     verses: "40"
+  },
+  {
+    id: "shiva-chalisa",
+    name: "Shiva Chalisa", 
+    title: "40 Verses of Shiva",
+    description: "Sacred hymn dedicated to Lord Shiva, the destroyer of evil and transformer of consciousness, praising his divine attributes.",
+    icon: "🕉️",
+    color: "from-blue-400 to-purple-500",
+    deity: "Lord Shiva",
+    verses: "40"
+  },
+  {
+    id: "durga-chalisa",
+    name: "Durga Chalisa",
+    title: "40 Verses of Durga", 
+    description: "Devotional prayer to Goddess Durga, the divine mother who protects devotees and destroys evil forces.",
+    icon: "👑",
+    color: "from-red-400 to-pink-500",
+    deity: "Goddess Durga",
+    verses: "40"
+  },
+  {
+    id: "ganesh-chalisa",
+    name: "Ganesh Chalisa",
+    title: "40 Verses of Ganesha",
+    description: "Prayer to Lord Ganesha, the remover of obstacles and bestower of wisdom and success.",
+    icon: "🐘",
+    color: "from-yellow-400 to-orange-500", 
+    deity: "Lord Ganesha",
+    verses: "40"
+  },
+  {
+    id: "krishna-chalisa",
+    name: "Krishna Chalisa",
+    title: "40 Verses of Krishna",
+    description: "Devotional hymn to Lord Krishna, the embodiment of divine love and spiritual wisdom.",
+    icon: "🎵",
+    color: "from-blue-400 to-indigo-500",
+    deity: "Lord Krishna", 
+    verses: "40"
   }
 ];
 
@@ -113,26 +153,50 @@ export default function ChalisasPage() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold text-red-900 mb-4">More Chalisas Coming Soon</h2>
-            <p className="text-lg text-red-700 mb-6">
-              We're adding more sacred Chalisas including popular compositions dedicated to 
-              various deities, regional variations, and traditional texts from 
-              different spiritual traditions and saints.
-            </p>
-            <Link 
-              href="/"
-              className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-medium transition-colors"
-            >
-              <span>Back to Home</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
+      {/* Benefits of Chalisas Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-orange-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-red-900 mb-6">Benefits of Reciting Chalisas</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🙏</span>
+              </div>
+              <h3 className="text-xl font-bold text-red-900 mb-3">Spiritual Growth</h3>
+              <p className="text-red-700 leading-relaxed">
+                Regular recitation helps deepen spiritual connection and purify the mind, body, and soul.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🛡️</span>
+              </div>
+              <h3 className="text-xl font-bold text-red-900 mb-3">Divine Protection</h3>
+              <p className="text-red-700 leading-relaxed">
+                Creates a protective shield of positive energy and removes negative influences from life.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">✨</span>
+              </div>
+              <h3 className="text-xl font-bold text-red-900 mb-3">Inner Peace</h3>
+              <p className="text-red-700 leading-relaxed">
+                Brings tranquility, reduces anxiety, and promotes mental clarity and emotional balance.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* AdSense After Benefits */}
+      <BannerAd adSlot="1234567898" />
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-red-900 to-orange-900 text-white py-16 px-4 sm:px-6 lg:px-8">

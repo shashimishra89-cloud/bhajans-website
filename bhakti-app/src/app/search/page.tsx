@@ -12,7 +12,7 @@ const searchData = {
       id: "diwali",
       name: "Diwali",
       title: "Festival of Lights",
-      description: "The most celebrated Hindu festival symbolizing the victory of light over darkness",
+      description: "The most celebrated Hindu festival symbolizing victory of light over darkness",
       type: "festival",
       tags: ["lights", "lakshmi", "prosperity", "victory", "good over evil"]
     },
@@ -20,14 +20,14 @@ const searchData = {
       id: "holi",
       name: "Holi",
       title: "Festival of Colors",
-      description: "Spring festival celebrating love, joy, and the triumph of good over evil through colors",
+      description: "Spring festival celebrating love, joy, and triumph of good over evil through colors",
       type: "festival",
       tags: ["colors", "spring", "krishna", "radha", "joy", "love"]
     },
     {
       id: "navratri",
       name: "Navratri",
-      title: "Nine Nights of the Goddess",
+      title: "Nine Nights of Goddess",
       description: "Nine-day festival honoring Goddess Durga and her nine divine forms",
       type: "festival",
       tags: ["durga", "goddess", "nine nights", "dance", "garba", "shakti"]
@@ -36,7 +36,7 @@ const searchData = {
       id: "ganesh-chaturthi",
       name: "Ganesh Chaturthi",
       title: "Festival of Lord Ganesha",
-      description: "Vibrant festival celebrating the birth of Lord Ganesha, the remover of obstacles",
+      description: "Vibrant festival celebrating the birth of Lord Ganesha, remover of obstacles",
       type: "festival",
       tags: ["ganesha", "elephant", "obstacles", "wisdom", "modak", "vinayaka"]
     },
@@ -44,7 +44,7 @@ const searchData = {
       id: "krishna-janmashtami",
       name: "Krishna Janmashtami",
       title: "Birth of Lord Krishna",
-      description: "Celebrates the birth of Lord Krishna, the eighth avatar of Lord Vishnu",
+      description: "Celebrates the birth of Lord Krishna, eighth avatar of Lord Vishnu",
       type: "festival",
       tags: ["krishna", "birth", "avatar", "vishnu", "midnight", "dahi handi", "vrindavan"]
     },
@@ -97,6 +97,22 @@ const searchData = {
       description: "One of the principal deities, known as the destroyer and transformer within the Trimurti",
       type: "god",
       tags: ["trimurti", "destroyer", "transformer", "nataraja", "dance", "meditation", "trident"]
+    },
+    {
+      id: "lakshmi",
+      name: "Goddess Lakshmi",
+      title: "Goddess of Wealth",
+      description: "The divine goddess of prosperity, fortune, and spiritual abundance",
+      type: "god",
+      tags: ["prosperity", "fortune", "wealth", "lotus", "vishnu consort", "diwali"]
+    },
+    {
+      id: "saraswati",
+      name: "Goddess Saraswati",
+      title: "Goddess of Knowledge",
+      description: "The divine embodiment of knowledge, music, arts, and wisdom",
+      type: "god",
+      tags: ["knowledge", "arts", "music", "wisdom", "learning", "veena", "book"]
     }
   ],
   bhajans: [
@@ -147,11 +163,176 @@ const searchData = {
       type: "bhajan",
       festival: "holi",
       tags: ["holi", "colors", "rama", "ayodhya", "joy", "gulal"]
+    },
+    {
+      id: "vishnu-sahasranam",
+      title: "Vishnu Sahasranam",
+      description: "A sacred hymn listing the thousand names of Lord Vishnu",
+      type: "bhajan",
+      deity: "vishnu",
+      tags: ["vishnu", "thousand names", "sacred", "hymn", "prayer"]
+    },
+    {
+      id: "shiv-tandav-stotram",
+      title: "Shiv Tandav Stotram",
+      description: "A powerful hymn describing Lord Shiva's cosmic dance",
+      type: "bhajan",
+      deity: "shiva",
+      tags: ["shiva", "cosmic dance", "stotram", "tandav", "powerful"]
+    },
+    {
+      id: "madhurashtakam",
+      title: "Madhurashtakam",
+      description: "A beautiful composition describing the sweetness of Lord Krishna",
+      type: "bhajan",
+      deity: "krishna",
+      tags: ["krishna", "sweetness", "madhura", "eight verses", "devotional"]
+    }
+  ],
+  chalisas: [
+    {
+      id: "hanuman-chalisa",
+      title: "Hanuman Chalisa",
+      description: "The most powerful prayer to Lord Hanuman, consisting of 40 verses",
+      type: "chalisa",
+      deity: "hanuman",
+      tags: ["hanuman", "40 verses", "powerful prayer", "strength", "devotion"]
+    },
+    {
+      id: "shiva-chalisa",
+      title: "Shiva Chalisa",
+      description: "Sacred hymn dedicated to Lord Shiva, praising his divine attributes",
+      type: "chalisa",
+      deity: "shiva",
+      tags: ["shiva", "40 verses", "divine attributes", "transformation"]
+    },
+    {
+      id: "durga-chalisa",
+      title: "Durga Chalisa",
+      description: "Devotional prayer to Goddess Durga, the divine mother",
+      type: "chalisa",
+      deity: "durga",
+      tags: ["durga", "40 verses", "divine mother", "protection"]
+    },
+    {
+      id: "ganesh-chalisa",
+      title: "Ganesh Chalisa",
+      description: "Prayer to Lord Ganesha, the remover of obstacles",
+      type: "chalisa",
+      deity: "ganesha",
+      tags: ["ganesha", "40 verses", "obstacles", "wisdom"]
+    },
+    {
+      id: "krishna-chalisa",
+      title: "Krishna Chalisa",
+      description: "Devotional hymn to Lord Krishna, the embodiment of divine love",
+      type: "chalisa",
+      deity: "krishna",
+      tags: ["krishna", "40 verses", "divine love", "bhakti"]
+    }
+  ],
+  aartis: [
+    {
+      id: "ganesh-aarti",
+      title: "Ganesh Aarti",
+      description: "Sacred prayer ceremony to Lord Ganesha, the remover of obstacles",
+      type: "aarti",
+      deity: "ganesha",
+      tags: ["ganesha", "prayer", "obstacles", "ceremony", "wisdom"]
+    },
+    {
+      id: "durga-aarti",
+      title: "Durga Aarti",
+      description: "Devotional prayer to Goddess Durga, the divine mother who protects",
+      type: "aarti",
+      deity: "durga",
+      tags: ["durga", "divine mother", "protection", "prayer"]
+    },
+    {
+      id: "krishna-aarti",
+      title: "Krishna Aarti",
+      description: "Sacred prayer ceremony to Lord Krishna, the divine cowherd",
+      type: "aarti",
+      deity: "krishna",
+      tags: ["krishna", "prayer", "divine cowherd", "ceremony"]
+    },
+    {
+      id: "shiv-aarti",
+      title: "Shiv Aarti",
+      description: "Prayer ceremony to Lord Shiva, the destroyer of evil",
+      type: "aarti",
+      deity: "shiva",
+      tags: ["shiva", "prayer", "destruction", "transformation"]
+    },
+    {
+      id: "lakshmi-aarti",
+      title: "Lakshmi Aarti",
+      description: "Sacred prayer to Goddess Lakshmi, the bestower of prosperity",
+      type: "aarti",
+      deity: "lakshmi",
+      tags: ["lakshmi", "prosperity", "wealth", "prayer", "goddess"]
+    }
+  ],
+  mantras: [
+    {
+      id: "gayatri-mantra",
+      title: "Gayatri Mantra",
+      description: "The most sacred mantra in Hinduism, dedicated to the Sun God",
+      type: "mantra",
+      deity: "surya",
+      tags: ["gayatri", "sun god", "sacred", "mantra", "wisdom"]
+    },
+    {
+      id: "mahamrityunjaya-mantra",
+      title: "Mahamrityunjaya Mantra",
+      description: "Powerful mantra for conquering death and achieving immortality",
+      type: "mantra",
+      deity: "shiva",
+      tags: ["shiva", "death conquering", "immortality", "powerful mantra"]
+    },
+    {
+      id: "om-mantra",
+      title: "Om Mantra",
+      description: "The primordial sound of the universe, the most sacred mantra",
+      type: "mantra",
+      deity: "universal",
+      tags: ["om", "primordial", "universal", "sacred sound", "meditation"]
+    },
+    {
+      id: "om-namah-shivaya",
+      title: "Om Namah Shivaya",
+      description: "Sacred mantra dedicated to Lord Shiva for spiritual liberation",
+      type: "mantra",
+      deity: "shiva",
+      tags: ["shiva", "liberation", "spiritual", "sacred", "meditation"]
+    }
+  ],
+  stories: [
+    {
+      id: "dhruva-the-devotee",
+      title: "Dhruva the Devotee",
+      description: "The inspiring story of young Dhruva's unwavering devotion to Lord Vishnu",
+      type: "story",
+      tags: ["dhruva", "devotion", "vishnu", "determination", "spiritual"]
+    },
+    {
+      id: "ganesh-and-the-moon",
+      title: "Ganesh and the Moon",
+      description: "The fascinating tale of how Lord Ganesha learned humility from the Moon",
+      type: "story",
+      tags: ["ganesh", "moon", "humility", "lesson", "moral"]
+    },
+    {
+      id: "krishna-and-pootana",
+      title: "Krishna and Pootana",
+      description: "The divine story of how baby Krishna defeated the demon Pootana",
+      type: "story",
+      tags: ["krishna", "pootana", "demon", "divine protection", "childhood"]
     }
   ]
 };
 
-const allItems = [...searchData.festivals, ...searchData.gods, ...searchData.bhajans];
+const allItems = [...searchData.festivals, ...searchData.gods, ...searchData.bhajans, ...searchData.chalisas, ...searchData.aartis, ...searchData.mantras, ...searchData.stories];
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -199,6 +380,10 @@ function SearchContent() {
       case "festival": return <Calendar className="h-5 w-5" />;
       case "god": return <Crown className="h-5 w-5" />;
       case "bhajan": return <Music className="h-5 w-5" />;
+      case "chalisa": return <Heart className="h-5 w-5" />;
+      case "aarti": return <Music className="h-5 w-5" />;
+      case "mantra": return <Heart className="h-5 w-5" />;
+      case "story": return <Heart className="h-5 w-5" />;
       default: return <Heart className="h-5 w-5" />;
     }
   };
@@ -207,10 +392,11 @@ function SearchContent() {
     switch (item.type) {
       case "festival": return `/festivals/${item.id}`;
       case "god": return `/gods/${item.id}`;
-      case "bhajan": 
-        if (item.deity) return `/gods/${item.deity}`;
-        if (item.festival) return `/festivals/${item.festival}`;
-        return "#";
+      case "bhajan": return `/bhajans/${item.id}`;
+      case "chalisa": return `/chalisas/${item.id}`;
+      case "aarti": return `/aartis/${item.id}`;
+      case "mantra": return `/mantras/${item.id}`;
+      case "story": return `/stories/${item.id}`;
       default: return "#";
     }
   };
@@ -220,6 +406,10 @@ function SearchContent() {
       case "festival": return "from-orange-400 to-red-500";
       case "god": return "from-purple-400 to-indigo-500";
       case "bhajan": return "from-green-400 to-teal-500";
+      case "chalisa": return "from-red-400 to-pink-500";
+      case "aarti": return "from-yellow-400 to-orange-500";
+      case "mantra": return "from-blue-400 to-purple-500";
+      case "story": return "from-indigo-400 to-blue-500";
       default: return "from-gray-400 to-gray-500";
     }
   };
@@ -232,13 +422,17 @@ function SearchContent() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Sparkles className="h-8 w-8 text-orange-600" />
-              <h1 className="text-2xl font-bold text-orange-900">Bhajans</h1>
+              <h1 className="text-2xl font-bold text-orange-900">Bhakti</h1>
             </Link>
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
+              <Link href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</Link>
+              <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-800 hover:text-orange-600 font-medium">Chalisas</Link>
+              <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
+              <Link href="/stories" className="text-orange-800 hover:text-orange-600 font-medium">Stories</Link>
               <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
-              <Link href="/search" className="text-white bg-orange-600 px-4 py-2 rounded-lg font-medium">Search</Link>
-              <Link href="/about" className="text-orange-800 hover:text-orange-600 font-medium">About</Link>
+              <Link href="/search" className="text-orange-600 font-semibold">Search</Link>
             </nav>
           </div>
         </div>
@@ -249,10 +443,10 @@ function SearchContent() {
         <div className="max-w-4xl mx-auto text-center">
           <Search className="h-16 w-16 text-orange-600 mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-bold text-orange-900 mb-6">
-            Search Bhajans
+            Search Bhakti Content
           </h2>
           <p className="text-xl text-orange-700 mb-8">
-            Find festivals, gods, bhajans, and aartis from our comprehensive repository
+            Find festivals, gods, bhajans, aartis, and more from our comprehensive repository
           </p>
         </div>
       </section>
@@ -317,6 +511,50 @@ function SearchContent() {
             >
               <Music className="h-4 w-4" />
               <span>Bhajans ({searchData.bhajans.length})</span>
+            </button>
+            <button
+              onClick={() => setSelectedCategory('chalisa')}
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                selectedCategory === 'chalisa'
+                  ? "bg-orange-600 text-white"
+                  : "bg-white text-orange-600 border-2 border-orange-200 hover:border-orange-400"
+              }`}
+            >
+              <Heart className="h-4 w-4" />
+              <span>Chalisas ({searchData.chalisas.length})</span>
+            </button>
+            <button
+              onClick={() => setSelectedCategory('aarti')}
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                selectedCategory === 'aarti'
+                  ? "bg-orange-600 text-white"
+                  : "bg-white text-orange-600 border-2 border-orange-200 hover:border-orange-400"
+              }`}
+            >
+              <Music className="h-4 w-4" />
+              <span>Aartis ({searchData.aartis.length})</span>
+            </button>
+            <button
+              onClick={() => setSelectedCategory('mantra')}
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                selectedCategory === 'mantra'
+                  ? "bg-orange-600 text-white"
+                  : "bg-white text-orange-600 border-2 border-orange-200 hover:border-orange-400"
+              }`}
+            >
+              <Heart className="h-4 w-4" />
+              <span>Mantras ({searchData.mantras.length})</span>
+            </button>
+            <button
+              onClick={() => setSelectedCategory('story')}
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                selectedCategory === 'story'
+                  ? "bg-orange-600 text-white"
+                  : "bg-white text-orange-600 border-2 border-orange-200 hover:border-orange-400"
+              }`}
+            >
+              <Heart className="h-4 w-4" />
+              <span>Stories ({searchData.stories.length})</span>
             </button>
           </div>
         </div>
@@ -410,9 +648,9 @@ function SearchContent() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Sparkles className="h-6 w-6" />
-            <h3 className="text-xl font-bold">Bhajans</h3>
+            <h3 className="text-xl font-bold">Bhakti</h3>
           </div>
-          <p className="text-orange-200 mb-6">Preserving and sharing the sacred traditions of Hindu culture</p>
+          <p className="text-orange-200 mb-6">A Sacred Space for Devotion</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
             <Link href="/privacy" className="text-orange-200 hover:text-white">Privacy Policy</Link>
             <Link href="/terms" className="text-orange-200 hover:text-white">Terms of Service</Link>

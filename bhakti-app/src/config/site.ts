@@ -18,7 +18,7 @@ export const siteConfig = {
   
   // Contact Information
   contact: {
-    email: "contact@bhajans.justhobby.net",
+    email: "info@justhobby.net",
     phone: "+1-XXX-XXX-XXXX"
   },
   

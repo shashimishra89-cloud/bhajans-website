@@ -10,13 +10,16 @@ export default function ContactPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Sparkles className="h-8 w-8 text-orange-600" />
-              <h1 className="text-2xl font-bold text-orange-900">Bhajans</h1>
+              <h1 className="text-2xl font-bold text-orange-900">Bhakti</h1>
             </Link>
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
+              <Link href="/aartis" className="text-orange-800 hover:text-orange-600 font-medium">Aartis</Link>
+              <Link href="/bhajans" className="text-orange-800 hover:text-orange-600 font-medium">Bhajans</Link>
+              <Link href="/chalisas" className="text-orange-800 hover:text-orange-600 font-medium">Chalisas</Link>
+              <Link href="/mantras" className="text-orange-800 hover:text-orange-600 font-medium">Mantras</Link>
+              <Link href="/stories" className="text-orange-800 hover:text-orange-600 font-medium">Stories</Link>
               <Link href="/gods" className="text-orange-800 hover:text-orange-600 font-medium">Gods</Link>
-              <Link href="/search" className="text-orange-800 hover:text-orange-600 font-medium">Search</Link>
-              <Link href="/about" className="text-orange-800 hover:text-orange-600 font-medium">About</Link>
             </nav>
           </div>
         </div>
@@ -42,12 +45,12 @@ export default function ContactPage() {
                   <h3 className="text-xl font-bold text-orange-900">Email Us</h3>
                 </div>
                 <p className="text-orange-800 mb-2">For general inquiries:</p>
-                <a href="mailto:info@bhakti.com" className="text-orange-600 hover:text-orange-700 font-medium">
-                  info@bhakti.com
+                <a href="mailto:info@justhobby.net" className="text-orange-600 hover:text-orange-700 font-medium">
+                  info@justhobby.net
                 </a>
                 <p className="text-orange-800 mt-4 mb-2">For content suggestions:</p>
-                <a href="mailto:content@bhakti.com" className="text-orange-600 hover:text-orange-700 font-medium">
-                  content@bhakti.com
+                <a href="mailto:info@justhobby.net" className="text-orange-600 hover:text-orange-700 font-medium">
+                  info@justhobby.net
                 </a>
               </div>
 
@@ -88,7 +91,7 @@ export default function ContactPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-orange-900 mb-4">Contributing Content</h2>
               <p className="text-orange-800 mb-4">
-                Are you a scholar, practitioner, or enthusiast of Hindu culture? We welcome contributions of authentic bhajans, aartis, and cultural information. Please contact us at <a href="mailto:content@bhakti.com" className="text-orange-600 hover:text-orange-700 underline">content@bhakti.com</a> with:
+                Are you a scholar, practitioner, or enthusiast of Hindu culture? We welcome contributions of authentic bhajans, aartis, and cultural information. Please contact us at <a href="mailto:info@justhobby.net" className="text-orange-600 hover:text-orange-700 underline">info@justhobby.net</a> with:
               </p>
               <ul className="list-disc pl-6 text-orange-800 space-y-2">
                 <li>Original text in Devanagari script</li>
@@ -113,9 +116,9 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Sparkles className="h-6 w-6" />
-            <h3 className="text-xl font-bold">Bhajans</h3>
+            <h3 className="text-xl font-bold">Bhakti</h3>
           </div>
-          <p className="text-orange-200 mb-6">Preserving and sharing the sacred traditions of Hindu culture</p>
+          <p className="text-orange-200 mb-6">A Sacred Space for Devotion</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
             <Link href="/privacy" className="text-orange-200 hover:text-white">Privacy Policy</Link>
             <Link href="/terms" className="text-orange-200 hover:text-white">Terms of Service</Link>

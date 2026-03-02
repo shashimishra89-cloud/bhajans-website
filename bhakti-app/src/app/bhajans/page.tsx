@@ -11,16 +11,6 @@ export const metadata = {
 // Bhajan data
 const bhajans = [
   {
-    id: "hanuman-chalisa",
-    name: "Hanuman Chalisa",
-    title: "40 Verses of Hanuman",
-    description: "The most powerful prayer to Lord Hanuman, consisting of 40 verses (chaupais) praising his glory and seeking his blessings.",
-    icon: "💪",
-    color: "from-orange-400 to-red-500",
-    deity: "Lord Hanuman",
-    verses: "40"
-  },
-  {
     id: "vishnu-sahasranam",
     name: "Vishnu Sahasranam",
     title: "Thousand Names of Vishnu",
