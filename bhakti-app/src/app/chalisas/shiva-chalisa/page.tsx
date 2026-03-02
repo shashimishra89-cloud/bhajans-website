@@ -7,7 +7,7 @@ import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
 
 const ShivaChalisaPage = () => {
   const chalisaData = {
-    id: "shiva-chalisa",
+    id: "Shiva-chalisa",
     name: "Shiva Chalisa",
     title: "शिव चालीसा - Shiva Chalisa",
     description: "Complete Shiva Chalisa with Hindi lyrics, English translations, and spiritual significance.",
@@ -359,7 +359,27 @@ const ShivaChalisaPage = () => {
         {/* In-Content Ad */}
         <InContentAd />
 
-        {/* Lyrics Section */}
+        {/* Complete Hindi Chalisa Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            पूर्ण शिव चालीसा (Complete Shiva Chalisa in Hindi)
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
+              <div className="space-y-3 text-right">
+                {chalisaData.lyrics.hindi.map((verse, index) => (
+                  <div key={index} className="text-lg text-gray-800 leading-relaxed">
+                    {verse}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <InContentAd />
+
+        {/* Verse-by-Verse Translation Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             शिव चालीसा - Shiva Chalisa Lyrics
