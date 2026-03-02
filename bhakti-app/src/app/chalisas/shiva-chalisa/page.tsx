@@ -1,459 +1,444 @@
 "use client";
 
-import Link from "next/link";
-import { Music, Sparkles, ChevronRight, BookOpen, Heart, Clock } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
 import { BannerAd, InContentAd } from "@/components/AdBlock";
 import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
 
-export default function ShivaChalisaPage() {
-  const chalisa = {
+const ShivaChalisaPage = () => {
+  const chalisaData = {
+    id: "shiva-chalisa",
     name: "Shiva Chalisa",
-    title: "40 Verses of Lord Shiva",
-    description: "Sacred hymn dedicated to Lord Shiva, the destroyer of evil and transformer of consciousness, praising his divine attributes.",
+    title: "शिव चालीसा - Shiva Chalisa",
+    description: "Complete Shiva Chalisa with Hindi lyrics, English translations, and spiritual significance.",
     icon: "🕉️",
-    color: "from-blue-400 to-purple-500",
+    color: "from-blue-500 to-purple-500",
     deity: "Lord Shiva",
     verses: "40",
     lyrics: {
       hindi: [
-        "जय शिव शंकर, मंगल मूले।",
-        "जय गंगाधर, गंगा जटा धारी॥",
-        "भाल चन्द्रमा सोहत, नीलकंठ भाले।",
-        "कण्ठ में वसंत राजा, भृंगी की माले॥",
-        "वस्त्र भाले बाघ चर्म, साँवरे स्याम।",
-        "भाले मुण्ड माला, भस्म अंग राम॥",
-        "त्रिपुर त्रास देवता, भूत प्रेत आधार।",
-        "भूत प्रेत पिशाच नाथ, सबके सर धार॥",
-        "जटा जूट बिखराय, बाभन विखराय।",
-        "गंगा जटा में बहत, जलधर को टार॥",
-        "दमरू वादन शंकर, तांडव नृत्य करत।",
-        "सब दिक दारुण गूंज, भूत गण विहरत॥",
-        "नन्दी बैल सवारी, सोहत शम्भु भाली।",
-        "देवता दानव मुनि, सब मिलि गावली॥",
-        "करत त्रिशूल भुजदण्ड, भाले चन्द्र चकोर।",
-        "जय जय शिव शंकर, ब्रह्मा विष्णु विचार॥",
-        "जय जय शिव शंकर, जय गंगाधर।",
-        "जय जय शिव शंकर, जय भोलेनाथ॥",
-        "जय जय शिव शंकर, जय गिरिजापति।",
-        "जय जय शिव शंकर, जय भूतनाथ॥",
-        "जय जय शिव शंकर, जय चंद्रमौली।",
-        "जय जय शिव शंकर, जय पिनाकधारी॥",
-        "जय जय शिव शंकर, जय उमापति।",
-        "जय जय शिव शंकर, जय गंगाधर॥",
-        "जय जय शिव शंकर, जय भोलेनाथ।",
-        "जय जय शिव शंकर, जय गिरिजापति॥",
-        "जय जय शिव शंकर, जय भूतनाथ।",
-        "जय जय शिव शंकर, जय चंद्रमौली॥",
-        "जय जय शिव शंकर, जय पिनाकधारी।",
-        "जय जय शिव शंकर, जय उमापति॥",
-        "जय जय शिव शंकर, जय गंगाधर।",
-        "जय जय शिव शंकर, जय भोलेनाथ॥",
-        "जय जय शिव शंकर, जय गिरिजापति।",
-        "जय जय शिव शंकर, जय भूतनाथ॥",
-        "जय जय शिव शंकर, जय चंद्रमौली।",
-        "जय जय शिव शंकर, जय पिनाकधारी॥",
-        "जय जय शिव शंकर, जय उमापति।",
-        "जय जय शिव शंकर, जय गंगाधर॥",
-        "जय जय शिव शंकर, जय भोलेनाथ।",
-        "जय जय शिव शंकर, जय गिरिजापति॥",
-        "जय जय शिव शंकर, जय भूतनाथ।",
-        "जय जय शिव शंकर, जय चंद्रमौली॥",
-        "जय जय शिव शंकर, जय पिनाकधारी।",
-        "जय जय शिव शंकर, जय उमापति॥",
-        "दोहा",
-        "शिव शंकर की आरती, जो कोई जपत ध्यावत।",
-        "तात सुख सम्पत्ति पावत, दुःख नहीं लाभत॥",
-        "पाठ करत शिव चालीसा, पूरन होई इच्छा।",
-        "शिव शंकर की कृपा, सदा सुरक्षा रचा॥"
+        "जय गिरिजा पति दीन दयाला। सदा करत सन्तन प्रतिपाला॥",
+        "भाल चन्द्रमा सोहत नीके। कानन कुण्डल नागफनी के॥",
+        "अंग गौर शिर गंग बहाये। मुण्डमाल तन क्षार लगाये॥",
+        "वस्त्र खाल बाघम्बर सोहे। छवि को देखि नाग मन मोहे॥",
+        "मैना मातु की हवे दुलारी। बाम अंग सोहत छवि न्यारी॥",
+        "कर त्रिशूल सोहत छवि भारी। करत सदा शत्रुन क्षयकारी॥",
+        "नन्दि गणेश सोहै तहँ कैसे। सागर मध्य कमल हैं जैसे॥",
+        "कार्तिक श्याम और गणराऊ। या छवि को कहि जात न काऊ॥",
+        "देवन जबहीं जाय पुकारा। तब ही दुख प्रभु आप निवारा॥",
+        "किया उपद्रव तारक भारी। देवन सब मिलि तुमहिं जुहारी॥",
+        "तुरत षडानन आप पठायउ। लवनिमेष महँ मारि गिरायउ॥",
+        "आप जलंधर असुर संहारा। सुयश तुम्हार विदित संसारा॥",
+        "त्रिपुरासुर सन युद्ध मचाई। सबहिं कृपा कर लीन बचाई॥",
+        "किया तपहिं भागीरथ भारी। पुरब प्रतिज्ञा तासु पुरारी॥",
+        "दानिन महँ तुम सम कोउ नाहीं। सेवक स्तुति करत सदाहीं॥",
+        "वेद माहि महिमा तुम गाई। अकथ अनादि भेद नहिं पाई॥",
+        "प्रकटी उदधि मंथन में ज्वाला। जरत सुरासुर भए विहाला॥",
+        "कीन्ही दया तहं करी सहाई। नीलकण्ठ तब नाम कहाई॥",
+        "पूजन रामचन्द्र जब कीन्हा। जीत के लंक विभीषण दीन्हा॥",
+        "सहस कमल में हो रहे धारी। कीन्ह परीक्षा तबहिं पुरारी॥",
+        "एक कमल प्रभु राखेउ जोई। कमल नयन पूजन चहं सोई॥",
+        "कठिन भक्ति देखी प्रभु शंकर। भए प्रसन्न दिए इच्छित वर॥",
+        "जय जय जय अनन्त अविनाशी। करत कृपा सब के घटवासी॥",
+        "दुष्ट सकल नित मोहि सतावै। भ्रमत रहौं मोहि चैन न आवै॥",
+        "त्राहि त्राहि मैं नाथ पुकारो। येहि अवसर मोहि आन उबारो॥",
+        "लै त्रिशूल शत्रुन को मारो। संकट ते मोहि आन उबारो॥",
+        "मात-पिता भ्राता सब होई। संकट में पूछत नहिं कोई॥",
+        "स्वामी एक है आस तुम्हारी। आय हरहु मम संकट भारी॥",
+        "धन निर्धन को देत सदा हीं। जो कोई जांचे सो फल पाहीं॥",
+        "अस्तुति केहि विधि करैं तुम्हारी। क्षमहु नाथ अब चूक हमारी॥",
+        "शंकर हो संकट के नाशन। मंगल कारण विघ्न विनाशन॥",
+        "योगी यति मुनि ध्यान लगावैं। शारद नारद शीश नवावैं॥",
+        "नमो नमो जय नमः शिवाय। सुर ब्रह्मादिक पार न पाय॥",
+        "जो यह पाठ करे मन लाई। ता पर होत है शम्भु सहाई॥",
+        "ॠनियां जो कोई हो अधिकारी। पाठ करे सो पावन हारी॥",
+        "पुत्र होन कर इच्छा जोई। निश्चय शिव प्रसाद तेहि होई॥",
+        "पण्डित त्रयोदशी को लावे। ध्यान पूर्वक होम करावे॥",
+        "त्रयोदशी व्रत करै हमेशा। ताके तन नहीं रहै कलेशा॥",
+        "धूप दीप नैवेद्य चढ़ावे। शंकर सम्मुख पाठ सुनावे॥",
+        "जन्म जन्म के पाप नसावे। अन्त धाम शिवपुर में पावे॥",
+        "कहैं अयोध्यादास आस तुम्हारी। जानि सकल दुःख हरहु हमारी॥"
       ],
       translations: [
         {
-          hindi: "जय शिव शंकर, मंगल मूले।",
-          english: "Victory to Shiva Shankar, the source of auspiciousness."
+          hindi: "जय गिरिजा पति दीन दयाला। सदा करत सन्तन प्रतिपाला॥",
+          english: "Victory to Girija's husband, compassionate to the poor. Always protects your devotees."
         },
         {
-          hindi: "जय गंगाधर, गंगा जटा धारी॥",
-          english: "Victory to Ganga Dhara, who holds Ganga in his matted locks."
+          hindi: "भाल चन्द्रमा सोहत नीके। कानन कुण्डल नागफनी के॥",
+          english: "The moon adorns your forehead beautifully. Serpents serve as your earrings."
         },
         {
-          hindi: "भाल चन्द्रमा सोहत, नीलकंठ भाले।",
-          english: "The moon adorns his forehead, blue-throated one."
+          hindi: "अंग गौर शिर गंग बहाये। मुण्डमाल तन क्षार लगाये॥",
+          english: "Your body is fair, Ganga flows in your hair. Garland of skulls, body smeared with ashes."
         },
         {
-          hindi: "कण्ठ में वसंत राजा, भृंगी की माले॥",
-          english: "King Vasant in his throat, garland of bees."
+          hindi: "वस्त्र खाल बाघम्बर सोहे। छवि को देखि नाग मन मोहे॥",
+          english: "Tiger skin looks beautiful as clothing. Seeing your form, the serpent's heart is captivated."
         },
         {
-          hindi: "वस्त्र भाले बाघ चर्म, साँवरे स्याम।",
-          english: "Wears tiger skin as clothing, dark complexioned."
+          hindi: "मैना मातु की हवे दुलारी। बाम अंग सोहत छवि न्यारी॥",
+          english: "Mother Maina's beloved is beautiful. Your left side holds a unique form."
         },
         {
-          hindi: "भाले मुण्ड माला, भस्म अंग राम॥",
-          english: "Garland of skulls on forehead, body smeared with ashes."
+          hindi: "कर त्रिशूल सोहत छवि भारी। करत सदा शत्रुन क्षयकारी॥",
+          english: "Trident in hand looks magnificent in your form. Always destroys the enemies."
         },
         {
-          hindi: "त्रिपुर त्रास देवता, भूत प्रेत आधार।",
-          english: "Terror to the three cities, lord of ghosts and spirits."
+          hindi: "नन्दि गणेश सोहै तहँ कैसे। सागर मध्य कमल हैं जैसे॥",
+          english: "Nandi and Ganesha look beautiful there. Like lotuses in the middle of the ocean."
         },
         {
-          hindi: "भूत प्रेत पिशाच नाथ, सबके सर धार॥",
-          english: "Lord of ghosts, spirits, and demons, master of all."
+          hindi: "कार्तिक श्याम और गणराऊ। या छवि को कहि जात न काऊ॥",
+          english: "Kartikeya, Shyam, and Ganesha. This form cannot be described in words."
         },
         {
-          hindi: "जटा जूट बिखराय, बाभन विखराय।",
-          english: "Matted locks scattered, serpent spread out."
+          hindi: "देवन जबहीं जाय पुकारा। तब ही दुख प्रभु आप निवारा॥",
+          english: "Whenever the gods cried out. Then you, Lord, removed their sorrows."
         },
         {
-          hindi: "गंगा जटा में बहत, जलधर को टार॥",
-          english: "Ganga flows in his locks, relieving the ocean."
+          hindi: "किया उपद्रव तारक भारी। देवन सब मिलि तुमहिं जुहारी॥",
+          english: "When the planets caused great disturbance. All gods together prayed to you."
         },
         {
-          hindi: "दमरू वादन शंकर, तांडव नृत्य करत।",
-          english: "Shankar plays the damaru, performs the Tandava dance."
+          hindi: "तुरत षडानन आप पठायउ। लवनिमेष महँ मारि गिरायउ॥",
+          english: "You immediately sent Shadanan. Who killed Lavanimesh and made him fall."
         },
         {
-          hindi: "सब दिक दारुण गूंज, भूत गण विहरत॥",
-          english: "Terrible echoes in all directions, ghosts and spirits rejoice."
+          hindi: "आप जलंधर असुर संहारा। सुयश तुम्हार विदित संसारा॥",
+          english: "You killed the demon Jalandhar. Your glory is known throughout the world."
         },
         {
-          hindi: "नन्दी बैल सवारी, सोहत शम्भु भाली।",
-          english: "Rides Nandi the bull, Shambhu looks magnificent."
+          hindi: "त्रिपुरासुर सन युद्ध मचाई। सबहिं कृपा कर लीन बचाई॥",
+          english: "You fought a war with Tripurasur. By your grace, saved everyone."
         },
         {
-          hindi: "देवता दानव मुनि, सब मिलि गावली॥",
-          english: "Devas, demons, and sages all sing his praises together."
+          hindi: "किया तपहिं भागीरथ भारी। पुरब प्रतिज्ञा तासु पुरारी॥",
+          english: "Bhagirath did severe penance. You fulfilled his promise."
         },
         {
-          hindi: "करत त्रिशूल भुजदण्ड, भाले चन्द्र चकोर।",
-          english: "Holds trident and staff, moon like a disc on forehead."
+          hindi: "दानिन महँ तुम सम कोउ नाहीं। सेवक स्तुति करत सदाहीं॥",
+          english: "In giving, none is equal to you. Your servants always praise you."
         },
         {
-          hindi: "जय जय शिव शंकर, ब्रह्मा विष्णु विचार॥",
-          english: "Victory to Shiva Shankar, contemplated by Brahma and Vishnu."
+          hindi: "वेद माहि महिमा तुम गाई। अकथ अनादि भेद नहिं पाई॥",
+          english: "Your glory is sung in the Vedas. Indescribable, beginningless, no difference found."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गंगाधर।",
-          english: "Victory to Shiva Shankar, victory to Ganga Dhara."
+          hindi: "प्रकटी उदधि मंथन में ज्वाला। जरत सुरासुर भए विहाला॥",
+          english: "Flames appeared during ocean churning. Gods and demons became distressed."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भोलेनाथ॥",
-          english: "Victory to Shiva Shankar, victory to Bholenath."
+          hindi: "कीन्ही दया तहं करी सहाई। नीलकण्ठ तब नाम कहाई॥",
+          english: "You had mercy and helped them. Then you were named Neelkanth."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गिरिजापति।",
-          english: "Victory to Shiva Shankar, victory to Girija Pati."
+          hindi: "पूजन रामचन्द्र जब कीन्हा। जीत के लंक विभीषण दीन्हा॥",
+          english: "When Ramachandra worshipped you. He conquered Lanka and gave it to Vibhishan."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भूतनाथ॥",
-          english: "Victory to Shiva Shankar, victory to Bhootnath."
+          hindi: "सहस कमल में हो रहे धारी। कीन्ह परीक्षा तबहिं पुरारी॥",
+          english: "You were holding a thousand lotuses. Then the Lord tested you."
         },
         {
-          hindi: "जय जय शिव शंकर, जय चंद्रमौली।",
-          english: "Victory to Shiva Shankar, victory to Chandramauli."
+          hindi: "एक कमल प्रभु राखेउ जोई। कमल नयन पूजन चहं सोई॥",
+          english: "Whoever keeps one lotus for the Lord. Lotus-eyed Lord wants to worship only him."
         },
         {
-          hindi: "जय जय शिव शंकर, जय पिनाकधारी॥",
-          english: "Victory to Shiva Shankar, victory to Pinakadhari."
+          hindi: "कठिन भक्ति देखी प्रभु शंकर। भए प्रसन्न दिए इच्छित वर॥",
+          english: "Seeing the difficult devotion, Lord Shankar. Became pleased and gave the desired boon."
         },
         {
-          hindi: "जय जय शिव शंकर, जय उमापति।",
-          english: "Victory to Shiva Shankar, victory to Umapati."
+          hindi: "जय जय जय अनन्त अविनाशी। करत कृपा सब के घटवासी॥",
+          english: "Victory, victory, victory to the infinite, indestructible. By your grace, you reside in everyone's heart."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गंगाधर॥",
-          english: "Victory to Shiva Shankar, victory to Ganga Dhara."
+          hindi: "दुष्ट सकल नित मोहि सतावै। भ्रमत रहौं मोहि चैन न आवै॥",
+          english: "All wicked people always torment me. I wander deluded, no consciousness comes."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भोलेनाथ।",
-          english: "Victory to Shiva Shankar, victory to Bholenath."
+          hindi: "त्राहि त्राहि मैं नाथ पुकारो। येहि अवसर मोहि आन उबारो॥",
+          english: "Save, save, I cry out to you, Lord. Save me in this moment."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गिरिजापति॥",
-          english: "Victory to Shiva Shankar, victory to Girija Pati."
+          hindi: "लै त्रिशूल शत्रुन को मारो। संकट ते मोहि आन उबारो॥",
+          english: "Take the trident and kill the enemies. Save me from this crisis."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भूतनाथ।",
-          english: "Victory to Shiva Shankar, victory to Bhootnath."
+          hindi: "मात-पिता भ्राता सब होई। संकट में पूछत नहिं कोई॥",
+          english: "Mother, father, brother all are there. In crisis, no one asks."
         },
         {
-          hindi: "जय जय शिव शंकर, जय चंद्रमौली॥",
-          english: "Victory to Shiva Shankar, victory to Chandramauli."
+          hindi: "स्वामी एक है आस तुम्हारी। आय हरहु मम संकट भारी॥",
+          english: "You are the only hope, Lord. Come and remove my great crisis."
         },
         {
-          hindi: "जय जय शिव शंकर, जय पिनाकधारी।",
-          english: "Victory to Shiva Shankar, victory to Pinakadhari."
+          hindi: "धन निर्धन को देत सदा हीं। जो कोई जांचे सो फल पाहीं॥",
+          english: "You always give wealth to the poor. Whoever tests you gets the fruit."
         },
         {
-          hindi: "जय जय शिव शंकर, जय उमापति॥",
-          english: "Victory to Shiva Shankar, victory to Umapati."
+          hindi: "अस्तुति केहि विधि करैं तुम्हारी। क्षमहु नाथ अब चूक हमारी॥",
+          english: "In whatever way I praise you. Forgive me, Lord, for my mistakes now."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गंगाधर।",
-          english: "Victory to Shiva Shankar, victory to Ganga Dhara."
+          hindi: "शंकर हो संकट के नाशन। मंगल कारण विघ्न विनाशन॥",
+          english: "Shankar is the destroyer of crises. Causer of auspiciousness, destroyer of obstacles."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भोलेनाथ॥",
-          english: "Victory to Shiva Shankar, victory to Bholenath."
+          hindi: "योगी यति मुनि ध्यान लगावैं। शारद नारद शीश नवावैं॥",
+          english: "Yogis, ascetics, and sages meditate. Sharada and Narada bow their heads."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गिरिजापति।",
-          english: "Victory to Shiva Shankar, victory to Girija Pati."
+          hindi: "नमो नमो जय नमः शिवाय। सुर ब्रह्मादिक पार न पाय॥",
+          english: "Salutations, salutations, victory to Namah Shivaya. Gods including Brahma cannot cross you."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भूतनाथ॥",
-          english: "Victory to Shiva Shankar, victory to Bhootnath."
+          hindi: "जो यह पाठ करे मन लाई। ता पर होत है शम्भु सहाई॥",
+          english: "Whoever reads this with devotion. Shambhu becomes their protector."
         },
         {
-          hindi: "जय जय शिव शंकर, जय चंद्रमौली।",
-          english: "Victory to Shiva Shankar, victory to Chandramauli."
+          hindi: "ॠनियां जो कोई हो अधिकारी। पाठ करे सो पावन हारी॥",
+          english: "Whoever is a ruler or authority. Reading this becomes pure."
         },
         {
-          hindi: "जय जय शिव शंकर, जय पिनाकधारी॥",
-          english: "Victory to Shiva Shankar, victory to Pinakadhari."
+          hindi: "पुत्र होन कर इच्छा जोई। निश्चय शिव प्रसाद तेहि होई॥",
+          english: "Whoever desires to have a son. Definitely gets it by Shiva's grace."
         },
         {
-          hindi: "जय जय शिव शंकर, जय उमापति।",
-          english: "Victory to Shiva Shankar, victory to Umapati."
+          hindi: "पण्डित त्रयोदशी को लावे। ध्यान पूर्वक होम करावे॥",
+          english: "Bring a pandit on the thirteenth day. Have havan performed with meditation."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गंगाधर॥",
-          english: "Victory to Shiva Shankar, victory to Ganga Dhara."
+          hindi: "त्रयोदशी व्रत करै हमेशा। ताके तन नहीं रहै कलेशा॥",
+          english: "Whoever fasts on the thirteenth day always. No sorrow remains in their body."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भोलेनाथ।",
-          english: "Victory to Shiva Shankar, victory to Bholenath."
+          hindi: "धूप दीप नैवेद्य चढ़ावे। शंकर सम्मुख पाठ सुनावे॥",
+          english: "Offer incense, lamp, and food offerings. Have the reading recited in front of Shankar."
         },
         {
-          hindi: "जय जय शिव शंकर, जय गिरिजापति॥",
-          english: "Victory to Shiva Shankar, victory to Girija Pati."
+          hindi: "जन्म जन्म के पाप नसावे। अन्त धाम शिवपुर में पावे॥",
+          english: "Sins of many births are destroyed. At the end, attains Shiva's abode."
         },
         {
-          hindi: "जय जय शिव शंकर, जय भूतनाथ।",
-          english: "Victory to Shiva Shankar, victory to Bhootnath."
-        },
-        {
-          hindi: "जय जय शिव शंकर, जय चंद्रमौली॥",
-          english: "Victory to Shiva Shankar, victory to Chandramauli."
-        },
-        {
-          hindi: "जय जय शिव शंकर, जय पिनाकधारी।",
-          english: "Victory to Shiva Shankar, victory to Pinakadhari."
-        },
-        {
-          hindi: "जय जय शिव शंकर, जय उमापति॥",
-          english: "Victory to Shiva Shankar, victory to Umapati."
-        },
-        {
-          hindi: "दोहा",
-          english: "Couplet"
-        },
-        {
-          hindi: "शिव शंकर की आरती, जो कोई जपत ध्यावत।",
-          english: "Whoever chants the aarti of Shiva Shankar with devotion."
-        },
-        {
-          hindi: "तात सुख सम्पत्ति पावत, दुःख नहीं लाभत॥",
-          english: "Receives happiness and prosperity, never suffers sorrow."
-        },
-        {
-          hindi: "पाठ करत शिव चालीसा, पूरन होई इच्छा।",
-          english: "By reciting Shiva Chalisa, wishes are fulfilled."
-        },
-        {
-          hindi: "शिव शंकर की कृपा, सदा सुरक्षा रचा॥",
-          english: "By the grace of Shiva Shankar, always protected."
+          hindi: "कहैं अयोध्यादास आस तुम्हारी। जानि सकल दुःख हरहु हमारी॥",
+          english: "Says Ayodhyadas with hope in you. Knowing all, remove our sorrows."
         }
       ]
     },
-    benefits: [
-      "Liberation from negative karma and past sins",
-      "Spiritual awakening and enlightenment",
-      "Peace of mind and emotional stability",
-      "Success in meditation and spiritual practices",
-      "Protection from evil forces and obstacles"
-    ],
-    significance: "Shiva Chalisa is a powerful 40-verse hymn dedicated to Lord Shiva, the supreme ascetic and transformer. Regular recitation brings spiritual purification, liberation from worldly attachments, and divine blessings."
+    significance: {
+      title: "Spiritual Significance of Shiva Chalisa",
+      content: [
+        "Shiva Chalisa is a powerful devotional hymn dedicated to Lord Shiva, the supreme deity of transformation and destruction in Hinduism.",
+        "The Chalisa consists of 40 verses (chaupais) that praise the various forms, powers, and divine attributes of Lord Shiva.",
+        "Regular recitation of Shiva Chalisa is believed to bring spiritual growth, remove obstacles, and grant blessings from Lord Shiva.",
+        "It is especially powerful during Mahashivaratri celebrations and Mondays, which are considered auspicious days for Lord Shiva worship."
+      ]
+    },
+    benefits: {
+      title: "Benefits of Reciting Shiva Chalisa",
+      content: [
+        "Brings peace of mind and spiritual enlightenment",
+        "Helps overcome fear, anxiety, and negative thoughts",
+        "Provides protection from evil forces and negative energies",
+        "Removes obstacles in personal and professional life",
+        "Strengthens willpower and self-discipline",
+        "Promotes health, longevity, and well-being",
+        "Helps achieve success in spiritual practices",
+        "Brings harmony in family and relationships"
+      ]
+    },
+    practice: {
+      title: "How to Practice Shiva Chalisa",
+      content: [
+        "Best time to recite: Early morning (Brahma Muhurta) or Monday evening",
+        "Face the north or east direction while reciting",
+        "Light a diya (lamp) and offer bilva leaves to Lord Shiva",
+        "Maintain cleanliness and wear clean clothes, preferably white",
+        "Recite with devotion, faith, and concentration on Lord Shiva",
+        "Can be recited daily or especially on Mondays and Mahashivaratri",
+        "Complete the recitation by offering water and seeking blessings"
+      ]
+    }
   };
 
-  const breadcrumbs = generateBreadcrumbs('chalisas', chalisa.name);
+  const breadcrumbs = generateBreadcrumbs('bhajans', chalisaData.title);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-blue-200 sticky top-0 z-50">
+      <header className="bg-white shadow-sm border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <Sparkles className="h-8 w-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-blue-900">Bhakti</h1>
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              भक्ति
             </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/festivals" className="text-blue-700 hover:text-blue-900 transition-colors">Festivals</Link>
-              <Link href="/aartis" className="text-blue-700 hover:text-blue-900 transition-colors">Aartis</Link>
-              <Link href="/bhajans" className="text-blue-700 hover:text-blue-900 transition-colors">Bhajans</Link>
-              <Link href="/chalisas" className="text-blue-600 font-semibold">Chalisas</Link>
-              <Link href="/mantras" className="text-blue-700 hover:text-blue-900 transition-colors">Mantras</Link>
-              <Link href="/stories" className="text-blue-700 hover:text-blue-900 transition-colors">Stories</Link>
-              <Link href="/gods" className="text-blue-700 hover:text-blue-900 transition-colors">Gods</Link>
+              <Link href="/chalisas" className="text-gray-700 hover:text-blue-600 transition-colors">
+                चालीसा
+              </Link>
+              <Link href="/aartis" className="text-gray-700 hover:text-blue-600 transition-colors">
+                आरती
+              </Link>
+              <Link href="/bhajans" className="text-gray-700 hover:text-blue-600 transition-colors">
+                भजन
+              </Link>
+              <Link href="/festivals" className="text-gray-700 hover:text-blue-600 transition-colors">
+                त्योहार
+              </Link>
             </nav>
           </div>
         </div>
       </header>
 
+      {/* Breadcrumbs */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex" aria-label="Breadcrumb">
+            <ol className="flex items-center space-x-2 text-sm">
+              {breadcrumbs.map((crumb, index) => (
+                <li key={index} className="flex items-center">
+                  {index > 0 && <span className="mx-2 text-gray-400">/</span>}
+                  {index === breadcrumbs.length - 1 ? (
+                    <span className="text-gray-500">{crumb.label}</span>
+                  ) : (
+                    <Link href={crumb.href || "/"} className="text-blue-600 hover:text-blue-700">
+                      {crumb.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <Breadcrumbs items={breadcrumbs} />
-          </div>
-          
-          <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl shadow-xl p-8 md:p-12 border border-blue-200">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-5xl">{chalisa.icon}</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-                {chalisa.name}
-              </h1>
-              <p className="text-xl text-blue-700 mb-6">
-                {chalisa.title}
-              </p>
-              <p className="text-lg text-blue-600 max-w-2xl mx-auto">
-                {chalisa.description}
-              </p>
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              {chalisaData.title}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">
+              {chalisaData.description}
+            </p>
+            <div className="flex justify-center space-x-4 text-sm">
+              <span className="bg-white/20 px-3 py-1 rounded-full">
+                {chalisaData.verses} वर्स
+              </span>
+              <span className="bg-white/20 px-3 py-1 rounded-full">
+                {chalisaData.deity}
+              </span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
+      {/* Banner Ad */}
       <BannerAd />
 
       {/* Main Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Significance */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-blue-100">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Spiritual Significance</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {chalisa.significance}
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-semibold text-blue-800 mb-3">Benefits</h3>
-                <ul className="space-y-2">
-                  {chalisa.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start space-x-2">
-                      <span className="text-blue-500 mt-1">•</span>
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-blue-800 mb-3">Practice Guidelines</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Recite with pure heart and devotion</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Best time: Early morning (Brahma Muhurta)</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Offer bilva leaves and water</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Observe fasting on Mondays</span>
-                  </li>
-                </ul>
-              </div>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Significance Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            {chalisaData.significance.title}
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="space-y-4">
+              {chalisaData.significance.content.map((paragraph, index) => (
+                <p key={index} className="text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
+        </section>
 
-          <InContentAd />
+        {/* In-Content Ad */}
+        <InContentAd />
 
-          {/* Lyrics */}
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Shiva Chalisa Lyrics</h2>
-            
-            <div className="space-y-8">
-              {/* Hindi Lyrics */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-800 mb-4">हिंदी गीत (Hindi Lyrics)</h3>
-                <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
-                  <div className="space-y-3 text-right">
-                    {chalisa.lyrics.hindi.map((verse, index) => (
-                      <div key={index} className="text-lg text-gray-800 leading-relaxed">
-                        {verse}
-                      </div>
-                    ))}
+        {/* Lyrics Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            शिव चालीसा - Shiva Chalisa Lyrics
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="space-y-6">
+              {chalisaData.lyrics.hindi.map((verse, index) => (
+                <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                  <div className="text-right mb-2">
+                    <p className="text-lg font-medium text-gray-800" dir="rtl">
+                      {verse}
+                    </p>
                   </div>
+                  {chalisaData.lyrics.translations[index] && (
+                    <div className="text-left mt-2">
+                      <p className="text-sm text-gray-600 italic">
+                        {chalisaData.lyrics.translations[index].english}
+                      </p>
+                    </div>
+                  )}
                 </div>
-              </div>
-
-              {/* Translations */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-800 mb-4">English Translation</h3>
-                <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200">
-                  <div className="space-y-4">
-                    {chalisa.lyrics.translations.map((translation, index) => (
-                      <div key={index} className="border-l-4 border-indigo-400 pl-4">
-                        <div className="text-lg text-gray-800 font-medium mb-1 text-right">
-                          {translation.hindi}
-                        </div>
-                        <div className="text-gray-700">
-                          {translation.english}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <BannerAd />
+        {/* Benefits Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            {chalisaData.benefits.title}
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <ul className="space-y-3">
+              {chalisaData.benefits.content.map((benefit, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">✓</span>
+                  <span className="text-gray-700">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Practice Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            {chalisaData.practice.title}
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <ul className="space-y-3">
+              {chalisaData.practice.content.map((instruction, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  <span className="text-gray-700">{instruction}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Banner Ad */}
+        <BannerAd />
+      </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold">Bhakti</h3>
-            </div>
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              A Sacred Space for Devotion
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-gray-400">
+              © 2024 भक्ति - Devotional Content for Spiritual Practice
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <Link href="/festivals" className="text-blue-200 hover:text-white transition-colors">Festivals</Link>
-              <Link href="/aartis" className="text-blue-200 hover:text-white transition-colors">Aartis</Link>
-              <Link href="/bhajans" className="text-blue-200 hover:text-white transition-colors">Bhajans</Link>
-              <Link href="/chalisas" className="text-blue-200 hover:text-white transition-colors">Chalisas</Link>
-              <Link href="/mantras" className="text-blue-200 hover:text-white transition-colors">Mantras</Link>
-              <Link href="/stories" className="text-blue-200 hover:text-white transition-colors">Stories</Link>
-            </div>
-          </div>
-          
-          <div className="border-t border-blue-800 pt-8 text-center">
-            <p className="text-blue-300 text-sm mb-4">
-              © 2024 Bhakti. Preserving and sharing sacred traditions of Hindu culture.
+            <p className="text-gray-500 text-sm mt-2">
+              Made with devotion for all devotees
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-              <Link href="/privacy" className="text-blue-300 hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-blue-300 hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/contact" className="text-blue-300 hover:text-white transition-colors">Contact</Link>
-            </div>
           </div>
         </div>
       </footer>
     </div>
   );
-}
+};
+
+export default ShivaChalisaPage;

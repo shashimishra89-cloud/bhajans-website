@@ -1,389 +1,444 @@
 "use client";
 
-import Link from "next/link";
-import { Music, Sparkles, ChevronRight, BookOpen, Heart, Clock } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
 import { BannerAd, InContentAd } from "@/components/AdBlock";
 import { Breadcrumbs, generateBreadcrumbs } from "@/components/Breadcrumbs";
 
-export default function DurgaChalisaPage() {
-  const chalisa = {
+const DurgaChalisaPage = () => {
+  const chalisaData = {
+    id: "durga-chalisa",
     name: "Durga Chalisa",
-    title: "40 Verses of Goddess Durga",
-    description: "Sacred hymn dedicated to Goddess Durga, the divine mother who protects devotees and destroys evil forces.",
-    icon: "👑",
-    color: "from-red-400 to-pink-500",
+    title: "दुर्गा चालीसा - Durga Chalisa",
+    description: "Complete Durga Chalisa with Hindi lyrics, English translations, and spiritual significance.",
+    icon: "🔱",
+    color: "from-red-500 to-pink-500",
     deity: "Goddess Durga",
     verses: "40",
     lyrics: {
       hindi: [
-        "जय अम्बे गौरी, मैया जय श्यामा गौरी।",
-        "तुमको निशिदिन ध्यावत, हरि ब्रह्मा शिवरी॥",
-        "माँ शरनागत दीनारी, बड़न करुणा सिंधारी।",
-        "सुन सकल विश्व हिंडोला, बजे ताल मृदंग बाजे॥",
-        "तुम ही जग की माता, तुम ही हो भगवती।",
-        "तुम ही अन्नदा जगदम्बा, तुम ही भवानी॥",
-        "जय जय जय तुम ही, जय जगदम्बा।",
-        "जय जय जय तुम ही, जय भवानी॥",
-        "ब्रह्मा, विष्णु, महेश, सब करें तुमको वंदन।",
-        "सकल चराचर जग में, तुम ही सुखदाता॥",
-        "शुम्भ, निशुम्भ, दैत्य, तुमने मारे संहारा।",
-        "रक्तबीज को मार कर, दिया वर दुहाई॥",
-        "महिषासुर मर्दिनी, तुमको सब कहें।",
-        "जय जय जगदम्बा, सुनहु मेरी बानी॥",
-        "कातिक मास की शुक्ला, नवमी को आवत।",
-        "भक्तन को देन को, दाता देवी भावत॥",
-        "नवरात्र में तुमको, भक्त जपत निशिदिन।",
-        "जो कोई तुमको ध्यावत, तारे सकल संतान॥",
-        "तुमको भक्त जो नित्य, ध्यावत निशिचर।",
-        "दुःख दारिद्रय निकट, नहीं रहें विचार॥",
-        "धन धान्य बहु धाम, सुख सम्पत्ति पावत।",
-        "गृह बार बसो रहे, नहीं कोई विचार॥",
-        "जो तुमको भजत भावे, प्रेम से फल पावत।",
-        "दुष्ट दलन को मारे, भय से बचावत॥",
-        "जय जय जय दुर्गा, तुम ही सुखदाता।",
-        "करो कृपा माता, मो पर अवताता॥",
-        "जय जय जय जय, जय जगदम्बा।",
-        "जय जय जय जय, जय भवानी॥",
-        "दोहा",
-        "शुभ गुण सागर, शुभ दायिनी।",
-        "कविराज आगर, करें विनयी॥",
-        "जो कोई जपत नित्य, दुर्गा चालीसा।",
-        "तात सुख सम्पत्ति, पावत निराला॥",
-        "पाठ करत भक्त, पूरन होई इच्छा।",
-        "दुर्गा माँ की, करे सदा रक्षा॥"
+        "नमो नमो दुर्गे सुख करनी। नमो नमो अंबे दुःख हरनी॥",
+        "निरंकार है ज्योति तुम्हारी। तिहूं लोक फैली उजियारी॥",
+        "शशि लालाट मुख महाविशाला। नेत्र लाल भृकुटि विकराला॥",
+        "रूप मातु को अधिक सुहावे। दरश करत जन अति सुख पावे॥",
+        "तुम संसार शक्ति लै कीना। पालन हेतु अन्न धन दीना॥",
+        "अन्नपूर्णा हुई जग पाला। तुम ही आदि सुन्दरी बाला॥",
+        "प्रलयकाल सब नाशन हारी। तुम गौरी शिवशंकर प्यारी॥",
+        "शिव योगी तुम्हरे गुण गावें। ब्रह्मा विष्णु तुम्हें नित ध्यावें॥",
+        "रूप सरस्वती को तुम धारा। दे सुबुद्धि ऋषि मुनिन उबारा॥",
+        "धरयो रूप नरसिंह को अम्बा। परगट भई फाड़कर खम्बा॥",
+        "रक्षा करि प्रह्लाद बचायो। हिरण्याक्ष को स्वर्ग पठायो॥",
+        "लक्ष्मी रूप धरो जग माहीं। श्री नारायण अंग समाहीं॥",
+        "क्षीरसिन्धु में करत विलासा। दयासिन्धु दीजै मन आसा॥",
+        "हिंगलाज में तुम्हीं भवानी। महिमा अमित न जात बखानी॥",
+        "मातंगी अरु धूमावति माता। भुवनेश्वरी बगला सुख दाता॥",
+        "श्री भैरव तारा जग तारिणी। छिन्न भाल भव दुःख निवारिणी॥",
+        "केहरि वाहन सोह भवानी। लांगुर वीर चलत अगवानी॥",
+        "कर में खप्पर खड्ग विराजै। जाको देख काल डर भाजै॥",
+        "सोहै अस्त्र और त्रिशूला। जाते उठत शत्रु हिय शूला॥",
+        "नगरकोट में तुम्हीं विराजत। तिहुँलोक में डंका बाजत॥",
+        "शुम्भ निशुम्भ दानव तुम मारे। रक्तन बीज शंखन संहारे॥",
+        "महिषासुर नृप अति अभिमानी। जेहि अघ भार मही अकुलानी॥",
+        "रूप कराल कालिका धारा। सेन सहित तुम तिहि संहारा॥",
+        "परी गाढ़ सन्तन पर जब जब। भई सहाय मातु तुम तब तब॥",
+        "अमर पुरी औरो सब लोका। तब महिमा सब रहें अशोका॥",
+        "ज्वाला में है ज्योति तुम्हारी। तुम्हें सदा पूजें नर-नारी॥",
+        "प्रेम भक्ति से जो यश गावें। दुःख दारिद्र निकट नहिं आवें॥",
+        "ध्यावे तुम्हें जो नर मन लाई। जन्म-मरण ताकौ छुटि जाई॥",
+        "जोगी सुर मुनि कहत पुकारी। योग न हो बिन शक्ति तुम्हारी॥",
+        "शंकर आचारज तप कीनो। काम क्रोध जीति सब लीनो॥",
+        "निशिदिन ध्यान धरो शंकर को। काहु काल नहिं सुमिरो तुमको॥",
+        "शक्ति रूप का मरम न पायो। शक्ति गई तब मन पछितायो॥",
+        "शरणागत हुई कीर्ति बखानी। जय जय जय जगदम्ब भवानी॥",
+        "भई प्रसन्न आदि जगदम्बा। दई शक्ति नहिं कीन विलम्बा॥",
+        "मोको मातु कष्ट अति घेरो। तुम बिन कौन हरै दुःख मेरो॥",
+        "आशा तृष्णा निपट सतावें। मोह मदादिक सब बिनशावे॥",
+        "शत्रु नाश कीजै महारानी। सुमिरौं इकचित तुम्हें भवानी॥",
+        "करो कृपा हे मातु दयाला। ऋद्धि-सिद्धि दै करहु निहाला॥",
+        "जब लगि जियऊं दया फल पाऊं। तुम्हरो यश मैं सदा सुनाऊं॥",
+        "श्री दुर्गा चालीसा जो कोई गावै। सब सुख भोग परमपद पावै॥",
+        "देवीदास शरण निज जानी। करहु कृपा जगदम्ब भवानी॥"
       ],
       translations: [
         {
-          hindi: "जय अम्बे गौरी, मैया जय श्यामा गौरी।",
-          english: "Victory to Mother Amba Gauri, victory to Mother Shyama Gauri."
+          hindi: "नमो नमो दुर्गे सुख करनी। नमो नमो अंबे दुःख हरनी॥",
+          english: "Salutations to Durga who brings happiness. Salutations to Amba who removes sorrows."
         },
         {
-          hindi: "तुमको निशिदिन ध्यावत, हरि ब्रह्मा शिवरी॥",
-          english: "Hari, Brahma, and Shiva meditate upon you day and night."
+          hindi: "निरंकार है ज्योति तुम्हारी। तिहूं लोक फैली उजियारी॥",
+          english: "You are the one who is beyond attributes, O Mother. The whole world is your creation."
         },
         {
-          hindi: "माँ शरनागत दीनारी, बड़न करुणा सिंधारी।",
-          english: "O Mother, I take refuge at your feet, ocean of compassion."
+          hindi: "शशि लालाट मुख महाविशाला। नेत्र लाल भृकुटि विकराला॥",
+          english: "Shiva's skull is in your hands, the great illusion is destroyed."
         },
         {
-          hindi: "सुन सकल विश्व हिंडोला, बजे ताल मृदंग बाजे॥",
-          english: "The entire universe swings to your rhythm, as drums and cymbals play."
+          hindi: "रूप मातु को अधिक सुहावे। दरश करत जन अति सुख पावे॥",
+          english: "You hold the form of mother nature, making people happy by your sight."
         },
         {
-          hindi: "तुम ही जग की माता, तुम ही हो भगवती।",
-          english: "You alone are the Mother of the world, you alone are the Goddess."
+          hindi: "तुम संसार शक्ति लै कीना। पालन हेतु अन्न धन दीना॥",
+          english: "You are the goddess who holds all power, protecting the world."
         },
         {
-          hindi: "तुम ही अन्नदा जगदम्बा, तुम ही भवानी॥",
-          english: "You are Annapurna, Jagdamba, and you are Bhavani."
+          hindi: "अन्नपूर्णा हुई जग पाला। तुम ही आदि सुन्दरी बाला॥",
+          english: "Annapurna who sustains the world. You are the first Sundari."
         },
         {
-          hindi: "जय जय जय तुम ही, जय जगदम्बा।",
-          english: "Victory, victory, victory to you alone, victory to Jagdamba."
+          hindi: "प्रलयकाल सब नाशन हारी। तुम गौरी शिवशंकर प्यारी॥",
+          english: "Prahlada's aunt is burning. You are dear to Gauri Shankar."
         },
         {
-          hindi: "जय जय जय तुम ही, जय भवानी॥",
-          english: "Victory, victory, victory to you alone, victory to Bhavani."
+          hindi: "शिव योगी तुम्हरे गुण गावें। ब्रह्मा विष्णु तुम्हें नित ध्यावें॥",
+          english: "Shiva and yogis are your servants. Brahma and Vishnu meditate upon you."
         },
         {
-          hindi: "ब्रह्मा, विष्णु, महेश, सब करें तुमको वंदन।",
-          english: "Brahma, Vishnu, and Mahesh all worship you."
+          hindi: "रूप सरस्वती को तुम धारा। दे सुबुद्धि ऋषि मुनिन उबारा॥",
+          english: "You hold the essence of all forms. The creator Brahma is amazed."
         },
         {
-          hindi: "सकल चराचर जग में, तुम ही सुखदाता॥",
-          english: "In the entire mobile and immobile world, you alone are the giver of happiness."
+          hindi: "धरयो रूप नरसिंह को अम्बा। परगट भई फाड़कर खम्बा॥",
+          english: "In the form of a demon, you became Mother Amba. You tore apart the demon."
         },
         {
-          hindi: "शुम्भ, निशुम्भ, दैत्य, तुमने मारे संहारा।",
-          english: "You killed the demons Shumbha and Nishumbha."
+          hindi: "रक्षा करि प्रह्लाद बचायो। हिरण्याक्ष को स्वर्ग पठायो॥",
+          english: "You protected Prahlada and killed Hiranyakashipu. You sent him to heaven."
         },
         {
-          hindi: "रक्तबीज को मार कर, दिया वर दुहाई॥",
-          english: "After killing Raktabeeja, you granted the boon they sought."
+          hindi: "लक्ष्मी रूप धरो जग माहीं। श्री नारायण अंग समाहीं॥",
+          english: "You took the form of Lakshmi and fought the demon. The goddess was pleased."
         },
         {
-          hindi: "महिषासुर मर्दिनी, तुमको सब कहें।",
-          english: "Everyone calls you Mahishasura Mardini (slayer of Mahishasura)."
+          hindi: "क्षीरसिन्धु में करत विलासा। दयासिन्धु दीजै मन आसा॥",
+          english: "You play in the ocean of milk. The ocean of mercy fulfills our desires."
         },
         {
-          hindi: "जय जय जगदम्बा, सुनहु मेरी बानी॥",
-          english: "Victory to Jagdamba, listen to my prayer."
+          hindi: "हिंगलाज में तुम्हीं भवानी। महिमा अमित न जात बखानी॥",
+          english: "You are Bhavani in Hinglaj. Your glory cannot be described in words."
         },
         {
-          hindi: "कातिक मास की शुक्ला, नवमी को आवत।",
-          english: "On the ninth day of the bright fortnight of Kartik month."
+          hindi: "मातंगी अरु धूमावति माता। भुवनेश्वरी बगला सुख दाता॥",
+          english: "Matangi and Dhumavati are mothers. Bhuvaneshwari and Bagla give happiness."
         },
         {
-          hindi: "भक्तन को देन को, दाता देवी भावत॥",
-          english: "The benevolent Goddess wishes to give blessings to devotees."
+          hindi: "श्री भैरव तारा जग तारिणी। छिन्न भाल भव दुःख निवारिणी॥",
+          english: "Shri Bhairav and Tara save the world. Chhinnabhala removes worldly suffering."
         },
         {
-          hindi: "नवरात्र में तुमको, भक्त जपत निशिदिन।",
-          english: "During Navratri, devotees chant your name day and night."
+          hindi: "केहरि वाहन सोह भवानी। लांगुर वीर चलत अगवानी॥",
+          english: "The lion vehicle looks beautiful, O Bhavani. The brave monkey leads the procession."
         },
         {
-          hindi: "जो कोई तुमको ध्यावत, तारे सकल संतान॥",
-          english: "Whoever meditates upon you, saves their entire lineage."
+          hindi: "कर में खप्पर खड्ग विराजै। जाको देख काल डर भाजै॥",
+          english: "Skull and sword shine in your hands. Even death fears seeing you."
         },
         {
-          hindi: "तुमको भक्त जो नित्य, ध्यावत निशिचर।",
-          english: "Your devotees who always meditate upon you, even at night."
+          hindi: "सोहै अस्त्र और त्रिशूला। जाते उठत शत्रु हिय शूला॥",
+          english: "Your weapons and trident look beautiful. Enemies' hearts burn with fear."
         },
         {
-          hindi: "दुःख दारिद्रय निकट, नहीं रहें विचार॥",
-          english: "Poverty and suffering stay far away, no worries remain."
+          hindi: "नगरकोट में तुम्हीं विराजत। तिहुँलोक में डंका बाजत॥",
+          english: "You rule in Nagarkot. Drums play in all three worlds."
         },
         {
-          hindi: "धन धान्य बहु धाम, सुख सम्पत्ति पावत।",
-          english: "They receive abundant wealth, grain, happiness, and prosperity."
+          hindi: "शुम्भ निशुम्भ दानव तुम मारे। रक्तन बीज शंखन संहारे॥",
+          english: "You killed the demons Shumbha and Nishumbha. You destroyed Raktabeeja and Shumbha."
         },
         {
-          hindi: "गृह बार बसो रहे, नहीं कोई विचार॥",
-          english: "They live happily in their homes, without any worries."
+          hindi: "महिषासुर नृप अति अभिमानी। जेहि अघ भार मही अकुलानी॥",
+          english: "Mahishasura was very arrogant. The earth was troubled by his sins."
         },
         {
-          hindi: "जो तुमको भजत भावे, प्रेम से फल पावत।",
-          english: "Whoever worships you with devotion, receives the fruits of their love."
+          hindi: "रूप कराल कालिका धारा। सेन सहित तुम तिहि संहारा॥",
+          english: "You took the fierce form of Kalika. You destroyed him along with his army."
         },
         {
-          hindi: "दुष्ट दलन को मारे, भय से बचावत॥",
-          english: "You destroy wicked armies and protect from fear."
+          hindi: "परी गाढ़ सन्तन पर जब जब। भई सहाय मातु तुम तब तब॥",
+          english: "Whenever demons troubled saints. You helped them, O Mother."
         },
         {
-          hindi: "जय जय जय दुर्गा, तुम ही सुखदाता।",
-          english: "Victory, victory, victory to Durga, you alone are the giver of happiness."
+          hindi: "अमर पुरी औरो सब लोका। तब महिमा सब रहें अशोका॥",
+          english: "Amarpuri and all other worlds. Became happy by your glory."
         },
         {
-          hindi: "करो कृपा माता, मो पर अवताता॥",
-          english: "Have mercy, Mother, and descend upon me."
+          hindi: "ज्वाला में है ज्योति तुम्हारी। तुम्हें सदा पूजें नर-नारी॥",
+          english: "Your light shines in Jwala. Men and women always worship you."
         },
         {
-          hindi: "जय जय जय जय, जय जगदम्बा।",
-          english: "Victory, victory, victory, victory, victory to Jagdamba."
+          hindi: "प्रेम भक्ति से जो यश गावें। दुःख दारिद्र निकट नहिं आवें॥",
+          english: "Those who sing your glory with love and devotion. Sorrow and poverty never come near them."
         },
         {
-          hindi: "जय जय जय जय, जय भवानी॥",
-          english: "Victory, victory, victory, victory, victory to Bhavani."
+          hindi: "ध्यावे तुम्हें जो नर मन लाई। जन्म-मरण ताकौ छुटि जाई॥",
+          english: "Whoever meditates upon you with devotion. Is freed from the cycle of birth and death."
         },
         {
-          hindi: "दोहा",
-          english: "Couplet"
+          hindi: "जोगी सुर मुनि कहत पुकारी। योग न हो बिन शक्ति तुम्हारी॥",
+          english: "Yogis, gods, and sages call out. Yoga is not possible without your power."
         },
         {
-          hindi: "शुभ गुण सागर, शुभ दायिनी।",
-          english: "Ocean of virtuous qualities, giver of auspiciousness."
+          hindi: "शंकर आचारज तप कीनो। काम क्रोध जीति सब लीनो॥",
+          english: "Shankar performed penance. He conquered desire and anger."
         },
         {
-          hindi: "कविराज आगर, करें विनयी॥",
-          english: "The poet Aagar humbly prays."
+          hindi: "निशिदिन ध्यान धरो शंकर को। काहु काल नहिं सुमिरो तुमको॥",
+          english: "Shankar meditates upon you day and night. He never forgets you."
         },
         {
-          hindi: "जो कोई जपत नित्य, दुर्गा चालीसा।",
-          english: "Whoever chants the Durga Chalisa daily."
+          hindi: "शक्ति रूप का मरम न पायो। शक्ति गई तब मन पछितायो॥",
+          english: "He didn't understand the secret of your power form. When power left, he repented."
         },
         {
-          hindi: "तात सुख सम्पत्ति, पावत निराला॥",
-          english: "Receives unparalleled happiness and prosperity."
+          hindi: "शरणागत हुई कीर्ति बखानी। जय जय जय जगदम्ब भवानी॥",
+          english: "Taking refuge, I sing your glory. Victory, victory, victory to Jagdamba Bhavani."
         },
         {
-          hindi: "पाठ करत भक्त, पूरन होई इच्छा।",
-          english: "By reciting, the devotee's wishes are fulfilled."
+          hindi: "भई प्रसन्न आदि जगदम्बा। दई शक्ति नहिं कीन विलम्बा॥",
+          english: "The first Jagdamba became pleased. She gave power without delay."
         },
         {
-          hindi: "दुर्गा माँ की, करे सदा रक्षा॥",
-          english: "May Mother Durga always protect."
+          hindi: "मोको मातु कष्ट अति घेरो। तुम बिन कौन हरै दुःख मेरो॥",
+          english: "O Mother, I am surrounded by great troubles. Who can remove my sorrows except you?"
+        },
+        {
+          hindi: "आशा तृष्णा निपट सतावें। मोह मदादिक सब बिनशावे॥",
+          english: "Hope and desire torment me. Destroy attachment, ego, and all."
+        },
+        {
+          hindi: "शत्रु नाश कीजै महारानी। सुमिरौं इकचित तुम्हें भवानी॥",
+          english: "Destroy enemies, O great queen. I remember you, O Bhavani."
+        },
+        {
+          hindi: "करो कृपा हे मातु दयाला। ऋद्धि-सिद्धि दै करहु निहाला॥",
+          english: "Have mercy, O compassionate Mother. Grant me wealth and accomplishments."
+        },
+        {
+          hindi: "जब लगि जियऊं दया फल पाऊं। तुम्हरो यश मैं सदा सुनाऊं॥",
+          english: "As long as I live, I will receive the fruit of your mercy. I will always sing your glory."
+        },
+        {
+          hindi: "श्री दुर्गा चालीसा जो कोई गावै। सब सुख भोग परमपद पावै॥",
+          english: "Whoever sings Shri Durga Chalisa. Gets all happiness and attains the supreme state."
+        },
+        {
+          hindi: "देवीदास शरण निज जानी। करहु कृपा जगदम्ब भवानी॥",
+          english: "Devidas takes refuge knowing you. Have mercy, O Jagdamba Bhavani."
         }
       ]
     },
-    benefits: [
-      "Protection from negative forces and evil influences",
-      "Blessings for courage, strength, and confidence",
-      "Fulfillment of desires and removal of obstacles",
-      "Peace of mind and spiritual growth",
-      "Prosperity and success in endeavors"
-    ],
-    significance: "Durga Chalisa is a powerful 40-verse hymn dedicated to Goddess Durga, the supreme divine mother. Regular recitation brings divine protection, courage, and spiritual transformation."
+    significance: {
+      title: "Spiritual Significance of Durga Chalisa",
+      content: [
+        "Durga Chalisa is a powerful devotional hymn dedicated to Goddess Durga, the supreme feminine power in Hinduism.",
+        "The Chalisa consists of 40 verses (chaupais) that praise the various forms, powers, and deeds of Goddess Durga.",
+        "Regular recitation of Durga Chalisa is believed to bring divine protection, remove obstacles, and fulfill sincere wishes.",
+        "It is especially powerful during Navratri celebrations and other auspicious occasions dedicated to the Goddess."
+      ]
+    },
+    benefits: {
+      title: "Benefits of Reciting Durga Chalisa",
+      content: [
+        "Provides protection from negative energies and evil forces",
+        "Helps overcome fear, anxiety, and mental stress",
+        "Brings peace, prosperity, and happiness to the family",
+        "Removes obstacles in personal and professional life",
+        "Strengthens spiritual connection and devotion",
+        "Fulfills sincere wishes and desires",
+        "Provides courage and strength to face life's challenges",
+        "Purifies the mind and soul"
+      ]
+    },
+    practice: {
+      title: "How to Practice Durga Chalisa",
+      content: [
+        "Best time to recite: Early morning (Brahma Muhurta) or evening during sunset",
+        "Face the north or east direction while reciting",
+        "Light a diya (lamp) and offer flowers to the Goddess",
+        "Maintain cleanliness and wear clean clothes",
+        "Recite with devotion, faith, and concentration",
+        "Can be recited daily or especially on Tuesdays and Fridays",
+        "Complete the recitation by offering prasad and seeking blessings"
+      ]
+    }
   };
 
-  const breadcrumbs = generateBreadcrumbs('chalisas', chalisa.name);
+  const breadcrumbs = generateBreadcrumbs('bhajans', chalisaData.title);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-red-200 sticky top-0 z-50">
+      <header className="bg-white shadow-sm border-b border-red-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <Sparkles className="h-8 w-8 text-red-600" />
-              <h1 className="text-2xl font-bold text-red-900">Bhakti</h1>
+            <Link href="/" className="text-2xl font-bold text-red-600">
+              भक्ति
             </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/festivals" className="text-red-700 hover:text-red-900 transition-colors">Festivals</Link>
-              <Link href="/aartis" className="text-red-700 hover:text-red-900 transition-colors">Aartis</Link>
-              <Link href="/bhajans" className="text-red-700 hover:text-red-900 transition-colors">Bhajans</Link>
-              <Link href="/chalisas" className="text-red-600 font-semibold">Chalisas</Link>
-              <Link href="/mantras" className="text-red-700 hover:text-red-900 transition-colors">Mantras</Link>
-              <Link href="/stories" className="text-red-700 hover:text-red-900 transition-colors">Stories</Link>
-              <Link href="/gods" className="text-red-700 hover:text-red-900 transition-colors">Gods</Link>
+              <Link href="/chalisas" className="text-gray-700 hover:text-red-600 transition-colors">
+                चालीसा
+              </Link>
+              <Link href="/aartis" className="text-gray-700 hover:text-red-600 transition-colors">
+                आरती
+              </Link>
+              <Link href="/bhajans" className="text-gray-700 hover:text-red-600 transition-colors">
+                भजन
+              </Link>
+              <Link href="/festivals" className="text-gray-700 hover:text-red-600 transition-colors">
+                त्योहार
+              </Link>
             </nav>
           </div>
         </div>
       </header>
 
+      {/* Breadcrumbs */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <nav className="flex" aria-label="Breadcrumb">
+            <ol className="flex items-center space-x-2 text-sm">
+              {breadcrumbs.map((crumb, index) => (
+                <li key={index} className="flex items-center">
+                  {index > 0 && <span className="mx-2 text-gray-400">/</span>}
+                  {index === breadcrumbs.length - 1 ? (
+                    <span className="text-gray-500">{crumb.label}</span>
+                  ) : (
+                    <Link href={crumb.href || "/"} className="text-red-600 hover:text-red-700">
+                      {crumb.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <Breadcrumbs items={breadcrumbs} />
-          </div>
-          
-          <div className="bg-gradient-to-br from-red-100 to-pink-100 rounded-2xl shadow-xl p-8 md:p-12 border border-red-200">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-red-400 to-pink-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-5xl">{chalisa.icon}</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-red-900 mb-4">
-                {chalisa.name}
-              </h1>
-              <p className="text-xl text-red-700 mb-6">
-                {chalisa.title}
-              </p>
-              <p className="text-lg text-red-600 max-w-2xl mx-auto">
-                {chalisa.description}
-              </p>
+      <div className="relative overflow-hidden bg-gradient-to-r from-red-500 to-pink-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              {chalisaData.title}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">
+              {chalisaData.description}
+            </p>
+            <div className="flex justify-center space-x-4 text-sm">
+              <span className="bg-white/20 px-3 py-1 rounded-full">
+                {chalisaData.verses} वर्स
+              </span>
+              <span className="bg-white/20 px-3 py-1 rounded-full">
+                {chalisaData.deity}
+              </span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
+      {/* Banner Ad */}
       <BannerAd />
 
       {/* Main Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Significance */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-red-100">
-            <h2 className="text-3xl font-bold text-red-900 mb-6">Spiritual Significance</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {chalisa.significance}
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-semibold text-red-800 mb-3">Benefits</h3>
-                <ul className="space-y-2">
-                  {chalisa.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start space-x-2">
-                      <span className="text-red-500 mt-1">•</span>
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-red-800 mb-3">Practice Guidelines</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Recite with pure heart and devotion</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Best time: Early morning or evening</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Offer red flowers and incense</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Maintain cleanliness and purity</span>
-                  </li>
-                </ul>
-              </div>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Significance Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            {chalisaData.significance.title}
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="space-y-4">
+              {chalisaData.significance.content.map((paragraph, index) => (
+                <p key={index} className="text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
+        </section>
 
-          <InContentAd />
+        {/* In-Content Ad */}
+        <InContentAd />
 
-          {/* Lyrics */}
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-red-100">
-            <h2 className="text-3xl font-bold text-red-900 mb-6">Durga Chalisa Lyrics</h2>
-            
-            <div className="space-y-8">
-              {/* Hindi Lyrics */}
-              <div>
-                <h3 className="text-xl font-semibold text-red-800 mb-4">हिंदी गीत (Hindi Lyrics)</h3>
-                <div className="bg-red-50 rounded-lg p-6 border border-red-200">
-                  <div className="space-y-3 text-right">
-                    {chalisa.lyrics.hindi.map((verse, index) => (
-                      <div key={index} className="text-lg text-gray-800 leading-relaxed">
-                        {verse}
-                      </div>
-                    ))}
+        {/* Lyrics Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            दुर्गा चालीसा - Durga Chalisa Lyrics
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="space-y-6">
+              {chalisaData.lyrics.hindi.map((verse, index) => (
+                <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                  <div className="text-right mb-2">
+                    <p className="text-lg font-medium text-gray-800" dir="rtl">
+                      {verse}
+                    </p>
                   </div>
+                  {chalisaData.lyrics.translations[index] && (
+                    <div className="text-left mt-2">
+                      <p className="text-sm text-gray-600 italic">
+                        {chalisaData.lyrics.translations[index].english}
+                      </p>
+                    </div>
+                  )}
                 </div>
-              </div>
-
-              {/* Translations */}
-              <div>
-                <h3 className="text-xl font-semibold text-red-800 mb-4">English Translation</h3>
-                <div className="bg-orange-50 rounded-lg p-6 border border-orange-200">
-                  <div className="space-y-4">
-                    {chalisa.lyrics.translations.map((translation, index) => (
-                      <div key={index} className="border-l-4 border-orange-400 pl-4">
-                        <div className="text-lg text-gray-800 font-medium mb-1 text-right">
-                          {translation.hindi}
-                        </div>
-                        <div className="text-gray-700">
-                          {translation.english}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <BannerAd />
+        {/* Benefits Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            {chalisaData.benefits.title}
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <ul className="space-y-3">
+              {chalisaData.benefits.content.map((benefit, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-red-500 mr-2 mt-1">✓</span>
+                  <span className="text-gray-700">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Practice Section */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            {chalisaData.practice.title}
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <ul className="space-y-3">
+              {chalisaData.practice.content.map((instruction, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-red-500 mr-2 mt-1">•</span>
+                  <span className="text-gray-700">{instruction}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Banner Ad */}
+        <BannerAd />
+      </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-red-900 to-orange-900 text-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold">Bhakti</h3>
-            </div>
-            <p className="text-xl text-red-200 mb-8 max-w-2xl mx-auto">
-              A Sacred Space for Devotion
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-gray-400">
+              © 2024 भक्ति - Devotional Content for Spiritual Practice
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <Link href="/festivals" className="text-red-200 hover:text-white transition-colors">Festivals</Link>
-              <Link href="/aartis" className="text-red-200 hover:text-white transition-colors">Aartis</Link>
-              <Link href="/bhajans" className="text-red-200 hover:text-white transition-colors">Bhajans</Link>
-              <Link href="/chalisas" className="text-red-200 hover:text-white transition-colors">Chalisas</Link>
-              <Link href="/mantras" className="text-red-200 hover:text-white transition-colors">Mantras</Link>
-              <Link href="/stories" className="text-red-200 hover:text-white transition-colors">Stories</Link>
-            </div>
-          </div>
-          
-          <div className="border-t border-red-800 pt-8 text-center">
-            <p className="text-red-300 text-sm mb-4">
-              © 2024 Bhakti. Preserving and sharing sacred traditions of Hindu culture.
+            <p className="text-gray-500 text-sm mt-2">
+              Made with devotion for all devotees
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-              <Link href="/privacy" className="text-red-300 hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-red-300 hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/contact" className="text-red-300 hover:text-white transition-colors">Contact</Link>
-            </div>
           </div>
         </div>
       </footer>
     </div>
   );
-}
+};
+
+export default DurgaChalisaPage;
