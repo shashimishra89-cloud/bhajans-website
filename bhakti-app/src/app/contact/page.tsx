@@ -45,12 +45,12 @@ export default function ContactPage() {
                   <h3 className="text-xl font-bold text-orange-900">Email Us</h3>
                 </div>
                 <p className="text-orange-800 mb-2">For general inquiries:</p>
-                <a href="mailto:info@bhakti.com" className="text-orange-600 hover:text-orange-700 font-medium">
-                  info@bhakti.com
+                <a href="mailto:info@justhobby.net" className="text-orange-600 hover:text-orange-700 font-medium">
+                  info@justhobby.net
                 </a>
                 <p className="text-orange-800 mt-4 mb-2">For content suggestions:</p>
-                <a href="mailto:content@bhakti.com" className="text-orange-600 hover:text-orange-700 font-medium">
-                  content@bhakti.com
+                <a href="mailto:info@justhobby.net" className="text-orange-600 hover:text-orange-700 font-medium">
+                  info@justhobby.net
                 </a>
               </div>
 
@@ -91,7 +91,7 @@ export default function ContactPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-orange-900 mb-4">Contributing Content</h2>
               <p className="text-orange-800 mb-4">
-                Are you a scholar, practitioner, or enthusiast of Hindu culture? We welcome contributions of authentic bhajans, aartis, and cultural information. Please contact us at <a href="mailto:content@bhakti.com" className="text-orange-600 hover:text-orange-700 underline">content@bhakti.com</a> with:
+                Are you a scholar, practitioner, or enthusiast of Hindu culture? We welcome contributions of authentic bhajans, aartis, and cultural information. Please contact us at <a href="mailto:info@justhobby.net" className="text-orange-600 hover:text-orange-700 underline">info@justhobby.net</a> with:
               </p>
               <ul className="list-disc pl-6 text-orange-800 space-y-2">
                 <li>Original text in Devanagari script</li>
