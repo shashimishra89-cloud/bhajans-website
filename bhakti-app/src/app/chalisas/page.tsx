@@ -21,8 +21,8 @@ const chalisas = [
     verses: "40"
   },
   {
-    id: "shiva-chalisa",
-    name: "Shiva Chalisa", 
+    id: "shiva-chalisa", 
+    name: "Shiva Chalisa",
     title: "40 Verses of Shiva",
     description: "Sacred hymn dedicated to Lord Shiva, the destroyer of evil and transformer of consciousness, praising his divine attributes.",
     icon: "🕉️",
@@ -38,26 +38,6 @@ const chalisas = [
     icon: "👑",
     color: "from-red-400 to-pink-500",
     deity: "Goddess Durga",
-    verses: "40"
-  },
-  {
-    id: "ganesh-chalisa",
-    name: "Ganesh Chalisa",
-    title: "40 Verses of Ganesha",
-    description: "Prayer to Lord Ganesha, the remover of obstacles and bestower of wisdom and success.",
-    icon: "🐘",
-    color: "from-yellow-400 to-orange-500", 
-    deity: "Lord Ganesha",
-    verses: "40"
-  },
-  {
-    id: "krishna-chalisa",
-    name: "Krishna Chalisa",
-    title: "40 Verses of Krishna",
-    description: "Devotional hymn to Lord Krishna, the embodiment of divine love and spiritual wisdom.",
-    icon: "🎵",
-    color: "from-blue-400 to-indigo-500",
-    deity: "Lord Krishna", 
     verses: "40"
   }
 ];
@@ -111,7 +91,7 @@ export default function ChalisasPage() {
             {chalisas.map((chalisa) => (
               <Link 
                 key={chalisa.id}
-                href={`/bhajans/${chalisa.id}`}
+                href={`/chalisas/${chalisa.id}`}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105"
               >
                 <div className={`h-48 bg-gradient-to-br ${chalisa.color} relative overflow-hidden`}>
