@@ -87,7 +87,7 @@ export default function Home() {
             
             {/* Tagline */}
             <p className="text-2xl sm:text-3xl text-orange-800 mb-6 font-medium animate-fade-in-delayed">
-              All Bhakti Content. One Divine Place.
+              All Devotion. One Place.
             </p>
             
             {/* Description */}
@@ -98,13 +98,13 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delayed-3">
-              <Link 
-                href="/festivals" 
+              <button 
+                onClick={() => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center space-x-2"
               >
                 <span>Begin Your Journey</span>
                 <ChevronRight className="w-5 h-5" />
-              </Link>
+              </button>
               <Link 
                 href="/search" 
                 className="bg-white/80 backdrop-blur-sm text-orange-600 border-2 border-orange-300 hover:bg-orange-50 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
@@ -120,7 +120,7 @@ export default function Home() {
       <BannerAd adSlot={ADSENSE_CONFIG.AD_SLOTS.HERO_BANNER} />
 
       {/* Category Grid Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="categories" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-orange-900 mb-4">
@@ -222,6 +222,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What is Bhakti Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-50 to-orange-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold text-orange-900 mb-6">
+              What is Bhakti?
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-orange-800 leading-relaxed mb-6">
+                <strong>Bhakti</strong> (भक्ति) is the Sanskrit word for "devotion" or "love" - a profound spiritual path 
+                centered on pure, unconditional love and surrender to the Divine. It represents one of the most 
+                beautiful and accessible approaches to spiritual realization in Hindu tradition.
+              </p>
+              
+              <p className="text-lg text-orange-800 leading-relaxed mb-6">
+                Unlike paths focused solely on knowledge (Jnana) or rituals (Karma), Bhakti emphasizes the 
+                heart's connection with the Divine. Through devotional practices like singing bhajans, 
+                chanting mantras, performing aartis, and celebrating festivals, devotees cultivate a personal 
+                relationship with their chosen deity.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-orange-900 mb-3">🙏 The Path of Love</h3>
+                  <p className="text-orange-700 leading-relaxed">
+                    Bhakti transforms ordinary actions into divine worship through love and devotion, 
+                    making spirituality accessible to everyone regardless of background or knowledge.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-orange-900 mb-3">🕉️ Universal Devotion</h3>
+                  <p className="text-orange-700 leading-relaxed">
+                    Whether through Krishna, Shiva, Devi, or the formless Divine, Bhakti embraces 
+                    all paths that lead to spiritual union through pure love and surrender.
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-lg text-orange-800 leading-relaxed mt-8 text-center italic">
+                "Bhakti is not just worship - it is the very essence of spiritual life, 
+                the eternal dance between the soul and the Divine."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AdSense After What is Bhakti */}
+      <InContentAd adSlot={ADSENSE_CONFIG.AD_SLOTS.FEATURED_INCONTENT} />
+
       {/* Featured Content Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -230,19 +285,79 @@ export default function Home() {
               Featured Content
             </h2>
             <p className="text-xl text-orange-700 max-w-2xl mx-auto">
-              Discover the most beloved festivals and aartis from our collection
+              Discover our most beloved festivals, aartis, and devotional content
             </p>
           </div>
           
-          <div className="text-center text-orange-600">
-            <p className="text-lg">Coming Soon</p>
-            <p>This section will dynamically showcase popular festivals, aartis, bhajans, and mantras from our comprehensive collection.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Featured Festival */}
+            <Link href="/festivals/diwali" className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-orange-400 to-red-500 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-6xl">🪔</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <span className="text-sm text-orange-600 font-semibold">Featured Festival</span>
+                <h3 className="text-xl font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  Diwali - Festival of Lights
+                </h3>
+                <p className="text-orange-700 mb-4">
+                  Celebrate the victory of light over darkness with rituals, stories, and traditions
+                </p>
+                <div className="flex items-center text-orange-600 font-medium">
+                  <span>Explore Festival</span>
+                  <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* Featured Aarti */}
+            <Link href="/aartis/ganesh-aarti" className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-6xl">🙏</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <span className="text-sm text-orange-600 font-semibold">Featured Aarti</span>
+                <h3 className="text-xl font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  Ganesh Aarti
+                </h3>
+                <p className="text-orange-700 mb-4">
+                  Sacred prayer ceremony to Lord Ganesha, the remover of obstacles
+                </p>
+                <div className="flex items-center text-orange-600 font-medium">
+                  <span>Read Aarti</span>
+                  <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* Featured Bhajan */}
+            <Link href="/bhajans/hanuman-chalisa" className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-red-400 to-orange-500 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-6xl">🕉️</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <span className="text-sm text-orange-600 font-semibold">Featured Bhajan</span>
+                <h3 className="text-xl font-bold text-orange-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  Hanuman Chalisa
+                </h3>
+                <p className="text-orange-700 mb-4">
+                  The powerful 40-verse hymn dedicated to Lord Hanuman
+                </p>
+                <div className="flex items-center text-orange-600 font-medium">
+                  <span>Read Chalisa</span>
+                  <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
-
-      {/* AdSense After Featured Content */}
-      <InContentAd adSlot={ADSENSE_CONFIG.AD_SLOTS.FEATURED_INCONTENT} />
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-orange-900 to-red-900 text-white py-16 px-4 sm:px-6 lg:px-8">

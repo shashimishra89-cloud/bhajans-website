@@ -13,7 +13,7 @@ const aartiData = {
   description: "A prayer to Goddess Durga, the divine mother who protects and destroys evil.",
   deity: "Goddess Durga",
   lyrics: {
-    sanskrit: [
+    hindi: [
       "जय अंबे गौरी, मैया जय श्यामा गौरी।",
       "तुमको निशिदिन ध्यावत, हरि ब्रह्मा शिवरी॥ ओम जय अंबे गौरी",
       "मांग सिन्दूर विराजत, टीको मृगमद कोत।",
@@ -239,12 +239,12 @@ export default function DurgaAartiPage() {
 
         <InContentAd />
 
-        {/* Sanskrit Shlokas */}
+        {/* Hindi Aarti */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-pink-900 mb-6">Sanskrit Shlokas</h2>
+          <h2 className="text-3xl font-bold text-pink-900 mb-6">हिंदी आरती (Hindi Aarti)</h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border border-pink-100">
             <div className="space-y-3">
-              {aarti.lyrics.sanskrit.map((line: string, index: number) => (
+              {aarti.lyrics.hindi.map((line: string, index: number) => (
                 <p key={index} className="text-lg text-gray-700 font-medium leading-relaxed text-center">
                   {line}
                 </p>
@@ -257,12 +257,12 @@ export default function DurgaAartiPage() {
 
         {/* Translations */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-pink-900 mb-6">Shloka Translations</h2>
+          <h2 className="text-3xl font-bold text-pink-900 mb-6">आरती अनुवाद (Aarti Translations)</h2>
           <div className="space-y-8 mb-12">
-            {aarti.lyrics.sanskrit.map((shloka, index) => (
+            {aarti.lyrics.hindi.map((line, index: number) => (
               <div key={index} className="text-center space-y-4">
                 <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
-                  {shloka}
+                  {line}
                 </p>
                 {aarti.lyrics.translations[index] && (
                   <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">

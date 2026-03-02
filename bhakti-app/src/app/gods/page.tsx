@@ -6,7 +6,7 @@ const gods = [
     id: "krishna",
     name: "Lord Krishna",
     title: "The Divine Cowherd",
-    description: "The eighth avatar of Vishnu, known for his teachings in the Bhagavad Gita and his playful, loving nature.",
+    description: "The eighth avatar of Vishnu, known for his teachings in Bhagavad Gita and his playful, loving nature.",
     domain: "Love, Compassion, Divine Play",
     icon: "🦚",
     color: "from-blue-400 to-indigo-600"
@@ -24,7 +24,7 @@ const gods = [
     id: "durga",
     name: "Goddess Durga",
     title: "The Divine Mother",
-    description: "The fierce and protective goddess who represents divine feminine power and the triumph of good over evil.",
+    description: "The fierce and protective goddess who represents divine feminine power and triumph of good over evil.",
     domain: "Protection, Strength, Divine Feminine",
     icon: "🌺",
     color: "from-pink-400 to-purple-600"
@@ -33,10 +33,46 @@ const gods = [
     id: "rama",
     name: "Lord Rama",
     title: "The Ideal King",
-    description: "The seventh avatar of Vishnu, embodying dharma, righteousness, and the perfect devotion of a son, husband, and king.",
+    description: "The seventh avatar of Vishnu, embodying dharma, righteousness, and perfect devotion of a son, husband, and king.",
     domain: "Dharma, Righteousness, Honor",
     icon: "🏹",
     color: "from-green-400 to-teal-600"
+  },
+  {
+    id: "shiva",
+    name: "Lord Shiva",
+    title: "The Destroyer of Evil",
+    description: "The supreme deity who transforms consciousness, destroys evil, and represents cosmic dance of creation and destruction.",
+    domain: "Transformation, Meditation, Liberation",
+    icon: "🕉️",
+    color: "from-purple-400 to-blue-600"
+  },
+  {
+    id: "lakshmi",
+    name: "Goddess Lakshmi",
+    title: "Goddess of Wealth",
+    description: "The divine goddess of prosperity, fortune, and spiritual abundance who blesses devotees with material and spiritual wealth.",
+    domain: "Prosperity, Fortune, Abundance",
+    icon: "💰",
+    color: "from-yellow-400 to-amber-600"
+  },
+  {
+    id: "saraswati",
+    name: "Goddess Saraswati",
+    title: "Goddess of Knowledge",
+    description: "The divine embodiment of knowledge, music, arts, wisdom, and learning who inspires creativity and spiritual growth.",
+    domain: "Knowledge, Arts, Wisdom",
+    icon: "📚",
+    color: "from-indigo-400 to-purple-600"
+  },
+  {
+    id: "hanuman",
+    name: "Lord Hanuman",
+    title: "The Devoted Servant",
+    description: "The mighty monkey god known for his unwavering devotion to Lord Rama and immense strength and courage.",
+    domain: "Devotion, Strength, Loyalty",
+    icon: "💪",
+    color: "from-red-400 to-orange-600"
   }
 ];
 
@@ -49,7 +85,7 @@ export default function GodsPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Sparkles className="h-8 w-8 text-orange-600" />
-              <h1 className="text-2xl font-bold text-orange-900">Bhajans</h1>
+              <h1 className="text-2xl font-bold text-orange-900">Bhakti</h1>
             </Link>
             <nav className="hidden md:flex space-x-8">
               <Link href="/festivals" className="text-orange-800 hover:text-orange-600 font-medium">Festivals</Link>
