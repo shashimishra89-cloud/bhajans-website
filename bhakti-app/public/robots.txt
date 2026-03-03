@@ -1,17 +1,37 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Google-specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+# Sitemap location - supports all hostnames
+Sitemap: https://justhobby.net/sitemap.xml
+Sitemap: https://www.justhobby.net/sitemap.xml
 Sitemap: https://bhakti.justhobby.net/sitemap.xml
 
-# Allow search engines to crawl all content
+# Allow all content for search engines
 Allow: /festivals/
 Allow: /aartis/
 Allow: /bhajans/
+Allow: /chalisas/
 Allow: /mantras/
-Allow: /search
+Allow: /stories/
+Allow: /gods/
+Allow: /search/
+Allow: /about/
+Allow: /contact/
+Allow: /privacy/
+Allow: /terms/
 
-# Disallow admin and private areas
+# Disallow only admin and private areas
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /.well-known/
