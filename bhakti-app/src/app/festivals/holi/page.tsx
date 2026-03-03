@@ -261,7 +261,7 @@ export default function HoliPage() {
             <div className="max-w-3xl mx-auto">
               <div className="space-y-4">
                 <img 
-                    src="/holi-celebration.jpg" 
+                    src="/holi-celebration.svg" 
                     alt="Holi celebration with colors and people throwing colored powder"
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />
@@ -276,7 +276,8 @@ export default function HoliPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Banner Ad */}
         <BannerAd />

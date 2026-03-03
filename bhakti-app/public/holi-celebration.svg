@@ -1,0 +1,54 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE4B5;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sun">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="800" height="400" fill="url(#sky)"/>
+  
+  <!-- Sun -->
+  <circle cx="650" cy="100" r="50" fill="url(#sun)"/>
+  
+  <!-- Ground -->
+  <ellipse cx="400" cy="450" rx="500" ry="150" fill="#90EE90"/>
+  
+  <!-- People silhouettes celebrating -->
+  <g id="people">
+    <!-- Person 1 -->
+    <ellipse cx="200" cy="320" rx="15" ry="20" fill="#FF6B6B"/>
+    <circle cx="200" cy="290" r="12" fill="#FFB6C1"/>
+    
+    <!-- Person 2 -->
+    <ellipse cx="300" cy="330" rx="15" ry="20" fill="#4ECDC4"/>
+    <circle cx="300" cy="300" r="12" fill="#87CEEB"/>
+    
+    <!-- Person 3 -->
+    <ellipse cx="400" cy="325" rx="15" ry="20" fill="#FFD93D"/>
+    <circle cx="400" cy="295" r="12" fill="#FFEB3B"/>
+    
+    <!-- Person 4 -->
+    <ellipse cx="500" cy="320" rx="15" ry="20" fill="#95E77E"/>
+    <circle cx="500" cy="290" r="12" fill="#B4E7CE"/>
+  </g>
+  
+  <!-- Color splashes in air -->
+  <g id="colors" opacity="0.7">
+    <circle cx="150" cy="200" r="25" fill="#FF6B6B"/>
+    <circle cx="250" cy="180" r="20" fill="#4ECDC4"/>
+    <circle cx="350" cy="220" r="22" fill="#FFD93D"/>
+    <circle cx="450" cy="190" r="18" fill="#95E77E"/>
+    <circle cx="550" cy="210" r="24" fill="#FF6B6B"/>
+    <circle cx="320" cy="150" r="15" fill="#4ECDC4"/>
+    <circle cx="480" cy="140" r="17" fill="#FFD93D"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#2C3E50">Happy Holi!</text>
+</svg>
