@@ -12,7 +12,7 @@ const categories = [
     title: "Festivals",
     description: "Celebrate divine festivals with rituals, stories, and traditions",
     icon: "🎉",
-    image: "/images/categories/festivals.jpg",
+    image: "/images/categories/festivals.svg",
     href: "/festivals",
     color: "from-orange-400 to-red-500"
   },
@@ -21,7 +21,7 @@ const categories = [
     title: "Aartis",
     description: "Sacred prayers and worship ceremonies",
     icon: "🪔",
-    image: "/images/categories/aartis.jpg",
+    image: "/images/categories/aartis.svg",
     href: "/aartis",
     color: "from-yellow-400 to-orange-500"
   },
@@ -30,7 +30,7 @@ const categories = [
     title: "Bhajans",
     description: "Devotional songs and sacred hymns",
     icon: "🎵",
-    image: "/images/categories/bhajans.jpg",
+    image: "/images/categories/bhajans.svg",
     href: "/bhajans",
     color: "from-pink-400 to-purple-500"
   },
@@ -39,7 +39,7 @@ const categories = [
     title: "Chalisas",
     description: "Sacred 40-verse devotional hymns dedicated to various deities",
     icon: "🪔",
-    image: "/images/categories/chalisas.jpg",
+    image: "/images/categories/chalisas.svg",
     href: "/chalisas",
     color: "from-red-400 to-orange-500"
   },
@@ -48,7 +48,7 @@ const categories = [
     title: "Mantras",
     description: "Powerful chants and spiritual vibrations",
     icon: "🕉️",
-    image: "/images/categories/mantras.jpg",
+    image: "/images/categories/mantras.svg",
     href: "/mantras",
     color: "from-blue-400 to-indigo-500"
   },
@@ -57,7 +57,7 @@ const categories = [
     title: "Devotional Stories",
     description: "Ancient tales and divine legends",
     icon: "📖",
-    image: "/images/categories/stories.jpg",
+    image: "/images/categories/stories.svg",
     href: "/stories",
     color: "from-green-400 to-teal-500"
   }
@@ -91,9 +91,17 @@ export default function Home() {
             </p>
             
             {/* Description */}
-            <p className="text-lg sm:text-xl text-orange-700 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed-2">
-              A sacred space where devotion comes alive. Explore the complete world of Hindu festivals, 
-              aartis, bhajans, mantras, and devotional stories—all in one beautifully structured platform.
+            <p className="text-lg sm:text-xl text-orange-700 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed-2">
+              Bhakti is a platform dedicated to sharing Hindu festivals, sacred stories, devotional knowledge, 
+              and spiritual traditions in one place. Discover authentic content on aartis, bhajans, mantras, 
+              and the rich cultural heritage of Hinduism.
+            </p>
+            
+            {/* Additional Description for AdSense */}
+            <p className="text-base sm:text-lg text-orange-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-delayed-2">
+              Explore comprehensive guides on Hindu festivals like Diwali and Holi, learn traditional aartis 
+              and bhajans, access powerful mantras, and read inspiring devotional stories that have been 
+              passed down through generations.
             </p>
             
             {/* CTA Buttons */}
