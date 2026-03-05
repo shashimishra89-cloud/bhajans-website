@@ -90,15 +90,15 @@ const ShivaChalisaPage = () => {
         },
         {
           hindi: "कार्तिक श्याम और गणराऊ। या छवि को कहि जात न काऊ॥",
-          english: "Kartikeya, Shyam, and Ganesha. This form cannot be described in words."
+          english: "Kartikeya, Shyam, and Ganesha are present. This form cannot be described in words."
         },
         {
           hindi: "देवन जबहीं जाय पुकारा। तब ही दुख प्रभु आप निवारा॥",
-          english: "Whenever the gods cried out. Then you, Lord, removed their sorrows."
+          english: "Whenever the gods cry out, you, Lord, remove their sorrows."
         },
         {
           hindi: "किया उपद्रव तारक भारी। देवन सब मिलि तुमहिं जुहारी॥",
-          english: "When the planets caused great disturbance. All gods together prayed to you."
+          english: "When the planets caused great disturbance, all the gods together prayed to you."
         },
         {
           hindi: "तुरत षडानन आप पठायउ। लवनिमेष महँ मारि गिरायउ॥",
@@ -325,7 +325,7 @@ const ShivaChalisaPage = () => {
             </p>
             <div className="flex justify-center space-x-4 text-sm">
               <span className="bg-white/20 px-3 py-1 rounded-full">
-                {chalisaData.verses} वर्स
+                {chalisaData.verses} verses
               </span>
               <span className="bg-white/20 px-3 py-1 rounded-full">
                 {chalisaData.deity}

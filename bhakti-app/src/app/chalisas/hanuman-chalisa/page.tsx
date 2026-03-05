@@ -168,7 +168,7 @@ export default function HanumanChalisaPage() {
               </p>
               <div className="flex justify-center space-x-4 text-sm">
                 <span className="bg-white/20 px-3 py-1 rounded-full">
-                  {chalisaData.verses} वर्स
+                  {chalisaData.verses} verses
                 </span>
                 <span className="bg-white/20 px-3 py-1 rounded-full">
                   {chalisaData.deity}
