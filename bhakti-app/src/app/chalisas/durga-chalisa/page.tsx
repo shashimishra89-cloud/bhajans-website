@@ -66,11 +66,11 @@ const DurgaChalisaPage = () => {
         },
         {
           hindi: "निरंकार है ज्योति तुम्हारी। तिहूं लोक फैली उजियारी॥",
-          english: "You are the one who is beyond attributes, O Mother. The whole world is your creation."
+          english: "You are beyond attributes, O Mother. The whole world is your creation."
         },
         {
           hindi: "शशि लालाट मुख महाविशाला। नेत्र लाल भृकुटि विकराला॥",
-          english: "Shiva's skull is in your hands, the great illusion is destroyed."
+          english: "Shiva's skull is in your hands, great illusion is destroyed."
         },
         {
           hindi: "रूप मातु को अधिक सुहावे। दरश करत जन अति सुख पावे॥",
@@ -82,15 +82,15 @@ const DurgaChalisaPage = () => {
         },
         {
           hindi: "अन्नपूर्णा हुई जग पाला। तुम ही आदि सुन्दरी बाला॥",
-          english: "Annapurna who sustains the world. You are the first Sundari."
+          english: "As Annapurna, you sustain the world. You are the first Sundari."
         },
         {
           hindi: "प्रलयकाल सब नाशन हारी। तुम गौरी शिवशंकर प्यारी॥",
-          english: "Prahlada's aunt is burning. You are dear to Gauri Shankar."
+          english: "At the time of pralaya, you destroy all. You are dear to Gauri and Shankar."
         },
         {
           hindi: "शिव योगी तुम्हरे गुण गावें। ब्रह्मा विष्णु तुम्हें नित ध्यावें॥",
-          english: "Shiva and yogis are your servants. Brahma and Vishnu meditate upon you."
+          english: "Shiva and yogis sing your praises. Brahma and Vishnu always meditate upon you."
         },
         {
           hindi: "रूप सरस्वती को तुम धारा। दे सुबुद्धि ऋषि मुनिन उबारा॥",
@@ -98,7 +98,7 @@ const DurgaChalisaPage = () => {
         },
         {
           hindi: "धरयो रूप नरसिंह को अम्बा। परगट भई फाड़कर खम्बा॥",
-          english: "In the form of a demon, you became Mother Amba. You tore apart the demon."
+          english: "Taking the form of Narasimha, you became Mother Amba. You tore apart the demon."
         },
         {
           hindi: "रक्षा करि प्रह्लाद बचायो। हिरण्याक्ष को स्वर्ग पठायो॥",
@@ -138,15 +138,15 @@ const DurgaChalisaPage = () => {
         },
         {
           hindi: "नगरकोट में तुम्हीं विराजत। तिहुँलोक में डंका बाजत॥",
-          english: "You rule in Nagarkot. Drums play in all three worlds."
+          english: "You rule in Nagarkot. Drums resound in all three worlds."
         },
         {
           hindi: "शुम्भ निशुम्भ दानव तुम मारे। रक्तन बीज शंखन संहारे॥",
-          english: "You killed the demons Shumbha and Nishumbha. You destroyed Raktabeeja and Shumbha."
+          english: "You killed the demons Shumbha and Nishumbha. You destroyed Raktabija and Shumbha."
         },
         {
           hindi: "महिषासुर नृप अति अभिमानी। जेहि अघ भार मही अकुलानी॥",
-          english: "Mahishasura was very arrogant. The earth was troubled by his sins."
+          english: "Mahishasura was extremely arrogant. The earth was troubled by the weight of his sins."
         },
         {
           hindi: "रूप कराल कालिका धारा। सेन सहित तुम तिहि संहारा॥",
@@ -325,7 +325,7 @@ const DurgaChalisaPage = () => {
             </p>
             <div className="flex justify-center space-x-4 text-sm">
               <span className="bg-white/20 px-3 py-1 rounded-full">
-                {chalisaData.verses} वर्स
+                {chalisaData.verses} verses
               </span>
               <span className="bg-white/20 px-3 py-1 rounded-full">
                 {chalisaData.deity}
