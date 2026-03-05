@@ -14,7 +14,7 @@ const DurgaChalisaPage = () => {
     icon: "🔱",
     color: "from-red-500 to-pink-500",
     deity: "Goddess Durga",
-    verses: "40",
+    verses: "41",
     lyrics: {
       hindi: [
         "नमो नमो दुर्गे सुख करनी। नमो नमो अंबे दुःख हरनी॥",

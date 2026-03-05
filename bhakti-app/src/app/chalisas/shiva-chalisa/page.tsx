@@ -14,7 +14,7 @@ const ShivaChalisaPage = () => {
     icon: "🕉️",
     color: "from-blue-500 to-purple-500",
     deity: "Lord Shiva",
-    verses: "40",
+    verses: "41",
     lyrics: {
       hindi: [
         "जय गिरिजा पति दीन दयाला। सदा करत सन्तन प्रतिपाला॥",
